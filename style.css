@@ -10,7 +10,7 @@
     font-family: 'Fira Sans', sans-serif;
 }
 
-.learnbutton{
+.button{
     appearance: none;
     border: none;
     outline: none;
@@ -23,10 +23,10 @@
     margin-top: 30px;
     padding: 15px 16px;
     border-radius: 15px;
-    text-decoration: none;
     text-transform: uppercase;
     font-weight: 200;
     cursor: pointer;
+    text-decoration: none;
 
     @media (max-width: 767px) {
 		font-size: 18px;
@@ -110,8 +110,6 @@ header{
 
 }
 
-
-
 main{
     .banner{
         color: black;
@@ -167,21 +165,69 @@ main{
         }
     }
 
-    .aboutus{
+    .about-us{
+        padding-top: 64px;
+        padding-bottom: 64px;
 
         .container{
-            padding-top: 64px;
-            padding-bottom: 64px;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 50px;
 
-            .aboutus-def{
+            .slidepic{
+                position: relative;
+                max-width: 100rem;
+                margin: 0 auto;
+    
+                .slider{
+                    display: flex;
+                    aspect-ratio: 16/9;
+                    overflow-x: hidden;
+                    scroll-snap-type: x mandatory;
+                    scroll-behavior: smooth;
+                    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+                    border-radius: 0.5rem;
+    
+                    .slider-img{
+                        flex: 1 0 100%;
+                        scroll-snap-align: start;
+                        object-fit: cover;
+                    }
+                }
+    
+                .slider-nav{
+                    display: flex;
+                    column-gap: 1rem;
+                    position: absolute;
+                    bottom: 1.25rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 1;
+                }
+    
+                .slider-nav a{
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    opacity: 0.75;
+                    transition: opacity ease 250ms;
+                }
+    
+                .slider-nav a:hover{
+                    opacity: 1;
+                }
+            }
+
+            .slidetext{
                 text-align: justify;
-                font-size: 90%;
             }
         }
+
     }
 
     .lnews{
-        background-color: #E2FBFF;
+        background-color: white;
 
         .container{
             padding-top: 64px;
@@ -350,26 +396,39 @@ main{
         }
     }
 
-    .contact {
-		background-color: #E2FBFF;
+    .contact{
+		background-color: white;
 
 		.container{
 			padding-top: 64px;
 			padding-bottom: 64px;
 
 			.contact-form{
-				display: block;
-				max-width: 680px;
+				display: grid;
+                grid-template-columns: repeat(3,1fr);
 
-				.form-grid {
+                .contact-us-grid{
+                    grid-column: span 1;
+                    padding-right: 20%;
+                    margin: auto;
+                    
+                    .get-in-touch{
+                        font-size: 35pt;
+                    }
+                    .fill-get{
+                        text-align: justify;
+                        font-size: 14pt;
+                    }
+                
+                  
+                }
+
+                .form-grid{
+                    grid-column: span 2;
                     display: grid;
-                    grid-template-columns: repeat(2,1fr);
-                    grid-gap: 16px;
-                    margin-bottom: 16px;
-
-                    @media (max-width: 767px) {
-						grid-template-columns: 1fr;
-					}
+                    grid-template-columns: auto;
+                    grid-gap: 10px;
+                    
 
                     .form-text, .form-mes{
                         appearance: none;
@@ -378,30 +437,84 @@ main{
                         background: none;
 
                         display: block;
-                        width: 100%;
-                        background-color: #FFF;
-                        border-radius: 8px;
+                        border: 1px solid;
+                        border-radius: 5px;
 
-                        padding: 16px;
-                        font-size: 20px;
+                        padding: 12px;
+                        font-size: 10pt;
                         color: #313131;
 
                         &::placeholder {
 							color: #AAA;
 						}
                     }
-                    
-					.form-mes{
-						grid-column: 1/-1;
-					}
-				}
-
-				.sendmes{
-					text-align: right;
-				}
+                }
 			}
+
+            .send-button{
+                appearance: none;
+                border: none;
+                outline: none;
+                background: none;
+                border-radius: 5px;
+                background-color: #34C1D5;
+                padding: 10px;
+                margin-top: 20px;
+                display: flex;
+                justify-content: flex-end;
+                margin-left: auto;
+                color: white;
+            }
 		}
 	}
+}
+
+footer{
+    background-color: #E2FBFF;
+
+    .footer-container{
+        max-width: 1600px;
+        margin: 0 auto;
+        align-items: center;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 64px;
+        padding-bottom: 64px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 30px;
+
+        .footer-logo{
+            grid-column: span 1;
+            width: 300px;
+        }
+        .footer-quicklinks{
+            grid-column: span 2;
+            display: block;
+            text-align: center;
+
+            .quicklinks{
+                list-style: none;
+                padding: 2px;
+            }
+
+        }
+        .footer-contacts{
+            grid-column: span 1;
+            text-align: end;
+
+            .contacts{
+                list-style: none;
+                text-decoration: none;
+            }
+            
+        }
+
+        .f-links{
+            color: black;
+        }
+
+    }    
 }
 
 @media (max-width: 767px) {
