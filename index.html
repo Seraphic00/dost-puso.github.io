@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/logo/logo.png" type="image/x-icon">
@@ -17,12 +19,31 @@
     <header>
         <div class="container">
             <img id="title-logo" src="img/logo/header-logo - 1.png" alt="">
-            <nav class="navbarlinks">
-                <a class="navlinks" href="">Home</a>
-                <a class="navlinks" href="">About Us</a>
-                <a class="navlinks" href="">Events</a>
-                <a class="navlinks" href="">Contact Us</a>
-            </nav>
+            <div class="navbar">
+                <ul class="navlinks">
+                    <li class="navlink">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="navlink d-aboutus">
+                        <a href="#">About Us
+                            <span class="material-icons dropdown-icon">
+                                arrow_drop_down
+                            </span>
+                        </a>
+                        <ul class="dropdown">
+                            <li>History</li>
+                            <li>Mission</li>
+                            <li>Vision</li>
+                        </ul>
+                    </li>
+                    <li class="navlink">
+                        <a href="#">Events</a>
+                    </li>
+                    <li class="navlink">
+                        <a href="#">Contacts</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -39,21 +60,23 @@
             </div>
         </section>
 
-        <section class="about-us" id="about-us">
+        <section class="ab">
             <div class="container">
-                <div class="slidepic">
-                    <div class="slider">
-                        <img class="slider-img" id="slide-1" src="img/img1.png" alt="">
-                        <img class="slider-img" id="slide-2" src="img/img2.png" alt="">
-                        <img class="slider-img" id="slide-3" src="img/img3.png" alt="">
-                    </div>
-                    <div class="slider-nav">
-                        <a href="#slide-1"></a>
-                        <a href="#slide-2"></a>
-                        <a href="#slide-3"></a>
+                <div class="slideshow-img">
+                    <img class="imgSlides fade" src="img/slide/img1.png" style="width:100%">
+                    <img class="imgSlides fade" src="img/slide/img4.png" style="width:100%">
+                    <img class="imgSlides fade" src="img/slide/img3.png" style="width:100%">
+        
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="dots">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
                 </div>
-                <div class="slidetext">
+                <div class="slideshow-text">
                     <h2>About Us</h2>
                     <p class="aboutus-def">
                         The DOST-PSU UCC Scholars’ Organization, affectionately known as DOST-PUSO, had its humble beginnings on October 1, 2022. Founded by a group of passionate Department of Science and Technology (DOST) scholars at Pangasinan State University's Urdaneta City Campus, the organization's inception marked the commencement of a remarkable journey.
@@ -172,8 +195,6 @@
                 </div>
             </div>
         </section>
-
-        
 
         <section id="latest-news" class="latest-news">
             <div class="container">
@@ -298,6 +319,9 @@
             </div>
         </section>
 
+        
+
+
     </main>
     <footer>
         <div class="footer-container">
@@ -314,7 +338,7 @@
                         <a class="f-links" href="#">DOST Mobilized Amianan Youth Scholars’ Association (DOST MAYSA)</a>
                     </li>
                     <li class="quicklinks">
-                        <a class="f-links" href="#">DOST Mobilized Amianan Youth Scholars’ Association (DOST MAYSA)</a>
+                        <a class="f-links" href="#">DOST Science and Education Institute  (DOST SEI)</a>
                     </li>
                 </ul>
             </div>
@@ -328,7 +352,7 @@
                         <a class="f-links" href="#">Urdaneta, Pangasinan 2428</a>
                     </li>
                     <li>
-                        <a  class="f-links" href="#"></a>
+                        <a  class="f-links" href="#">+(631) 2345-678</a>
                     </li>
                     <li>
                         <a class="f-links" href="#">dostpuso@gmail.com</a>
@@ -342,10 +366,8 @@
     </footer>
 
     <script src="main.js"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    
 
 </body>
 </html>
