@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/logo/logo.png" type="image/x-icon">
+    
 </head>
 <body>
     <header>
@@ -27,7 +28,7 @@
                     <li class="navlink">
                         <a href="#">Home</a>
                     </li>
-                    <li class="navlink d-aboutus">
+                    <li class="navlink dropdown-arrow">
                         <a href="#">About Us
                             <span class="material-icons dropdown-icon">
                                 arrow_drop_down
@@ -39,8 +40,27 @@
                             <li>Vision</li>
                         </ul>
                     </li>
-                    <li class="navlink">
-                        <a href="#">Events</a>
+                    <li class="navlink dropdown-arrow">
+                        <a href="#">Events 
+                            <span class="material-icons dropdown-icon">
+                            arrow_drop_down
+                        </span></a>
+                        <ul class="dropdown">
+                            <li>one</li>
+                            <li>two</li>
+                            <li>three</li>
+                        </ul>
+                    </li>
+                    <li class="navlink dropdown-arrow">
+                        <a href="#">Scholarship
+                            <span class="material-icons dropdown-icon">
+                                arrow_drop_down
+                        </span></a>
+                        <ul class="dropdown">
+                            <li>one</li>
+                            <li>two</li>
+                            <li>three</li>
+                        </ul>
                     </li>
                     <li class="navlink">
                         <a href="#">Contacts</a>
@@ -57,33 +77,76 @@
                     <!-- <img id="banner-logo" src="img/logo/logo.png" alt="DOST-PUSO logo"> -->
                     <h1 id="main-title">DOST - PSU UCC Scholars’ Organization </h1>
                     <h3 id="main-p">
-                        Welcome to DOST - PUSO, where we unite and empower DOST Scholars to make an impact in Pangasinan State <br> University and beyond. Discover our events, achievements, and how you can get involved!  
+                        Welcome to DOST - PUSO, where we unite and empower DOST Scholars to make an impact in Pangasinan State University and beyond.
+                        Discover our events, achievements, and how you can get involved!  
                     </h3>
                     <a href="#" class="button">Learn More</a>
                     </div>
                 <div class="banner-img">
-                    <img id="sss" src="img/slide/img1.png" alt="">
-                    <div id="hhh">.</div>
+                    <!-- <img id="sss" src="img/slide/img1.png" alt=""> -->
+                    <div class="slideshow-img">
+                        <img class="imgSlides fade" src="img/slide/img1.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img2.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img3.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img4.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img5.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img6.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img7.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img8.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img9.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img10.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img11.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img12.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img13.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img14.png" style="width:100%">
+                        <img class="imgSlides fade" src="img/slide/img15.png" style="width:100%">
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+                        <div class="dots">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                            <span class="dot" onclick="currentSlide(7)"></span>
+                            <span class="dot" onclick="currentSlide(8)"></span>
+                            <span class="dot" onclick="currentSlide(9)"></span>
+                            <span class="dot" onclick="currentSlide(10)"></span>
+                            <span class="dot" onclick="currentSlide(11)"></span>
+                            <span class="dot" onclick="currentSlide(12)"></span>
+                            <span class="dot" onclick="currentSlide(13)"></span>
+                            <span class="dot" onclick="currentSlide(14)"></span>
+                            <span class="dot" onclick="currentSlide(15)"></span>
+                        </div>
+                    </div>
+                    <div id="hhh"></div>
                 </div>
             </div>
-            
         </section>
 
         <section class="about-us">
             <div class="container">
-                <div class="slideshow-img">
-                    <img class="imgSlides fade" src="img/slide/img1.png" style="width:100%">
-                    <img class="imgSlides fade" src="img/slide/img4.png" style="width:100%">
-                    <img class="imgSlides fade" src="img/slide/img3.png" style="width:100%">
-        
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <!-- <div class="officers-images">
+                    <img class="officers" src="img/officers/one.png" alt="">
+                </div> -->
+                <div class="officers-img">
+                    <img class="officers fadee" src="img/officers/one.png" style="width:100%">
+                    <img class="officers fadee" src="img/officers/two.png" style="width:100%">
+                    <img class="officers fadee" src="img/officers/three.png" style="width:100%">
+                    <img class="officers fadee" src="img/officers/four.png" style="width:100%">
 
-                    <div class="dots">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
+                    <a class="prevv" onclick="plusSlidess(-1)">&#10094;</a>
+                    <a class="nextt" onclick="plusSlidess(1)">&#10095;</a>
+
+                    <!-- <div class="dotss">
+                        <span class="dott" onclick="currentSlidess(1)"></span>
+                        <span class="dott" onclick="currentSlidess(2)"></span>
+                        <span class="dott" onclick="currentSlidess(3)"></span>
+                        <span class="dott" onclick="currentSlidess(4)"></span>
+                    </div> -->
                 </div>
                 <div class="slideshow-text">
                     <h2>About Us</h2>
@@ -100,111 +163,6 @@
             </div>
         </section>
 
-        <section class="lnews">
-            <div class="container">
-                <h2>Latest News</h2>
-                <div class="new-grid">
-                    <div class="new">
-                        <figure class="new-img-box">
-                            <img src="img/news/news-img1.png" alt="" class="new-img">
-                        </figure>
-                        <div class="new-content">
-                            <p class="new-date">
-                                18 Oct 2023
-                            </p>
-                            <p class="new-title">
-                                2023 National Youth Science, Technology, and Innovation Festival (NYSTIF) happening this 25-28 October 2023 at The PICC Forum Tent! 
-                            </p>
-                            <p class="new-def">
-                                As the population of Scholars in the province of Pangasinan continuously grew, the appointment of leaders and officers who are dedicated, competent, and adaptable to changes is important in order to attain the association's main goal  ... See More.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="new">
-                        <figure class="new-img-box">
-                            <img src="img/news/news-img2.png" alt="" class="new-img">
-                        </figure>
-                        <div class="new-content">
-                            <p class="new-date">
-                                30 Sept 2023
-                            </p>
-                            <p class="new-title">
-                                New Elected Officers of DOST Scholars’ Inter-Campus Association of Pangasinan for the Academic year 2023-2024. 
-                            </p>
-                            <p class="new-def">
-                                As the population of Scholars in the province of Pangasinan continuously grew, the appointment of leaders and officers who are dedicated, competent, and adaptable to changes is important in order to attain the association's main goal and ... See More.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="new">
-                        <figure class="new-img-box">
-                            <img src="img/news/news-img3.png" alt="" class="new-img">
-                        </figure>
-                        <div class="new-content">
-                            <p class="new-date">
-                                06  Sept 2023
-                            </p>
-                            <p class="new-title">
-                                Congratulations to PSUnians, DOST 2023 S&T UNDERGRADUATE SCHOLARSHIP QUALIFIERS! 
-                            </p>
-                            <p class="new-def">
-                                The Department of Science and Technology Regional Office No. VIII is pleased to announce the names of the Qualifiers for the 2023 Undergraduate Scholarship Programs ...See More.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="new">
-                        <figure class="new-img-box">
-                            <img src="img/news/news-img4.jpg" alt="" class="new-img">
-                        </figure>
-                        <div class="new-content">
-                            <p class="new-date">
-                                29 July 2023
-                            </p>
-                            <p class="new-title">
-                                Super Typhoon Egay: Donation Drive led by DOST- MAYSA for all affected indigent families in Pagudpud, Ilocos Norte.  
-                            </p>
-                            <p class="new-def">
-                                Super Typhoon Egay may have left a trail of devastation in the Ilocos Region, but together, we can be a beacon of hope for those affected indigent families in Pagudpud.Let us unite under the banner of compassion as DOST-MAYSA launches a Donation Drive for our fellow ... See More.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="new">
-                        <figure class="new-img-box">
-                            <img src="img/news/news-img5.jpg" alt="" class="new-img">
-                        </figure>
-                        <div class="new-content">
-                            <p class="new-date">
-                                13 July 2023
-                            </p>
-                            <p class="new-title">
-                                2023 DOST-Scholars’ Exit Conference at  Lingayen, Pangasinan 
-                            </p>
-                            <p class="new-def">
-                                The Department of Science and Technology Region 1 (DOST 1) conducted an Exit Conference to 85 DOST-Science Education Institute (SEI) graduating scholars from Pangasinan on July 12-13, 2023 at Provincial Training and Development Center, Lingayen, Pangasinan.  .. See More.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="new">
-                        <figure class="new-img-box">
-                            <img src="img/news/news-img6.jpg" alt="" class="new-img">
-                        </figure>
-                        <div class="new-content">
-                            <p class="new-date">
-                                7 May 2023
-                            </p>
-                            <p class="new-title">
-                                DOST-PUSP Secures Two Spots for Prevail 2023 Final Round
-                            </p>
-                            <p class="new-def">
-                                University of the Philippines Diliman - After an intense battle of wits among five teams from DOST - PUSO, consisting of three members each, two teams have emerged victorious, securing their spots in the final round of Prevail 2023.… See more
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="latest-news" class="latest-news">
             <div class="container">
                 <h2>Latest News</h2>
@@ -214,8 +172,16 @@
                             <img src="img/news/news-img1.png" alt="" class="news-img">
                         </figure>
                         <div class="news-content">
-                            <h3>Websites</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum veniam officiis in. Distinctio cupiditate assumenda culpa voluptatem pariatur delectus illo explicabo, laboriosam natus nostrum nobis officiis reprehenderit non illum repellat?</p>
+                            <p class="news-date">
+                                18 Oct 2023
+                            </p>
+                            <p class="news-title">
+                                2023 National Youth Science, Technology, and Innovation Festival (NYSTIF) happening this 25-28 October 2023 at The PICC Forum Tent! 
+                            </p>
+                            <p class="news-def">
+                                As the population of Scholars in the province of Pangasinan continuously grew, the appointment of leaders and officers who are dedicated, competent, and adaptable to changes is important in order to attain the association's main goal Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat consequuntur consectetur tenetur tempore odio odit praesentium maiores ullam repellendus! Dolorem.
+                            </p>
+                            <a href="#" class="news-see-more">Read More</a> 
                         </div>
                     </div>
                     <div class="news">
@@ -223,8 +189,16 @@
                             <img src="img/news/news-img2.png" alt="" class="news-img">
                         </figure>
                         <div class="news-content">
-                            <h3>Apps</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum veniam officiis in. Distinctio cupiditate assumenda culpa voluptatem pariatur delectus illo explicabo, laboriosam natus nostrum nobis officiis reprehenderit non illum repellat?</p>
+                            <p class="news-date">
+                                30 Sept 2023
+                            </p>
+                            <p class="news-title">
+                                New Elected Officers of DOST Scholars’ Inter-Campus Association of Pangasinan for the Academic year 2023-2024. 
+                            </p>
+                            <p class="news-def">
+                                As the population of Scholars in the province of Pangasinan continuously grew, the appointment of leaders and officers who are dedicated, competent, and adaptable to changes is important in order to attain the association's main goal and Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio vel natus obcaecati ab inventore mollitia error eius quia! Doloribus hic quidem earum commodi ratione quisquam, tempora labore itaque quia suscipit neque enim. Autem quibusdam quasi corrupti. Aliquam, voluptatum fuga. Cum quis dolorum quisquam sapiente labore voluptatem id omnis molestias enim?
+                            </p>
+                            <a href="#" class="news-see-more">Read More</a> 
                         </div>
                     </div>
                     <div class="news">
@@ -232,8 +206,16 @@
                             <img src="img/news/news-img3.png" alt="" class="news-img">
                         </figure>
                         <div class="news-content">
-                            <h3>Games</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum veniam officiis in. Distinctio cupiditate assumenda culpa voluptatem pariatur delectus illo explicabo, laboriosam natus nostrum nobis officiis reprehenderit non illum repellat?</p>
+                            <p class="news-date">
+                                06  Sept 2023
+                            </p>
+                            <p class="news-title">
+                                Congratulations to PSUnians, DOST 2023 S&T UNDERGRADUATE SCHOLARSHIP QUALIFIERS! 
+                            </p>
+                            <p class="news-def">
+                                The Department of Science and Technology Regional Office No. VIII is pleased to announce the names of the Qualifiers for the 2023 Undergraduate Scholarship Programs Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sequi autem, magni magnam at reiciendis sit dolor iure saepe accusamus nulla id illum in facilis fugiat, sint debitis labore delectus? Quasi ullam, corporis alias cupiditate, eveniet laudantium labore voluptas commodi provident facere necessitatibus minima consequuntur fugit explicabo laborum ipsum deleniti.
+                            </p>
+                            <a href="#" class="news-see-more">Read More</a> 
                         </div>
                     </div>
                     <div class="news">
@@ -241,16 +223,93 @@
                             <img src="img/news/news-img4.jpg" alt="" class="news-img">
                         </figure>
                         <div class="news-content">
-                            <h3>Mentoring</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum veniam officiis in. Distinctio cupiditate assumenda culpa voluptatem pariatur delectus illo explicabo, laboriosam natus nostrum nobis officiis reprehenderit non illum repellat?</p>
+                            <p class="news-date">
+                                29 July 2023
+                            </p>
+                            <p class="news-title">
+                                Super Typhoon Egay: Donation Drive led by DOST- MAYSA for all affected indigent families in Pagudpud, Ilocos Norte.  
+                            </p>
+                            <p class="news-def">
+                                Super Typhoon Egay may have left a trail of devastation in the Ilocos Region, but together, we can be a beacon of hope for those affected indigent families in Pagudpud.Let us unite under the banner of compassion as DOST-MAYSA launches a Donation Drive for our fellow Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quia repudiandae officiis ipsum, minima similique, asperiores molestiae dolor a iusto vero corporis, magni doloribus facere distinctio possimus eveniet eligendi itaque nemo tempora debitis reiciendis vel rem facilis! Culpa suscipit aspernatur eligendi laboriosam, doloribus nobis neque, ipsum hic est corrupti sed.
+                            </p>
+                            <a href="#" class="news-see-more">Read More</a> 
                         </div>
                     </div>
+                    <!-- <div class="news">
+                        <figure class="news-img-box">
+                            <img src="img/news/news-img5.jpg" alt="" class="news-img">
+                        </figure>
+                        <div class="news-content">
+                            <p class="news-date">
+                                13 July 2023
+                            </p>
+                            <p class="news-title">
+                                2023 DOST-Scholars’ Exit Conference at  Lingayen, Pangasinan 
+                            </p>
+                            <p class="news-def">
+                                The Department of Science and Technology Region 1 (DOST 1) conducted an Exit Conference to 85 DOST-Science Education Institute (SEI) graduating scholars from Pangasinan on July 12-13, 2023 at Provincial Training and Development Center, Lingayen, Pangasinan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatum quibusdam quisquam itaque, voluptates ducimus id eaque quod hic blanditiis aperiam error, beatae voluptate neque optio quos suscipit veritatis. Saepe praesentium officia ratione quis quasi sit adipisci suscipit magni eos blanditiis. Fuga a ea totam! Eos dicta corrupti delectus id.
+                            </p>
+                            <a href="#" class="news-see-more">Read More</a> 
+                        </div>
+                    </div>
+                    <div class="news">
+                        <figure class="news-img-box">
+                            <img src="img/news/news-img6.jpg" alt="" class="news-img">
+                        </figure>
+                        <div class="news-content">
+                            <p class="news-date">
+                                7 May 2023
+                            </p>
+                            <p class="news-title">
+                                DOST-PUSP Secures Two Spots for Prevail 2023 Final Round
+                            </p>
+                            <p class="news-def">
+                                University of the Philippines Diliman - After an intense battle of wits among five teams from DOST - PUSO, consisting of three members each, two teams have emerged victorious, securing their spots in the final round of Prevail 2023 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste earum atque ipsam, consequuntur id molestias asperiores sapiente quod odit suscipit quaerat totam ratione magni consectetur quam rem quae nihil deleniti ea culpa, corrupti ipsa consequatur quo delectus. Voluptatem sint quidem itaque deserunt doloremque molestias sequi, ex dolorem amet error labore.
+                            </p>
+                            <a href="#" class="news-see-more">Read More</a> 
+                        </div>
+                    </div>
+                    <div class="news">
+                        <figure class="news-img-box">
+                            <img src="img/news/news-img5.jpg" alt="" class="news-img">
+                        </figure>
+                        <div class="news-content">
+                            <p class="news-date">
+                                13 July 2023
+                            </p>
+                            <p class="news-title">
+                                2023 DOST-Scholars’ Exit Conference at  Lingayen, Pangasinan 
+                            </p>
+                            <p class="news-def">
+                                The Department of Science and Technology Region 1 (DOST 1) conducted an Exit Conference to 85 DOST-Science Education Institute (SEI) graduating scholars from Pangasinan on July 12-13, 2023 at Provincial Training and Development Center, Lingayen, Pangasinan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatum quibusdam quisquam itaque, voluptates ducimus id eaque quod hic blanditiis aperiam error, beatae voluptate neque optio quos suscipit veritatis. Saepe praesentium officia ratione quis quasi sit adipisci suscipit magni eos blanditiis. Fuga a ea totam! Eos dicta corrupti delectus id.
+                            </p>
+                            <a href="#" class="news-see-more">Read More</a> 
+                        </div>
+                    </div>
+                    <div class="news">
+                        <figure class="news-img-box">
+                            <img src="img/news/news-img6.jpg" alt="" class="news-img">
+                        </figure>
+                        <div class="news-content">
+                            <p class="news-date">
+                                7 May 2023
+                            </p>
+                            <p class="news-title">
+                                DOST-PUSP Secures Two Spots for Prevail 2023 Final Round
+                            </p>
+                            <p class="news-def">
+                                University of the Philippines Diliman - After an intense battle of wits among five teams from DOST - PUSO, consisting of three members each, two teams have emerged victorious, securing their spots in the final round of Prevail 2023 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste earum atque ipsam, consequuntur id molestias asperiores sapiente quod odit suscipit quaerat totam ratione magni consectetur quam rem quae nihil deleniti ea culpa, corrupti ipsa consequatur quo delectus. Voluptatem sint quidem itaque deserunt doloremque molestias sequi, ex dolorem amet error labore.
+                            </p>
+                            <a href="#" class="news-see-more">Read More</a> 
+                        </div>
+                    </div> -->
                 </div>
             </div>
             
         </section>
 
-        <section class="projects" id="projects">
+
+        <!-- <section class="projects" id="projects">
             <div class="container">
                 <h2>Projects</h2>
                 <div class="projects-grids">
@@ -302,7 +361,7 @@
                     <a href="#" class="button">View More</a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="contact" id="contact">
             <div class="container">
@@ -381,7 +440,6 @@
     </footer>
 
     <script src="main.js"></script>
-
     
 
 </body>

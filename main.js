@@ -19,6 +19,7 @@ window.onload = function () {
 }
 
 //Slideshow
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -36,6 +37,9 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("imgSlides");
   let dots = document.getElementsByClassName("dot");
+  let bannerImg = document.querySelector(".banner");
+
+
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -46,4 +50,40 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+
+  bannerImg.style.backgroundImage = `url(${slides[slideIndex - 1].src})`;
 }
+
+
+//Slideshowwswdas
+
+let slideIndexx = 1;
+showSlidess(slideIndexx);
+
+function plusSlidess(o) {
+  showSlidess(slideIndexx += o);
+}
+
+// Thumbnail image controls
+function currentSlidess(o) {
+  showSlidess(slideIndexx = o);
+}
+
+function showSlidess(o) {
+  let j;
+  let slidess = document.getElementsByClassName("officers");
+  let dotss = document.getElementsByClassName("dott");
+
+  if (o > slidess.length) {slideIndexx = 1}
+  if (o < 1) {slideIndexx = slidess.length}
+  for (j = 0; j < slidess.length; j++) {
+    slidess[j].style.display = "none";
+  }
+  for (j = 0; j < dotss.length; j++) {
+    dotss[j].className = dotss[j].className.replace(" active", "");
+  }
+  slidess[slideIndexx-1].style.display = "block";
+  dotss[slideIndexx-1].className += " active";
+
+}
+
