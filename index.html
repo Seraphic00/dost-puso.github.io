@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>DOST PUSO</title>
+    <title>DOST PUSO - Home</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,17 +20,17 @@
 <body>
     <header>
         <div class="container">
-            <p>
+            <a href="#" class="dostpuso">
                 <img id="title-logo" src="img/logo/logo.png" alt="">
                 <h2 id="title-name">DOST-PUSO</h2>
-            </p>
+            </a>
             <div class="navbar">
                 <ul class="navlinks">
                     <li class="navlink">
                         <a href="#">Home</a>
                     </li>
                     <li class="navlink dropdown-arrow">
-                        <a href="#">About Us
+                        <a href="pages/about-us/aboutus.html">About Us
                             <span class="material-icons dropdown-icon">
                                 arrow_drop_down
                             </span>
@@ -42,7 +42,7 @@
                         </ul>
                     </li>
                     <li class="navlink dropdown-arrow">
-                        <a href="#">Events 
+                        <a href="pages/programsandprojects/proandpro.html">Programs and Projects 
                             <span class="material-icons dropdown-icon">
                             arrow_drop_down
                         </span></a>
@@ -53,7 +53,7 @@
                         </ul>
                     </li>
                     <li class="navlink dropdown-arrow">
-                        <a href="#">Scholarship
+                        <a href="pages/scholarships/scholarships.html">Scholarships
                             <span class="material-icons dropdown-icon">
                                 arrow_drop_down
                         </span></a>
@@ -64,7 +64,7 @@
                         </ul>
                     </li>
                     <li class="navlink">
-                        <a href="#">Contacts</a>
+                        <a href="pages/contacts/contacts.html">Contacts</a>
                     </li>
                 </ul>
             </div>
@@ -75,14 +75,13 @@
         <section class="banner">
             <div class="container">
                 <div class="banner-text">
-                    <!-- <img id="banner-logo" src="img/logo/logo.png" alt="DOST-PUSO logo"> -->
                     <h1 id="main-title">DOST - PSU UCC Scholars’ Organization </h1>
                     <h3 id="main-p">
                         Welcome to DOST - PUSO, where we unite and empower DOST Scholars to make an impact in Pangasinan State University and beyond.
                         Discover our events, achievements, and how you can get involved!  
                     </h3>
-                    <a href="#" class="button lmore">Learn More</a>
-                    <a href="#" class="button joinus">Join Us</a>
+                    <a href="#about-us" class="button lmore">Learn More</a>
+                    <a href="pages/joinus/joinus.html" class="button joinus">Join Us</a>
                 </div>
                 <div class="banner-img">
                     <div class="slideshow-img">
@@ -128,19 +127,20 @@
             </div>
         </section>
 
-        <section class="about-us">
+        <section class="about-us" id="about-us">
             <div class="container">
                 <div class="officers-img">
-                    <img class="officers fadee" src="img/officers/one.png" style="width:100%">
-                    <img class="officers fadee" src="img/officers/two.png" style="width:100%">
-                    <img class="officers fadee" src="img/officers/three.png" style="width:100%">
-                    <img class="officers fadee" src="img/officers/four.png" style="width:100%">
-
+                    <a href="pages/about-us/aboutus.html">
+                        <img class="officers fadee" src="img/officers/one.png" style="width:100%">
+                        <img class="officers fadee" src="img/officers/two.png" style="width:100%">
+                        <img class="officers fadee" src="img/officers/three.png" style="width:100%">
+                        <img class="officers fadee" src="img/officers/four.png" style="width:100%">
+                    </a>
                     <a class="prevv" onclick="plusSlidess(-1)">&#10094;</a>
                     <a class="nextt" onclick="plusSlidess(1)">&#10095;</a>
                 </div>
                 <div class="slideshow-text">
-                    <h2>About Us</h2>
+                    <h2><a href="pages/about-us/aboutus.html" >About Us</a></h2>
                     <p class="aboutus-def">
                         The DOST-PSU UCC Scholars’ Organization, affectionately known as DOST-PUSO, had its humble beginnings on October 1, 2022. Founded by a group of passionate Department of Science and Technology (DOST) scholars at Pangasinan State University's Urdaneta City Campus, the organization's inception marked the commencement of a remarkable journey.
                         <br>
@@ -154,39 +154,110 @@
             </div>
         </section>
 
-        <section class="calendar">
+        <section class="calendar" id="calendar">
             <div class="container">
                 <div class="activities">
-                    <h2>Calendar of Activities <span id="calendar-ay">(2023 - 2024)</span></h2>
+                    <h2><a href="pages/programsandprojects/proandpro.html">Calendar of Activities <span id="calendar-ay">(2023 - 2024)</span></a></h2>
                     <div class="events">
-                        <div class="date-col1">
-                            <a class="cal-link" href="#">Oct 2023</a>
-                            <a class="cal-link" href="#">Oct - Nov 2023</a>
-                            <a class="cal-link" href="#">Dec 2023</a>
-                            <a class="cal-link" href="#">Jan 2024</a>
-                            <a class="cal-link" href="#">Feb 2024 5</a>
-                        </div>
-                        <div class="event-col1">
-                            <a class="cal-link" href="#">Election of DOST – PUSO Officers</a>
-                            <a class="cal-link" href="#">Release of DOST – PUSO Merchandise</a>
-                            <a class="cal-link" href="#">Pamasko ni Isko</a>
-                            <a class="cal-link" href="#">DOST Kumustahan</a>
-                            <a class="cal-link" href="#">DOST Qualifying Exam Tutorials</a>
-                        </div>
-                        <div class="date-col2">
-                            <a class="cal-link" href="#">Mar 2024</a>
-                            <a class="cal-link" href="#">Jul 2024</a>
-                            <a class="cal-link" href="#">Aug 2024</a>
-                            <a class="cal-link" href="#">Sep 2024</a>
-                            <a class="cal-link" href="#">Feb 5</a>
-                        </div>
-                        <div class="event-col1">
-                            <a class="cal-link" href="#">Collaboration with Technoscope Publications for Sci-Tech Journnals</a>
-                            <a class="cal-link" href="#">Gift giving 2.0</a>
-                            <a class="cal-link" href="#">Junior Level Science Scholarship (JLSS) Campaign</a>
-                            <a class="cal-link" href="#">Brigada Eskwela</a>
-                            <a class="cal-link" href="#">DOST Qualifying Exam Tutorials</a>
-                        </div>
+                        <a class="cal-link" href="pages/programsandprojects/proandpro.html">
+                            <div class="month-year">
+                                <p id="my">Dec - Nov 2023</p>
+                                <p id="d">05</p>
+                            </div>
+                            <div class="event">
+                                <p id="e">Election of DOST – PUSO Officers</p>
+                            </div>
+                        </a>
+                        <a class="cal-link" href="pages/programsandprojects/proandpro.html">
+                            <div class="month-year">
+                                <p id="my">Dec - Nov 2023</p>
+                                <p id="d">05</p>
+                            </div>
+                            <div class="event">
+                                <p id="e">Election of DOST – PUSO Officerssdadadadadasdadasdasdsaddasdsadsahhhhhhh</p>
+                            </div>
+                        </a>
+                        <a class="cal-link" href="pages/programsandprojects/proandpro.html">
+                            <div class="month-year">
+                                <p id="my">Dec - Nov 2023</p>
+                                <p id="d">05</p>
+                            </div>
+                            <div class="event">
+                                <p id="e">Election of DOST – PUSO Officers</p>
+                            </div>
+                        </a>
+                        <a class="cal-link" href="pages/programsandprojects/proandpro.html">
+                            <div class="month-year">
+                                <p id="my">Dec - Nov 2023</p>
+                                <p id="d">05</p>
+                            </div>
+                            <div class="event">
+                                <p id="e">Election of DOST – PUSO Officers</p>
+                            </div>
+                        </a>
+                        <a class="cal-link" href="pages/programsandprojects/proandpro.html">
+                            <div class="month-year">
+                                <p id="my">Dec - Nov 2023</p>
+                                <p id="d">05</p>
+                            </div>
+                            <div class="event">
+                                <p id="e">Election of DOST – PUSO Officers</p>
+                            </div>
+                        </a>
+                        <a class="cal-link" href="pages/programsandprojects/proandpro.html">
+                            <div class="month-year">
+                                <p id="my">Dec - Nov 2023</p>
+                                <p id="d">05</p>
+                            </div>
+                            <div class="event">
+                                <p id="e">Election of DOST – PUSO Officers</p>
+                            </div>
+                        </a>
+                        <a class="cal-link" href="pages/programsandprojects/proandpro.html">
+                            <div class="month-year">
+                                <p id="my">Dec - Nov 2023</p>
+                                <p id="d">05</p>
+                            </div>
+                            <div class="event">
+                                <p id="e">Election of DOST – PUSO Officers</p>
+                            </div>
+                        </a>
+                        <a class="cal-link" href="pages/programsandprojects/proandpro.html">
+                            <div class="month-year">
+                                <p id="my">Dec - Nov 2023</p>
+                                <p id="d">05</p>
+                            </div>
+                            <div class="event">
+                                <p id="e">Election of DOST – PUSO Officers</p>
+                            </div>
+                        </a>
+                        <a class="cal-link" href="pages/programsandprojects/proandpro.html">
+                            <div class="month-year">
+                                <p id="my">Dec - Nov 2023</p>
+                                <p id="d">05</p>
+                            </div>
+                            <div class="event">
+                                <p id="e">Election of DOST – PUSO Officers</p>
+                            </div>
+                        </a>
+                        <a class="cal-link" href="pages/programsandprojects/proandpro.html">
+                            <div class="month-year">
+                                <p id="my">Dec - Nov 2023</p>
+                                <p id="d">05</p>
+                            </div>
+                            <div class="event">
+                                <p id="e">Election of DOST – PUSO Officers</p>
+                            </div>
+                        </a>
+                        <a class="cal-link" href="pages/programsandprojects/proandpro.html">
+                            <div class="month-year">
+                                <p id="my">Dec - Nov 2023</p>
+                                <p id="d">05</p>
+                            </div>
+                            <div class="event">
+                                <p id="e">Election of DOST – PUSO Officers</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="calendar-latest">
@@ -327,7 +398,7 @@
 
         <section id="latest-news" class="latest-news">
             <div class="container">
-                <h2>Latest News</h2>
+                <h2><a href="pages/programsandprojects/proandpro.html">Latest News</a></h2>
                 <div class="latest-news-grid">
                     <div class="news">
                         <figure class="news-img-box">
@@ -534,7 +605,7 @@
                 <form class="contact-form">
                     <div class="contact-us-grid">
                         <h2 class="get-in-touch">
-                            Get in touch
+                            <a href="pages/contacts/contacts.html">Get in touch</a>
                         </h2>
                         <p class="fill-get">
                             Fill ou the form below to get in touch with us. We are here to answer any questions you may have and provide the information you need.
@@ -560,7 +631,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="img/logo/header-logo.png" alt="">
+                <a href="#"><img src="img/logo/header-logo.png" alt=""></a>
             </div>
             <div class="footer-quicklinks">
                 <p class="footer-title"><b>QUICKLINKS</b></p>
@@ -569,19 +640,19 @@
                         <span class="material-icons arrow-left">
                             arrow_right
                         </span>
-                       <a href="#" class=" f-links"> DOST Scholars’ Inter-Campus Association of Pangasinan (DOST SICAP)</a>   
+                       <a href="https://www.facebook.com/dost.sicap/" class=" f-links" target="_blank"> DOST Scholars’ Inter-Campus Association of Pangasinan (DOST SICAP)</a>   
                     </li>
                     <li>
                         <span class="material-icons arrow-left">
                             arrow_right
                         </span>
-                        <a class="f-links" href="#"> DOST Mobilized Amianan Youth Scholars’ Association (DOST MAYSA)</a>
+                        <a class="f-links" href="https://www.facebook.com/dostmaysa" target="_blank"> DOST Mobilized Amianan Youth Scholars’ Association (DOST MAYSA)</a>
                     </li>
                     <li>
                         <span class="material-icons arrow-left">
                             arrow_right
                         </span>
-                        <a class="f-links" href="#"> DOST Science and Education Institute (DOST SEI)</a>
+                        <a class="f-links" href="https://www.dost.gov.ph/" target="_blank"> DOST Science and Education Institute (DOST SEI)</a>
                     </li>
                 </ul>
             </div>

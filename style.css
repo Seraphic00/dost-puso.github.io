@@ -10,6 +10,8 @@
     font-family: 'Fira Sans', sans-serif;
 }
 
+html{scroll-behavior:smooth}
+
 .button{
     appearance: none;
     border: none;
@@ -52,13 +54,16 @@
 }
 
 section h2{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+section h2 a{
     text-transform: uppercase;
     color: #313131;
     font-size: 40px;
     font-weight: 550;
-    text-decoration: wavy;
     font-family: Oregon;
+    text-decoration: none;
 }
 
 img{
@@ -77,18 +82,25 @@ header{
         padding-bottom: 32px;
         display: flex;
         justify-content: space-between; 
+
+        .dostpuso{
+            display: flex;
+            text-decoration: none;
+            color: #313131;
+            align-items: center;
+
+            #title-logo{
+                width: 80px;
+                height: auto;
+            }
+    
+            #title-name{
+                font-family:  Oregon;
+                font-size: 35px;
+                
+            }
         
-
-        #title-logo{
-            width: 80px;
-            height: auto;
         }
-
-        #title-name{
-            font-family:  Oregon;
-            font-size: 35px;
-        }
-
         .navbar{
             margin-left: auto;
             padding: 0.5rem 1.5rem;
@@ -271,13 +283,17 @@ main{
                         font-weight: bold;
                         font-size: 18px;
                         transition: 0.6s ease;
-                        border-radius: 0 3px 3px 0;
+                        border-radius: 100px;
                         user-select: none;
                     }
         
                     .next {
                         right: 0;
-                        border-radius: 3px 0 0 3px;
+                        margin-right: 10px;
+                    }
+
+                    .prev{
+                        margin-left: 10px;
                     }
         
                     .prev:hover, .next:hover {
@@ -378,18 +394,18 @@ main{
                     top: 50%;
                     width: auto;
                     margin-top: -22px;
-                    padding: 16px;
+                    padding: 12px;
                     color: #34C1D5;
                     font-weight: bold;
-                    font-size: 18px;
+                    font-size: 30px;
                     transition: 0.6s ease;
-                    border-radius: 0 3px 3px 0;
                     user-select: none;
+                    border-radius: 100px;
                 }
     
                 .nextt {
                     right: 0;
-                    border-radius: 3px 0 0 3px;
+                    
                 }
     
                 .prevv:hover, .nextt:hover {
@@ -416,11 +432,18 @@ main{
 
             .officers:hover{
                 transform: scale(1.1);
+                transition: 0.3s ease-in-out;
             }
 
             .slideshow-text{
                 text-align: justify;
                 line-height: 1.5;
+
+                /* .section-title a{
+                    text-decoration: none;
+                    color: #313131;
+                    fon
+                } */
             }
             
         }
@@ -445,64 +468,45 @@ main{
                     font-family: Oregon;
                 }
 
-                .cal-link{
-                    text-decoration: none;
-                    font-size: 18px;
-                    overflow: hidden;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 2; /* number of lines to show */
-                            line-clamp: 2; 
-                    -webkit-box-orient: vertical;
-                    margin: 5px;
-                }
-
                 .events{
-                    margin-left: 10px;
-                    margin-right: 80px;
                     display: grid;
-                    grid-template-columns: repeat(10,1fr);
-                    grid-gap: 10px;
-    
-                    .date-col1{
-                        grid-column: span 2;
+                    grid-template-rows: repeat(5, 1fr);
+                    gap: 10px;
+                    grid-auto-flow: column;
+                    max-width: 900px;
+                    overflow: hidden;
+                    padding-left: 10px;
+
+                    .cal-link{
+                        font-size: 18px;
+                        min-width: 450px;
+                        text-decoration: none;
                         display: grid;
-                        grid-template-rows: repeat(5,1fr);
-                        grid-gap: 5px;
-                        text-align: end;
-                        font-weight: 550;
-                    }
-                    
-                    .date-col1 a{
-                        color: #09c7e0;
-                        max-lines: 2;
-                    }
-                    
-                    .event-col1{
-                        grid-column: span 3;
-                        display: grid;
-                        grid-template-rows: repeat(5,1fr);
-                        grid-gap: 5px;
-                        
-                    }
-    
-                    .date-col2{
-                        grid-column: span 2;
-                        display: grid;
-                        grid-template-rows: repeat(5,1fr);
-                        grid-gap: 5px;
-                        text-align: end;
-                        font-weight: 550;
+                        grid-template-columns: 40% 60%;
+                        text-align: start;
+
+                        .month-year{
+                          text-align: end;
+                          margin: 5px;
+                          color: #0aadc3;
+                          font-weight: bold;
+                        }
+
+                        .event{
+                            padding-left: 12px;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2; /* number of lines to show */
+                                    line-clamp: 2; 
+                            -webkit-box-orient: vertical;
+                            margin: 5px;
+                            color: black;
+                        }
                     }
 
-                    .date-col2 a{
-                        color: #09c7e0;
-                    }
-                    
-                    .event-col2{
-                        grid-column: span 3;
-                        display: grid;
-                        grid-template-rows: repeat(5,1fr);
-                        grid-gap: 5px;
+                    .cal-link:hover{
+                        transform: scale(1.1);
+                        transition: 0.3s ease-in-out;
                     }
                 }
             }
@@ -537,16 +541,23 @@ main{
                     padding-top: 10px;
                 } 
             }
+
+            .calendar-latest:hover{
+                transform: translateY(-20px) scale(1.1);
+                transition: 0.3s ease-in-out;
+            }
             
         }
     }
+
+
 
     .acts {
 
         .container {
             background-color: #E2FBFF;
-            padding-left: 250px;
-            padding-right: 250px;
+            padding-left: 200px;
+            padding-right: 150px;
             padding-bottom: 64px;
             
             .slider-wrapper {
