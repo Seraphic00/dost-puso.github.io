@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @font-face {
     font-family: Oregon;
     src: url(../fonts/ORD_____.TTF);
@@ -7,7 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 html{scroll-behavior:smooth}
@@ -29,13 +31,21 @@ html{scroll-behavior:smooth}
     font-weight: 200;
     cursor: pointer;
     text-decoration: none;
+    font-weight: 450;
+
+    
 
     @media (max-width: 767px) {
 		font-size: 18px;
 	}
 }
 
-.container{
+.button:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+.containers{
     max-width: 1600px;
     margin: 0 auto;
     padding-left: 150px;
@@ -77,7 +87,7 @@ header{
     width: 100%;
     z-index: 99;
 
-    .container{
+    .containers{
         padding-top: 32px;
         padding-bottom: 32px;
         display: flex;
@@ -133,14 +143,14 @@ header{
                     width: 20px;
                     background: white;
                     left: 20px;
-                    top: -2px;
+                    top: -1px;
                     transform: rotate(45deg);
                     z-index: -1;
                 }
 
                 .dropdown{
                     position: absolute;
-                    margin: 1rem -0.5rem;
+                    margin: 0.5rem -0.5rem;
                     height: auto;
                     background: white;
                     color: black;
@@ -192,7 +202,8 @@ header{
     &.is-scrolling {
 		background-color: white;
         box-shadow: 0 1px 20px 0 rgba(0,0,0,.2);
-		.container {
+
+		.containers {
 			padding-top: 16px;
 			padding-bottom: 16px;
             border-radius: 20px;
@@ -203,7 +214,7 @@ header{
 
 main{
 
-    .banner{
+    .bannerslideshow{
         color: black;
         position: relative;
         min-height: 100vh;
@@ -227,7 +238,7 @@ main{
             opacity: 0.8;
         }
     
-        .container{
+        .containers{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 50px;
@@ -249,7 +260,7 @@ main{
                 #main-p{
                     margin-top: 20px;
                     font-size: 16px;
-                    font-weight: 200;
+                    font-weight: 450;
                     margin-bottom: 10px;
                     line-height: 1.5;
                 }
@@ -260,43 +271,43 @@ main{
                 align-items: center;
                 padding-left: 50px;
 
-                .slideshow-img{
+                .slideshow-image{
                     grid-column: span 2;
                     max-width: 1000px;
                     position: relative;
                     margin: auto;
                     z-index: 2;
                     
-                    .imgSlides {
+                    .images-slides {
                         display: none;
                         border-radius: 1rem;
                     }
         
-                    .prev, .next {
+                    .arrowleft, .arrowright {
                         cursor: pointer;
                         position: absolute;
                         top: 50%;
                         width: auto;
-                        margin-top: -22px;
-                        padding: 16px;
+                        margin-top: -32px;
+                        padding: 10px;
                         color: white;
                         font-weight: bold;
-                        font-size: 18px;
+                        font-size: 30px;
                         transition: 0.6s ease;
                         border-radius: 100px;
                         user-select: none;
                     }
         
-                    .next {
+                    .arrowright {
                         right: 0;
                         margin-right: 10px;
                     }
 
-                    .prev{
+                    .arrowleft{
                         margin-left: 10px;
                     }
         
-                    .prev:hover, .next:hover {
+                    .arrowleft:hover, .arrowright:hover {
                         background-color: rgba(0,0,0,0.8);
                     }
     
@@ -330,12 +341,12 @@ main{
                         }
                     }
         
-                    .fade {
-                        animation-name: fade;
+                    .f {
+                        animation-name: f;
                         animation-duration: 1.5s;
                     }
         
-                    @keyframes fade {
+                    @keyframes f {
                         from {opacity: .8}
                         to {opacity: 1}
                     }
@@ -369,9 +380,9 @@ main{
     .about-us{
         background-color: white;
         
-        .container{
+        .containers{
             padding-top: 64px;
-			padding-bottom: 10px;
+			padding-bottom: 64px;
             display: grid;
             grid-template-columns: auto auto;
             grid-gap: 50px;
@@ -452,262 +463,328 @@ main{
 
     .calendar{
 
-        .container{
+        .containers{
             background-image: url('img/waves/wave2.png');
             background-size: cover;
             padding-bottom: 50px;
             padding-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
+
+            #calendar-ay{
+                font-family: Oregon;
+            }
             
-            .activities{
-                padding-top: 120px;
-                grid-column: span 3;
+            .cal-container{
+                margin-left: 100px;
+                margin-right: 100px;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+                border-radius: 10px;
 
-                #calendar-ay{
-                    font-family: Oregon;
-                }
+                .projects{
+                    grid-column: span 3;
+                    
 
-                .events{
-                    display: grid;
-                    grid-template-rows: repeat(5, 1fr);
-                    gap: 10px;
-                    grid-auto-flow: column;
-                    max-width: 900px;
-                    overflow: hidden;
-                    padding-left: 10px;
-
-                    .cal-link{
-                        font-size: 18px;
-                        min-width: 450px;
-                        text-decoration: none;
-                        display: grid;
-                        grid-template-columns: 40% 60%;
-                        text-align: start;
-
-                        .month-year{
-                          text-align: end;
-                          margin: 5px;
-                          color: #0aadc3;
-                          font-weight: bold;
-                        }
-
-                        .event{
-                            padding-left: 12px;
-                            overflow: hidden;
-                            display: -webkit-box;
-                            -webkit-line-clamp: 2; /* number of lines to show */
-                                    line-clamp: 2; 
-                            -webkit-box-orient: vertical;
-                            margin: 5px;
-                            color: black;
-                        }
+                    .cal-def{
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                                line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                    }
+    
+                    .cal-day, .cal-my{
+                        color: #09c7e0;
+                        font-weight: bold;
                     }
 
-                    .cal-link:hover{
-                        transform: scale(1.1);
-                        transition: 0.3s ease-in-out;
+                    .cal-day{
+                        font-size: larger;
                     }
+    
+                    .cal-pad{
+                        padding-left: 50px;
+                    }
+
+                    .cal-scroll{
+                        max-height: 400px;
+                        overflow-y: auto;
+                    }
+
+                    #cal-title{
+                        font-size: 12px;
+                    }
+
+                    .cal-scroll::-webkit-scrollbar {
+                        height: 0px;
+                        width: 5px;
+                    }
+        
+                    .cal-scroll:hover::-webkit-scrollbar {
+                        height: 10px;
+                        width: 5px;
+                        transition: width 0.5s ease-in-out;
+                    }
+        
+                    .cal-scroll::-webkit-scrollbar-thumb {
+                        background-color: #09c7e0;
+                        border-radius: 100px;
+                        transition: background-color 0.5s ease-in-out;
+                    }
+        
+                    .cal-scroll::-webkit-scrollbar-track {
+                        background-color: #ccc;
+                        border-radius: 100px;
+                    }
+        
+                    .cal-scroll:hover::-webkit-scrollbar-track {
+                        background-color: #ccc;
+                        transition: background-color 0.5s ease-in-out;
+                    }
+        
+                    .cal-scroll:hover::-webkit-scrollbar-thumb {
+                        background-color: #09c7e0;
+                        border-radius: 50px;
+                        transition: background-color 0.5s ease-in-out;
+                        transform: scaleX(1.5);
+                    }
+    
                 }
-            }
-
-            .calendar-latest{
-                grid-column: span 1;
-                background-image: url('img/calendar/calendar.png');
-                background-position: center;
-                background-repeat: no-repeat;
-                height: 380px;
-                border-radius: 20px;
-                display: flex;
-                justify-content: center;
-                text-align: center;
-                align-items: center;
-                padding-top: 30px;
-                box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
-            
-                #latest-month-year{
-                    font-size: 30px;
-                    color: #09c7e0;
-                    font-weight: bolder;
+    
+                .calendar-latest{
+                    grid-column: span 1;
+                    background-image: url('img/calendar/calendar.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 200px;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
+                    padding-top: 50px;
+                
+                    #latest-month-year{
+                        font-size: 30px;
+                        color: #09c7e0;
+                        font-weight: bolder;
+                    }
+    
+                    #latest-day{
+                        font-size: 60px;
+                        color: #09c7e0;
+                        font-weight: bolder;
+                    }
+    
+                    #latest-event{
+                        padding-top: 10px;
+                    } 
+                }
+    
+                .calendar-latest:hover{
+                    transform: translateY(-20px) scale(1.1);
+                    transition: 0.3s ease-in-out;
                 }
 
-                #latest-day{
-                    font-size: 60px;
-                    color: #09c7e0;
-                    font-weight: bolder;
+                .wrapper{
+                    width: 400px;
+                    background: #fff;
+                    border-radius: 10px;
+                }
+                .wrapper .header{
+                    display: flex;
+                    align-items: center;
+                    padding: 25px 30px 10px;
+                    justify-content: space-between;
+                }
+                .header .icons{
+                    display: flex;
+                }
+                .header .icons span{
+                    height: 38px;
+                    width: 38px;
+                    margin: 0 1px;
+                    cursor: pointer;
+                    color: #878787;
+                    text-align: center;
+                    line-height: 38px;
+                    font-size: 1.9rem;
+                    user-select: none;
+                    border-radius: 50%;
+                }
+                .icons span:last-child{
+                    margin-right: -10px;
+                }
+                .header .icons span:hover{
+                    background: #f2f2f2;
+                }
+                .header .current-date{
+                    font-size: 1.45rem;
+                    font-weight: 500;
+                }
+                .calendar{
+                    padding: 20px;
+                }
+                .calendar ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    list-style: none;
+                    text-align: center;
+                }
+                .calendar .days{
+                    margin-bottom: 20px;
+                }
+                .calendar li{
+                    color: #333;
+                    width: calc(100% / 7);
+                    font-size: 1.07rem;
+                }
+                .calendar .weeks li{
+                    font-weight: 500;
+                    cursor: default;
+                }
+                .calendar .days li{
+                    z-index: 1;
+                    cursor: pointer;
+                    position: relative;
+                    margin-top: 30px;
+                }
+                .days li.inactive{
+                    color: #aaa;
+                }
+                .days li.active{
+                    color: #fff;
+                }
+                .days li::before{
+                    position: absolute;
+                    content: "";
+                    left: 50%;
+                    top: 50%;
+                    height: 40px;
+                    width: 40px;
+                    z-index: -1;
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .days li.active::before{
+                    background: #09c7e0;
+                }
+                .days li:not(.active):hover::before{
+                    background: #f2f2f2;
                 }
 
-                #latest-event{
-                    padding-top: 10px;
-                } 
-            }
-
-            .calendar-latest:hover{
-                transform: translateY(-20px) scale(1.1);
-                transition: 0.3s ease-in-out;
+                ol, ul {
+                    padding-left: 0rem;
+                }
             }
             
         }
     }
 
+    .gallery{
 
-
-    .acts {
-
-        .container {
+        .containers{
+            padding-left: 0;
+            padding-right: 0;
             background-color: #E2FBFF;
-            padding-left: 200px;
-            padding-right: 150px;
-            padding-bottom: 64px;
-            
-            .slider-wrapper {
+            padding-top: 30px;
+
+            .programs{
                 width: 100%;
                 overflow-x: auto;
-                scrollbar-width: thin; /* For Firefox */
-                scrollbar-color: #ccc #f1f4fd; /* For Firefox */
-                display: flex;
-                padding-bottom: 20px;
-            }
-    
-            .acts-grid {
-                display: flex;
-                gap: 10px;
-            }
-    
-            .actsel {
-                flex: 0 0 auto; /* Prevent flex items from shrinking */
-                width: 250px;
-                object-fit: cover;
-                white-space: normal;
-                overflow-x: hidden;
-                transition: transform 0.3s ease-in-out;
-                margin-right: 10px; /* Adjust the margin to create space between items */
-                margin-left: 10px;
-            }
-    
-            .actsel:last-child {
-                margin-right: 0; /* Remove margin for the last item */
-            }
-            .actsel:first-child {
-                margin-left: 0; /* Remove margin for the last item */
-            }
-            
-            .actsel:hover {
-                transform: scale(1.05);
-            }
-    
-            .acts-img {
-                display: block;
-                width: 100%;
-                height: 150px;
-                object-fit: cover;
-                border-radius: 20px;
-            }
-    
-            .acts-content {
-                text-align: justify;
-            }
-    
-            .acts-title {
-                font-weight: 600;
-                padding-top: 15px;
-                font-size: 12px;
-                overflow: hidden;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                        line-clamp: 2;
-                -webkit-box-orient: vertical;
-            }
-    
-            .acts-def {
-                font-size: 60%;
-                padding-top: 5px;
-                max-height: 50px;
-                overflow: hidden;
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                        line-clamp: 3;
-                -webkit-box-orient: vertical;
-            }
-    
-            .button {
-                grid-row: span 1;
-                font-size: 60%;
-                margin-top: 10px;
-                margin-bottom: 10px;
-                border-radius: 0;
-                padding: 8px;
-                color: white;
-                background-color: #09c7e0;
-            }
-
-            .slider-wrapper {
                 scrollbar-width: thin;
-                scrollbar-color: black #ccc;
+                scrollbar-color: #ccc #f1f4fd;
+                display: flex;
+
+                .program{
+                    display: flex;
+                    flex: 0 0 auto;
+                    width: 250px;
+                    object-fit: cover;
+                    white-space: normal;
+                    overflow-x: hidden;
+                    transition: transform 0.3s ease-in-out;
+                    background-size: cover;
+                    background-position: center;
+
+                    .content{
+                        display: block;
+                        padding: 45px;
+                        opacity: 0;
+                        color: white;
+                        background-color: rgba(0,0,0,0.6);
+
+                        .programname{
+                            font-weight: 600;
+                            font-size: 14px;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                                    line-clamp: 2;
+                            -webkit-box-orient: vertical;
+
+                        }
+
+                        .programdef{
+                            font-size: 12px;
+                            padding-top: 3px;
+                            text-align: justify;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                                    line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                        }
+
+                    }
+
+                    &:hover{
+                        .content{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            .programs::-webkit-scrollbar {
+                height: 0px;
+                width: 5px;
             }
 
-            .slider-wrapper:hover {
-                scrollbar-width: thin;
-                scrollbar-color: black #ccc;
-                transition: scrollbar-width 0.5s ease-in-out;
-            }
-
-            .slider-wrapper::-webkit-scrollbar {
-                height: 2px;
-                width: 10px;
-            }
-
-            .slider-wrapper:hover::-webkit-scrollbar {
+            .programs:hover::-webkit-scrollbar {
                 height: 10px;
-                width: 10px;
+                width: 5px;
                 transition: width 0.5s ease-in-out;
             }
 
-            .slider-wrapper::-webkit-scrollbar-thumb {
-                background-color: black;
+            .programs::-webkit-scrollbar-thumb {
+                background-color: #09c7e0;
                 border-radius: 100px;
                 transition: background-color 0.5s ease-in-out;
             }
 
-            .slider-wrapper::-webkit-scrollbar-track {
+            .programs::-webkit-scrollbar-track {
                 background-color: #ccc;
                 border-radius: 100px;
             }
 
-            .slider-wrapper:hover::-webkit-scrollbar-track {
+            .programs:hover::-webkit-scrollbar-track {
                 background-color: #ccc;
                 transition: background-color 0.5s ease-in-out;
             }
 
-            .slider-wrapper:hover::-webkit-scrollbar-thumb {
-                background-color: black;
+            .programs:hover::-webkit-scrollbar-thumb {
+                background-color: #09c7e0;
                 border-radius: 50px;
                 transition: background-color 0.5s ease-in-out;
                 transform: scaleX(1.5);
             }
-
-            .slider-wrapper:hover::-webkit-scrollbar {
-                width: 10px;
-                transition: width 0.5s ease-in-out;
-            }
-
-            
-            
-            
-
-            
-
-            
-
-
-            
-            
         }
     }
-    
+ 
     .latest-news{
 
-        .container{
+        .containers{
             padding-top: 64px;
             padding-bottom: 64px;
 
@@ -742,30 +819,38 @@ main{
                         }
                     }
                     .news-content{
-                        padding: 16px;
+                        padding: 12px;
                         text-align: justify;
                         grid-column: span 3;
 
                         .news-date{
-                            padding-top: 8px;
+                            padding-top: 5px;
                             font-style: oblique;
                             font-size: 70%;
+                            margin-bottom: 0;
                         }
 
                         .news-title{
                             font-weight: 600;
                             padding-top: 5px;
                             font-size: 12px;
-                            min-height: 50px;
-                            max-height: 50px;
+                            margin-bottom: 0;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                                    line-clamp: 2;
+                            -webkit-box-orient: vertical;
+
                         }
 
                         .news-def{
                             font-size: 60%;
                             padding-top: 5px;
-                            max-height: 50px;
-                            text-overflow: ellipsis;
                             overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                                    line-clamp: 3;
+                            -webkit-box-orient: vertical;
                         }
 
                         .news-def{
@@ -784,7 +869,6 @@ main{
                         }
 
                     }
-
                         
                 }
             }
@@ -794,83 +878,26 @@ main{
 
     .alumnis{
 
-        .container{
+        .containers{
             background-image: url('img/waves/wave3.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 800px;
+            height: 600px;
+            align-items: center;
+
+            .alum{
+                font-family: Oregon;
+                padding-top: 20px;
+            }
             
         }
     }
 
-    /* .projects{
-        padding-top: 64px;
-        padding-bottom: 64px;
-        background-color: #fff;
-
-        .projects-grids{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            grid-gap: 16px;
-            margin-bottom: 32px;
-
-            @media (max-width: 1024px){
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            @media (max-width: 767px) {
-				grid-template-columns: 1fr;
-			}
-
-            .project{
-                background-image: url(img/slide/img2.png);
-                border-radius: 16px;
-                overflow: hidden;
-
-                .content2{
-                    color: white;
-                    padding: 16px;
-                    background-color: rgba(64,39,68,0.8);
-                    opacity: 0;
-                    transition: 0.4s;
-
-                    .Projectname{
-                        font-size: 32px;
-                        margin-bottom: 16px;
-
-                        @media (max-width: 1024px){
-                            font: size 28px;
-                        }
-                    }
-    
-                    .Projectdef{
-                        font-size: 18px;
-                        margin-bottom: 16px;
-
-                        @media (max-width: 1024px){
-                            font: size 16px;
-                        }
-                    }
-                }
-
-                &:hover{
-                    .content2{
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-
-        .center{
-            text-align: center;
-        }
-    } */
-
     .contact{
 		background-color: white;
 
-		.container{
+		.containers{
 			padding-top: 64px;
 			padding-bottom: 64px;
 

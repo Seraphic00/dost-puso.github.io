@@ -18,13 +18,15 @@ window.onload = function () {
 	});
 }
 
-//Slideshow
 
+
+
+//Slideshow
 let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
-function plusSlides(n) {
+function plusSli(n) {
   showSlides(slideIndex += n);
 }
 
@@ -35,9 +37,9 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("imgSlides");
+  let slides = document.getElementsByClassName("images-slides");
   let dots = document.getElementsByClassName("dot");
-  let bannerImg = document.querySelector(".banner");
+  let bannerImg = document.querySelector(".bannerslideshow");
 
 
   if (n > slides.length) {slideIndex = 1}
@@ -56,7 +58,6 @@ function showSlides(n) {
 
 
 //Slideshowwswdas
-
 let slideIndexx = 1;
 showSlidess(slideIndexx);
 
@@ -86,4 +87,5 @@ function showSlidess(o) {
   dotss[slideIndexx-1].className += " active";
 
 }
+
 
