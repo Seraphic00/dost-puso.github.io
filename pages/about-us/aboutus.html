@@ -1,26 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> DOST PUSO - About Us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> DOST PUSO - About Us</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-    <link rel="stylesheet" href="aboutus.css">
-    <link rel="shortcut icon" href="img/logo/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="aboutus.css">
+  <link rel="shortcut icon" href="img/logo/logo.png" type="image/x-icon">
 </head>
 <body>
-    <div style="text-align: center; align-items: center;margin: auto; margin: 200px;">
-        <h1>About Us</h1>
-        History - Vision - Mision - Officers - alumnis
+  <header class="py-3 border-bottom">
+    <div class="container d-flex flex-wrap justify-content-center">
+      <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+        <img class="bi me-2" width="40" height="32" src="/img/logo/logo.png">
+        <span class="fs-4" style="font-family: Oregon;">DOST-PUSO</span>
+      </a>
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </form>
     </div>
+  </header>
     
-    
+  <main style="padding-top: 20px;">
+    <section class="history">
+      <div class="container">
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'History')">History</button>
+          <button class="tablinks" onclick="openCity(event, 'Mission')">Mission</button>
+          <button class="tablinks" onclick="openCity(event, 'Vision')">Vision</button>
+          <button class="tablinks" onclick="openCity(event, 'Officers')">Officers</button>
+          <button class="tablinks" onclick="openCity(event, 'Alumnis')">Alumnis</button>
+        </div>
+                  
+        <!-- Tab content -->
+        <div id="History" class="tabcontent active">
+          <h3>History</h3>
+          <p>London is the capital city of England.</p>
+        </div>
+                  
+        <div id="Mission" class="tabcontent">
+          <h3>Mission</h3>
+          <p>Paris is the capital of France.</p>
+        </div>
+                  
+        <div id="Vision" class="tabcontent">
+          <h3>Vision</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="Officers" class="tabcontent">
+          <h3>Officers</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="Alumnis" class="tabcontent">
+          <h3>Alumnis</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    function openCity(evt, cityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Display the content of the first tab when the page loads
+    document.getElementById("History").style.display = "block";
+    document.getElementsByClassName("tablinks")[0].className += " active";
+  </script>
 </body>
 </html>
