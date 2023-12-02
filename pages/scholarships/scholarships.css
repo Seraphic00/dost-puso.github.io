@@ -1,11 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @font-face {
     font-family: Oregon;
-    src: url(../fonts/ORD_____.TTF);
+    src: url(/fonts/ORD_____.TTF);
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+   
+
+th,td{
+    padding: 10px;
+}
+
+.logo-section {
+    text-align: center;
+}
+
+.logo-sec{
+    display: grid;
+    grid-auto-flow: column;
+    text-align: left;
+    align-items: center;
+}
+
+.logoimg {
+    /* Additional styles for the image if needed */
+    display: inline-block; /* Ensures the image behaves as an inline block */
+}
+
+.brdupper{
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.himg{
+    width: 1200px;
+    height: auto;
+    align-items: center;
+    padding: 30px;
+    margin: auto;
+}
+
+#vmbold{
+    color: #34C1D5;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.tbs{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    .tab {
+        overflow: hidden;
+        background-color: #34C1D5;
+
+        .tablinks{
+            text-transform: uppercase;
+            font-size: 14px;
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            color: white;
+        }
+
+        .tablinks:hover {
+            background-color: #E2FBFF;
+            color: black;
+            font-weight: bold;
+        }
+          
+        .tablinks.active {
+            background-color: white;
+            color: black;
+            font-weight: bold;
+        }
+    }
+
+    .tbcon{
+        .tabcontent{
+            padding: 40px !important;
+            background-color: white;
+            display: none;
+            padding: 6px 12px;
+
+            .con{
+                padding: 30px;
+                text-align: justify;
+            }
+        }
+
+        .tbcontitle{
+            color: #34C1D5;
+            font-weight: 1000;
+            padding-bottom: 20px;
+            
+        }
+    }
+}
+
+footer{
+    background-color: white;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
+    transform: scale(0.95);
+
+    #fttitle{
+        font-weight: 800;
+    }
+}
+
+.arr{
+    padding-left: 100px;
+    padding-right: 100px;
+    transform: scale(0.95);
 }

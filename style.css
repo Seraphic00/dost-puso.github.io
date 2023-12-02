@@ -34,6 +34,11 @@ html{scroll-behavior:smooth}
     font-weight: 450;
 }
 
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+
 .button:hover{
     transform: scale(1.1);
     transition: 0.3s ease-in-out;
@@ -90,7 +95,7 @@ header{
         padding-top: 32px;
         padding-bottom: 32px;
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
 
         .dostpuso{
             display: flex;
@@ -99,7 +104,7 @@ header{
             align-items: center;
 
             #title-logo{
-                width: 80px;
+                width: 60px;
                 height: auto;
             }
     
@@ -110,16 +115,15 @@ header{
             }
         
         }
-       .navbar{
+       .nbar{
             margin-left: auto;
-            padding: 0.5rem 1.5rem;
             
-            
-            .navlinks{
+            .nlinks{
                 display: flex;
                 gap: 2rem;
+                align-items: center;
 
-                .navlink, .dropdown{
+                .nlink, .dropdown{
                     list-style: none;
                     height: 100%;
                     padding: 0.5rem;
@@ -151,7 +155,7 @@ header{
                     }
                 }
 
-                .navlink a{
+                .nlink a{
                     text-decoration: none;
                     color: currentColor;
                 }
@@ -180,7 +184,7 @@ header{
                     display: none;
                 }
 
-                .navlink:hover{
+                .nlink:hover{
                     color: #09c7e0;
                 }
 
@@ -1088,11 +1092,17 @@ footer{
     padding-left: 100px;
     padding-right: 100px;
     align-items: center;
+    transform: scale(0.95);
+
+    #fttitle{
+        font-weight: 800;
+    }
 }
 
 .arr{
     padding-left: 100px;
-    padding-right: 100px; 
+    padding-right: 100px;
+    transform: scale(0.95);
 }
 
 
