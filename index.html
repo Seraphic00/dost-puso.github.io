@@ -35,15 +35,16 @@
                         <a href="#">Home</a>
                     </li>
                     <li class="nlink dropdown-arrow">
-                        <a href="pages/about-us/aboutus.html">About Us
+                        <a href="pages/about-us/aboutus.html">About Us 
                             <span class="material-icons dropdown-icon">
-                                arrow_drop_down
-                            </span>
-                        </a>
+                            arrow_drop_down
+                        </span></a>
                         <ul class="dropdown">
-                            <li><a href="pages/about-us/aboutus.html">History</a></li>
-                            <li><a href="pages/about-us/aboutus.html">Mission</a></li>
-                            <li><a href="pages/about-us/aboutus.html">Vision</a></li>
+                            <li><button class="navbtn" onclick="navigateTabAboutUs('History')">History</button></li>
+                            <li><button class="navbtn" onclick="navigateTabAboutUs('Dost Puso Logo')">DOST PUSO Logo</button></li>
+                            <li><button class="navbtn" onclick="navigateTabAboutUs('Vision')">Vision</button></li>
+                            <li><button class="navbtn" onclick="navigateTabAboutUs('Mission')">Mission</button></li>
+                            <li><button class="navbtn" onclick="navigateTabAboutUs('Officers')">Officers</button></li>
                         </ul>
                     </li>
                     <li class="nlink dropdown-arrow">
@@ -52,8 +53,9 @@
                             arrow_drop_down
                         </span></a>
                         <ul class="dropdown">
-                            <li><a href="pages/programsandprojects/proandpro.html">Calendars of Activities</a></li>
-                            <li><a href="pages/programsandprojects/proandpro.html">News</a></li>
+                            <li><button class="navbtn" onclick="navigateTabPro2('Calendar')">Calendars of Activities</button></li>
+                            <li><button class="navbtn" onclick="navigateTabPro2('Gallery')">Gallery</button></li>
+                            <li><button class="navbtn" onclick="navigateTabPro2('News')">News</button></li>
                         </ul>
                     </li>
                     <li class="nlink dropdown-arrow">
@@ -62,8 +64,8 @@
                                 arrow_drop_down
                         </span></a>
                         <ul class="dropdown">
-                            <li><a href="pages/scholarships/scholarships.html">S&T Undergraduate Scholarship</a></li>
-                            <li><a href="pages/scholarships/scholarships.html">Junior Level Science Scholarships (JLSS)</a></li>
+                            <li><button class="navbtn" onclick="navigateTabScholar('Undergraduate Scholarship')">S&T Undergraduate Scholarship</button></li>
+                            <li><button class="navbtn" onclick="navigateTabScholar('Junior Level Science Scholarships')">Junior Level Science Scholarships (JLSS)</button></li>
                         </ul>
                     </li>
                     <li class="nlink">
@@ -626,6 +628,18 @@
         }
     </script>
 
+    <script>
+        function navigateTabAboutUs(tabName) {
+            window.location.href = `pages/about-us/aboutus.html?tab=${tabName}`;
+        }
+        function navigateTabPro2(tabName) {
+            window.location.href = `pages/programsandprojects/proandpro.html?tab=${tabName}`;
+        }
+        function navigateTabScholar(tabName) {
+            window.location.href = `pages/scholarships/scholarships.html?tab=${tabName}`;
+        }
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <script>
@@ -647,6 +661,7 @@
             }).showToast();
         }
     </script>
+      
 
 </body>
 </html>

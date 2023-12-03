@@ -106,6 +106,25 @@ th,td{
     }
 }
 
+.lgrp{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+
+    .cal-pad{
+        border: 1px solid rgba(0,0,0,0.2);
+        padding: 20px;
+    }
+
+    .cal-day, .cal-my{
+        color: black;
+        font-weight: bold;
+    }
+
+    .cal-day{
+        font-size: larger;
+    }
+}
+
 footer{
     background-color: white;
     padding-left: 100px;

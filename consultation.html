@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request for Consultation</title>
+    <style>
+        /* Add any additional styling as needed */
+        header {
+            max-width: 600px;
+            margin: 0 auto;
+           
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <fieldset>
+            <div>
+                <div>
+                    <h3>REQUEST FOR CONSULTING SERVICES</h3>
+                </div>
+                <h4>Procedure:</h4>
+                <ol>
+                    <li>Accomplish two copies (2) of this form and submit at the Center for Statistics and 
+                        Computing Sciences Office</li>
+                    <li>Call Ms. Arlene N. Mendoza at 09484813973 to set your initial meeting with the 
+                        consultant.</li>  
+                    <li>Meet the consultant at the designated time and place. Bring the research 
+                        proposal, hard copy of the data, the cd file, copy of related studies, and other 
+                        materials  which may help the consultant in understanding the project.</li>  
+                    <li>If you fail to meet the consultant or if there are complaints/questions about the 
+                        service rendered, you may address it to the Head of Center for Statistics and 
+                        Computing Sciences, PSU Lingayen.</li>
+                </ol>
+        </fieldset>
+        
+    </header>
+    <!--Main-->
+
+    <form action="#" method="post" onsubmit="return validateForm()">
+        <fieldset>
+            <Legend>
+                Consultation
+            </Legend>
+            Date:
+            <input type="date" name="date" id="date" required> <br> <br>
+            Name:
+            <input type="text" name="name" id="name" v>
+            Institution:
+            <input type="text" name="Institution" id="Institution" required>
+            <br/> <br>
+            Email Address:
+            <input type="email" name="email" id="email" required> <br>
+            Cellphone No.:
+            <input type="tel" id="cellphone" name="cellphone" pattern="[0-9]{10}" placeholder="Enter 11-digit number" required><br>
+            Dept/College:
+            <Select name="College" id="college" required>
+            <option value="One">College of Computing</option>
+            <option value="Two">College of Arts and Education</option>
+            <option value="Three">College of Engineering and Architecture</option>
+            </Select> <br><br>
+            Title of Research Project: <br>
+            <textarea name="" id="" cols="100" rows="5" placeholder="" required></textarea> <br><br>
+            For what purpose is this research? <br>
+            <textarea name="" id="" cols="100" rows="5" placeholder="" required></textarea> <br><br>
+            Objectives of Research: <br>
+            <textarea name="" id="" cols="100" rows="5" placeholder="" required></textarea> <br><br>
+            Methodological Sketch: <br>
+            <textarea name="" id="" cols="100" rows="5" placeholder="" required></textarea> <br><br>
+            What assistance do you expect? <br>
+            <textarea name="" id="" cols="100" rows="5" placeholder="" required></textarea> <br><br> <br>
+            Consultant Assigned:
+            <input type="text" name="name" id="name" required> 
+            Email address:
+            <input type="email" name="email" id="email" required> <br><br>
+            Conforme:
+            <textarea name="" id="" cols="50" rows="1" required></textarea> <br><br>
+            Noted by:
+            <input type="text" name="name" id="name" required> <br><br>
+            <input type="submit" value="submit">
+        </fieldset>
+    </form>
+
+
+ <script>
+        function validateForm() {
+            // You can add more custom validation if needed
+            return true;
+        }
+    </script>
+</body>
+</html>

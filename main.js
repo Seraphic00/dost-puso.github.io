@@ -25,12 +25,10 @@ window.onload = function () {
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSli(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -65,7 +63,6 @@ function plusSlidess(o) {
   showSlidess(slideIndexx += o);
 }
 
-// Thumbnail image controls
 function currentSlidess(o) {
   showSlidess(slideIndexx = o);
 }
