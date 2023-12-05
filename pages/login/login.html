@@ -27,21 +27,18 @@
     </style>
 </head>
 <body>
-    <!-- <div style="text-align: center; align-items: center;margin: auto; margin: 200px;">
-        <h1>Log In</h1>
-    </div> -->
 
     <div class="login">
         <form>
             <img class="mb-4" src="/bootstrap/img/logo/header-logo.png" alt="" height="100">
         
             <div class="form-floating">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
+              <input type="text" class="form-control" id="lgusername" placeholder="name@example.com">
+              <label for="lgusername">Username</label>
             </div>
             <div class="form-floating">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">Password</label>
+              <input type="password" class="form-control" id="lgpassword" placeholder="Password">
+              <label for="lgpassword">Password</label>
             </div>
         
             <div class="form-check text-start my-3">
@@ -50,12 +47,24 @@
                 Remember me
               </label>
             </div>
-            <button class="btn btn-primary w-100 py-2" type="submit">Log In</button>
+            <button class="btn btn-primary w-100 py-2" type="submit" onclick="login()">Log In</button>
             <p class="text-body-secondary" style="padding-top: 20px;"><a href="/bootstrap/pages/signup/signup.html">Create new account</a></p>
             <p class="text-body-secondary"><a href="">Forgot Password</a></p>
         </form>
     </div>
 
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function login() {
+          var username = document.getElementById('lgusername').value;
+          var password = document.getElementById('lgpassword').value;
+
+          if (username === 'Jessa' && password === '123') {
+              window.location.href = url('../pages/login/admin.html');
+          } else {
+            alert('Invalid username or password');
+          }
+      }
+    </script>
 </body>
 </html>

@@ -29,8 +29,7 @@ th,td{
 }
 
 .logoimg {
-    /* Additional styles for the image if needed */
-    display: inline-block; /* Ensures the image behaves as an inline block */
+    display: inline-block;
 }
 
 .brdupper{
@@ -110,6 +109,22 @@ th,td{
     display: grid;
     grid-template-columns: repeat(5,1fr);
 
+    @media (max-width: 1000px){
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    @media (max-width: 800px){
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    @media (max-width: 700px){
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @media (max-width: 500px){
+        grid-template-columns: repeat(1,1fr);
+    }
+
     .cal-pad{
         border: 1px solid rgba(0,0,0,0.2);
         padding: 20px;
@@ -125,6 +140,188 @@ th,td{
     }
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff; /* Set color to white or the desired color */
+}
+
+.calpop{
+    padding: 20px;
+    border: rgba(0,0,0,0.2) 1px solid;
+}
+
+.programs{
+    width: 100%;
+    max-height: 2000px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f1f4fd;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    .program{
+        object-fit: cover;
+        white-space: normal;
+        overflow-x: hidden;
+        transition: transform 0.3s ease-in-out;
+        background-size: cover;
+        background-position: center;
+
+        .content{
+            display: block;
+            padding: 45px;
+            opacity: 0;
+            color: white;
+            background-color: rgba(0,0,0,0.6);
+
+            .programname{
+                font-weight: 600;
+                font-size: 14px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                        line-clamp: 2;
+                -webkit-box-orient: vertical;
+
+            }
+
+            .programdef{
+                font-size: 12px;
+                padding-top: 3px;
+                text-align: justify;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                        line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+
+        }
+
+        &:hover{
+            .content{
+                opacity: 1;
+            }
+        }
+    }
+}
+.programs::-webkit-scrollbar {
+    height: 0px;
+    width: 5px;
+}
+
+.programs:hover::-webkit-scrollbar {
+    height: 10px;
+    width: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+.programs::-webkit-scrollbar-thumb {
+    background-color: #09c7e0;
+    border-radius: 100px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.programs::-webkit-scrollbar-track {
+    background-color: #ccc;
+    border-radius: 100px;
+}
+
+.programs:hover::-webkit-scrollbar-track {
+    background-color: #ccc;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.programs:hover::-webkit-scrollbar-thumb {
+    background-color: #09c7e0;
+    border-radius: 50px;
+    transition: background-color 0.5s ease-in-out;
+    transform: scaleX(1.5);
+}
+
+.latest-news-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+.news-img {
+    width: 100%;
+    height: auto;
+}
+
+.news-content {
+    padding: 15px;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.pagination li {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.pagination li a {
+    text-decoration: none;
+    color: #34C1D5;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination li a:hover {
+    background-color: #34C1D5;
+    color: #fff;
+}
+
+.pagination li a.active {
+    background-color: #555;
+    color: #fff;
+}
+
+#prevButton,
+#nextButton {
+      display: inline-block;
+      margin: 0 5px;
+      cursor: pointer;
+}
+
 footer{
     background-color: white;
     padding-left: 100px;
@@ -134,6 +331,13 @@ footer{
 
     #fttitle{
         font-weight: 800;
+    }
+}
+
+.ft{
+    @media (max-width: 700px) {
+        background-image: none;
+        background-color: #E2FBFF;
     }
 }
 

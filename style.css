@@ -25,8 +25,8 @@ html{scroll-behavior:smooth}
     font-size: 14px;
     background-color: white;
     margin-top: 30px;
-    padding: 15px 16px;
-    border-radius: 10px;
+    padding: 10px 16px;
+    border-radius: 5px;
     text-transform: uppercase;
     font-weight: 200;
     cursor: pointer;
@@ -39,10 +39,6 @@ dl, ol, ul {
     margin-bottom: 0rem;
 }
 
-.button:hover{
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-}
 
 .containers{
     max-width: 1600px;
@@ -89,7 +85,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 5;
 
     .containers{
         padding-top: 32px;
@@ -1065,23 +1061,27 @@ main{
                     
 
                     .form-text, .form-mes{
-                        appearance: none;
-                        border: none;
-                        outline: none;
-                        background: none;
-
                         display: block;
-                        border: 1px solid;
-                        border-radius: 5px;
-
+                        box-shadow: rgba(0, 0, 0, 0.9) 10px;
+                        border: 2px solid white; /* Change the color as needed */
+                        border-radius: 5px; /* Add rounded corners if desired */
+                        outline: none; /* Remove the default focus outline */
                         padding: 12px;
                         font-size: 10pt;
                         color: #313131;
 
                         &::placeholder {
-							color: #AAA;
+							color: #aaa;
 						}
+
+                        
                     }
+
+                    .form-text:focus, .form-mes:focus {
+                        border-color: #3498db;
+                    }
+
+                    
                 }
 			}
 
@@ -1091,6 +1091,7 @@ main{
                 justify-content: flex-end;
                 margin-left: auto;
                 color: white;
+                margin-top: 10px;
             }
 		}
 	}
@@ -1114,6 +1115,22 @@ footer{
     padding-right: 100px;
     transform: scale(0.95);
 }
+
+
+.custom-modal-content {
+    width: 90%;
+    margin: auto;
+}
+
+
+.blue-uppercase-label {
+    text-transform: uppercase;
+    color: black;
+}
+
+
+  
+
 
 
 

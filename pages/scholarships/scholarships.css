@@ -118,6 +118,13 @@ footer{
     }
 }
 
+.ft{
+    @media (max-width: 700px) {
+        background-image: none;
+        background-color: #E2FBFF;
+    }
+}
+
 .arr{
     padding-left: 100px;
     padding-right: 100px;

@@ -18,11 +18,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/compiled-4.20.0.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/logo/logo.png" type="image/x-icon">
     
 </head>
 <body>
+
+    <!-- NAVBAR -->
     <header>
         <div class="containers">
             <a href="#" class="dostpuso">
@@ -69,11 +72,10 @@
                         </ul>
                     </li>
                     <li class="nlink">
-                        <a href="pages/contacts/contacts.html">Contacts</a>
+                        <a href="#contact">Contacts</a>
                     </li>
-
-                    <li class="nlink" style="background-color: #34C1D5; color: white; border-radius: 20px; padding:5px; padding-left: 20px; padding-right: 20px; margin-top: 2px;">
-                        <a href="pages/login/login.html">Log In</a>
+                    <li class="nlink" style="background-color: #34C1D5; color: white; border-radius: 8px; padding:5px; padding-left: 20px; padding-right: 20px; margin-top: 2px;">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalLoginForm">Log In</a>
                     </li>
                 </ul>
             </div>
@@ -81,6 +83,183 @@
     </header>
 
     <main>
+
+        <!-- LOGIN FORM -->
+        <div class="lgform modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document" style="display: flex; align-items: center; min-height: 90vh;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="border: none; background-color: transparent; position: absolute; top: 10px; right: 20px; transform: scale(1.8);">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img class="modal-title w-80 mx-auto" src="/bootstrap/img/logo/header-logo.png" alt="" height="auto">
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-2">
+                            <i class="fas fa-envelope prefix" ></i>
+                            <input type="email" id="lg-email" class="form-control" required>
+                            <label data-error="wrong" data-success="right" for="lg-email" class="">Email Address</label>
+                        </div>
+                        
+                        <div class="md-form mb-2 d-flex justify-content-between align-items-center">
+                            <div style="flex-grow: 1;">
+                                <i class="fas fa-lock prefix" ></i>
+                                <input type="password" id="lg-pass" class="form-control" required>
+                                <label data-error="wrong" data-success="right" for="lg-pass" class="">Password</label>
+                                
+                                <div class="d-flex justify-content-between align-items-center w-100">
+                                    <p id="error-message" class="mb-0" style="color: red; font-size: smaller;"></p>
+                                    <p class="text-body-secondary mb-0" style="font-size: smaller;"><a href="#">Forgot Password?</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button onclick="lgformbtn()" class="btn w-100" style="background-color: #34C1D5; color: white;" >Login</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- MEMBERSHIP FORM -->
+        <div class="membership-form modal fade" id="modalMembershipForm" tabindex="-1" role="dialog" aria-labelledby="membershipFormTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document" style="display: flex; align-items: center; min-height: 90vh;">
+                <div class="modal-content custom-modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="border: none; background-color: transparent; position: absolute; top: 10px; right: 20px; transform: scale(1.8);">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="modal-title w-80 mx-auto" id="membershipFormTitle" style="font-weight: 800; padding: 20px;">DOST-PSU UCC Scholars’ Organization Membership Form</h5>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <p style="text-align: justify;font-weight: bolder;">Are you a bona fide DOST scholar from Pangasinan State University- Urdaneta City Campus.</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="psuStudent" id="psuYes" checked>
+                            <label class="form-check-label" for="psuYes">
+                                Yes
+                            </label>
+                            <input class="form-check-input" type="radio" name="psuStudent" id="psuNo">
+                            <label class="form-check-label" for="psuNo">
+                                No
+                            </label>
+                        </div>
+        
+                        <!-- Form for PSU Students -->
+                        <form id="psuStudentForm" style="padding-top: 20px;">
+                            <div class="mb-3">
+                                <label for="email" class="blue-uppercase-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fullName" class="blue-uppercase-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Ex: Dela Cruz, Juan Dizon" required>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="course" class="blue-uppercase-label">Course</label>
+                                    <input type="text" class="form-control" id="course" placeholder="Ex: BS Mathematics" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="yearlevel" class="blue-uppercase-label">Year Level</label>
+                                    <select class="form-control" id="yearlevel" required>
+                                        <option value="firstyear">First Year</option>
+                                        <option value="secondyear">Second Year</option>
+                                        <option value="thirdyear">Third Year</option>
+                                        <option value="fourth year">Fourth Year</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="scholarshipType" class="blue-uppercase-label">Scholarship Type</label>
+                                    <select class="form-control" id="scholarshipType" required>
+                                        <option value="ra7687undergradScholar">RA 7687 - Undergrad</option>
+                                        <option value="meritundergradScholar">MERIT - Undergrad</option>
+                                        <option value="ra7687jlssScholar">RA 7687 - JLSS</option>
+                                        <option value="meritjlssScholar">MERIT - JLSS</option>
+                                        <option value="ra10612jlssScholar">RA 10612</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="yearaward" class="blue-uppercase-label">Year of Award</label>
+                                    <input type="text" class="form-control" id="yearaward" placeholder="Ex: 2023" required>
+                                </div>
+                            </div>
+                        </form>
+        
+                        <!-- Form for Non-PSU Students -->
+                        <form id="nonPsuStudentForm" style="display: none;">
+                            <p style="padding-left: 20px; padding-right: 20px; text-align: justify; font-weight: bolder; text-decoration: underline;">If you're interested in becoming a part of the DOST organization, kindly complete the form below. This will enable us to connect you with other relevant organizations that align with your interests.</p>
+                            <div class="mb-3">
+                                <label for="email" class="blue-uppercase-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fullName" class="blue-uppercase-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Ex: Dela Cruz, Juan Dizon" required>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="course" class="blue-uppercase-label">Course</label>
+                                    <input type="text" class="form-control" id="course" placeholder="Ex: BS Mathematics" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="yearlevel" class="blue-uppercase-label">Year Level</label>
+                                    <select class="form-control" id="yearlevel" required>
+                                        <option value="firstyear">First Year</option>
+                                        <option value="secondyear">Second Year</option>
+                                        <option value="thirdyear">Third Year</option>
+                                        <option value="fourth year">Fourth Year</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="scholarshipType" class="blue-uppercase-label">Scholarship Type</label>
+                                    <select class="form-control" id="scholarshipType" required>
+                                        <option value="ra7687undergradScholar">RA 7687 - Undergrad</option>
+                                        <option value="meritundergradScholar">MERIT - Undergrad</option>
+                                        <option value="ra7687jlssScholar">RA 7687 - JLSS</option>
+                                        <option value="meritjlssScholar">MERIT - JLSS</option>
+                                        <option value="ra10612jlssScholar">RA 10612</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="yearaward" class="blue-uppercase-label">Year of Award</label>
+                                    <input type="text" class="form-control" id="yearaward" placeholder="Ex: 2023" required>
+                                </div>
+                            </div>
+                        </form>
+
+                        <hr style=" background-color: black; margin-bottom: 30px; margin-top: 30px;">
+                        <h6 style="font-weight: bold; color: black;">DOST - PUSO MEMBERSHIP:</h6>
+                        <div style="text-align: justify; padding-left: 20px; padding-right: 20px;">
+                            
+                            <p style="font-weight: 500;">Membership Criteria:</p>
+                            <ol>
+                                <li>Must be a bona fide DOST scholar from Pangasinan State University- Urdaneta City Campus.</li>
+                                <li>Must have excellent moral character and not currently in violation of any institution rules and regulations.</li>
+                            </ol>
+                            <p style="padding-top: 20px;font-weight: 500;">Privileges and Responsibilities:</p>
+                            <ul>
+                                <li>Attend meetings and assembly of the association.</li>
+                                <li>Entitled to cast one vote during quorum and elections.</li>
+                                <li>Participate in creating and amending the organization’s Action Plan, Constitution, and By-Laws.</li>
+                                <li>Join all activities of the organization.</li>
+                            </ul>
+                            <p style="padding-top: 20px;font-weight: 500;">Membership Fee:</p>
+                            <p>Members shall pay a membership fee of <span style="font-weight: 800;"">Php</span> <span id="feeamount" style="font-weight: 800;">100.00</span> for one academic year. The total accumulated fee shall serve as the organization’s operational fund for the whole semester.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button class="btn w-100" style="background-color: #34C1D5; color: white;" onclick="submitMembershipForm()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+               
+        <!-- BANNER / HERO SECTION? -->
         <section class="bannerslideshow">
             <div class="containers">
                 <div class="banner-text">
@@ -91,7 +270,7 @@
                     </h3>
                     <div class="bbtngrid">
                         <a href="#about-us" class="button">Learn More</a>
-                        <a href="pages/joinus/joinus.html" class="button joinus">Join Us</a>
+                        <a class="button" href="#" data-bs-toggle="modal" data-bs-target="#modalMembershipForm" style="background-color: #34C1D5; color: white;">Join Us</a>
                     </div>
                 </div>
                 <div class="banner-img">
@@ -138,10 +317,11 @@
             </div>
         </section>
 
+        <!-- ABOUT US -->
         <section class="about-us" id="about-us">
             <div class="containers">
                 <div class="officers-img grid-item-1">
-                    <a href="pages/about-us/aboutus.html">
+                    <a href="#" onclick="navigateTabAboutUs('Officers', false);">
                         <img class="officers fadee" src="img/officers/one.png" style="width:100%">
                         <img class="officers fadee" src="img/officers/two.png" style="width:100%">
                         <img class="officers fadee" src="img/officers/three.png" style="width:100%">
@@ -166,6 +346,7 @@
             </div>
         </section>
 
+        <!-- CALENDAR OF ACTIVITIES -->
         <section class="calendar" id="calendar">
             <div class="containers">
                 <div class="cal-container">
@@ -299,11 +480,12 @@
             </div>
         </section>
 
+        <!-- GALLERY -->
         <section class="gallery">
             <div class="containers">
                 <div class="programs">
                     <div class="program" style="background-image: url('img/activities/one.png');">
-                        <div class="content" onclick="toProjects()">
+                        <div class="content" onclick="navigateTabPro2('Gallery')">
                             <h3 class="programname">2024 Undergraduate Scholarships Campaign</h3>
                             <p class="programdef">
                                 DOST-Science Education Institute (DOST-SEI) proudly announces the opening of applications for the 2024 DOST Undergraduate Scholarships! In line with this announcement, the DOST Scholars’ Intercampus Association of Pangasinan (DOST-SICAP) conducted a campaign on this day, November 14, 2023, at Daniel Maramba High School, unlocking opportunities for students to soar higher! They extend their heartfelt salute to the aspiring minds ready to apply for the DOST-SEI Undergraduate Scholarship Program.
@@ -311,7 +493,7 @@
                         </div>
                     </div>
                     <div class="program" style="background-image: url('img/activities/two.jpg');">
-                        <div class="content" onclick="toProjects()">
+                        <div class="content" onclick="navigateTabPro2('Gallery')">
                             <h3 class="programname">National DOST Scholars’ Summit 2023</h3>
                             <p class="programdef">Clear the runway, Quezon City! 🤩
                                 DOST - PUSO has gracefully touched down, bringing their boundless enthusiasm to the National DOST Scholars’ Summit at the University of the Philippines, Diliman. Get set for an electrifying showcase of brilliance and a fusion of ideas that will leave you in awe! Sheesh!🚀🔥
@@ -319,19 +501,19 @@
                         </div>
                     </div>
                     <div class="program" style="background-image: url('img/activities/three.png');">
-                        <div class="content" onclick="toProjects()">
+                        <div class="content" onclick="navigateTabPro2('Gallery')">
                             <h3 class="programname">DOST - SEI Leadership Bootcamp 2023</h3>
                             <p class="programdef">The Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and</p>
                         </div>
                     </div>
                     <div class="program" style="background-image: url('img/activities/four.png');">
-                        <div class="content" onclick="toProjects()">
+                        <div class="content" onclick="navigateTabPro2('Gallery')">
                             <h3 class="programname">Padayon Pantry</h3>
                             <p class="programdef">Padayon Pantry is all setup! With the help of the DOST-PUSO and DOST-SICAP members, the pantry was successfully assembled                            </p>
                         </div>
                     </div>
                     <div class="program" style="background-image: url('img/activities/one.png');">
-                        <div class="content" onclick="toProjects()">
+                        <div class="content" onclick="navigateTabPro2('Gallery')">
                             <h3 class="programname">2024 Undergraduate Scholarships Campaign</h3>
                             <p class="programdef">
                                 DOST-Science Education Institute (DOST-SEI) proudly announces the opening of applications for the 2024 DOST Undergraduate Scholarships! In line with this announcement, the DOST Scholars’ Intercampus Association of Pangasinan (DOST-SICAP) conducted a campaign on this day, November 14, 2023, at Daniel Maramba High School, unlocking opportunities for students to soar higher! They extend their heartfelt salute to the aspiring minds ready to apply for the DOST-SEI Undergraduate Scholarship Program.
@@ -339,7 +521,7 @@
                         </div>
                     </div>
                     <div class="program" style="background-image: url('img/activities/two.jpg');">
-                        <div class="content" onclick="toProjects()">
+                        <div class="content" onclick="navigateTabPro2('Gallery')">
                             <h3 class="programname">National DOST Scholars’ Summit 2023</h3>
                             <p class="programdef">Clear the runway, Quezon City! 🤩
                                 DOST - PUSO has gracefully touched down, bringing their boundless enthusiasm to the National DOST Scholars’ Summit at the University of the Philippines, Diliman. Get set for an electrifying showcase of brilliance and a fusion of ideas that will leave you in awe! Sheesh!🚀🔥
@@ -347,19 +529,19 @@
                         </div>
                     </div>
                     <div class="program" style="background-image: url('img/activities/three.png');">
-                        <div class="content" onclick="toProjects()">
+                        <div class="content" onclick="navigateTabPro2('Gallery')">
                             <h3 class="programname">DOST - SEI Leadership Bootcamp 2023</h3>
                             <p class="programdef">The Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and</p>
                         </div>
                     </div>
                     <div class="program" style="background-image: url('img/activities/four.png');">
-                        <div class="content" onclick="toProjects()">
+                        <div class="content" onclick="navigateTabPro2('Gallery')">
                             <h3 class="programname">Padayon Pantry</h3>
                             <p class="programdef">Padayon Pantry is all setup! With the help of the DOST-PUSO and DOST-SICAP members, the pantry was successfully assembled                            </p>
                         </div>
                     </div>
                     <div class="program" style="background-image: url('img/activities/one.png');">
-                        <div class="content" onclick="toProjects()">
+                        <div class="content" onclick="navigateTabPro2('Gallery')">
                             <h3 class="programname">2024 Undergraduate Scholarships Campaign</h3>
                             <p class="programdef">
                                 DOST-Science Education Institute (DOST-SEI) proudly announces the opening of applications for the 2024 DOST Undergraduate Scholarships! In line with this announcement, the DOST Scholars’ Intercampus Association of Pangasinan (DOST-SICAP) conducted a campaign on this day, November 14, 2023, at Daniel Maramba High School, unlocking opportunities for students to soar higher! They extend their heartfelt salute to the aspiring minds ready to apply for the DOST-SEI Undergraduate Scholarship Program.
@@ -367,7 +549,7 @@
                         </div>
                     </div>
                     <div class="program" style="background-image: url('img/activities/two.jpg');">
-                        <div class="content" onclick="toProjects()">
+                        <div class="content" onclick="navigateTabPro2('Gallery')">
                             <h3 class="programname">National DOST Scholars’ Summit 2023</h3>
                             <p class="programdef">Clear the runway, Quezon City! 🤩
                                 DOST - PUSO has gracefully touched down, bringing their boundless enthusiasm to the National DOST Scholars’ Summit at the University of the Philippines, Diliman. Get set for an electrifying showcase of brilliance and a fusion of ideas that will leave you in awe! Sheesh!🚀🔥
@@ -375,13 +557,13 @@
                         </div>
                     </div>
                     <div class="program" style="background-image: url('img/activities/three.png');">
-                        <div class="content" onclick="toProjects()">
+                        <div class="content" onclick="navigateTabPro2('Gallery')">
                             <h3 class="programname">DOST - SEI Leadership Bootcamp 2023</h3>
                             <p class="programdef">The Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and</p>
                         </div>
                     </div>
                     <div class="program" style="background-image: url('img/activities/four.png');">
-                        <div class="content" onclick="toProjects()">
+                        <div class="content" onclick="navigateTabPro2('Gallery')">
                             <h3 class="programname">Padayon Pantry</h3>
                             <p class="programdef">Padayon Pantry is all setup! With the help of the DOST-PUSO and DOST-SICAP members, the pantry was successfully assembled                            </p>
                         </div>
@@ -390,11 +572,12 @@
             </div>
         </section>
 
+        <!-- LATEST NEWS -->
         <section id="latest-news" class="latest-news">
             <div class="containers">
                 <h2><a href="pages/programsandprojects/proandpro.html">Latest News</a></h2>
                 <div class="latest-news-grid">
-                    <div class="news">
+                    <div class="news" onclick="navigateTabPro2('News')">
                         <div class="news-img-box">
                             <img src="img/news/news-img1.png" alt="" class="news-img">
                         </div>
@@ -408,10 +591,9 @@
                             <p class="news-def">
                                 As the population of Scholars in the province of Pangasinan continuously grew, the appointment of leaders and officers who are dedicated, competent, and adaptable to changes is important in order to attain the association's main goal Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat consequuntur consectetur tenetur tempore odio odit praesentium maiores ullam repellendus! Dolorem.
                             </p>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toNews()">View</button>
                         </div>
                     </div>
-                    <div class="news">
+                    <div class="news" onclick="navigateTabPro2('News')">
                         <div class="news-img-box">
                             <img src="img/news/news-img2.png" alt="" class="news-img">
                         </div>
@@ -425,10 +607,9 @@
                             <p class="news-def">
                                 As the population of Scholars in the province of Pangasinan continuously grew, the appointment of leaders and officers who are dedicated, competent, and adaptable to changes is important in order to attain the association's main goal and Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio vel natus obcaecati ab inventore mollitia error eius quia! Doloribus hic quidem earum commodi ratione quisquam, tempora labore itaque quia suscipit neque enim. Autem quibusdam quasi corrupti. Aliquam, voluptatum fuga. Cum quis dolorum quisquam sapiente labore voluptatem id omnis molestias enim?
                             </p>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toNews()">View</button>
                         </div>
                     </div>
-                    <div class="news">
+                    <div class="news" onclick="navigateTabPro2('News')">
                         <div class="news-img-box">
                             <img src="img/news/news-img3.png" alt="" class="news-img">
                         </div>
@@ -442,10 +623,9 @@
                             <p class="news-def">
                                 The Department of Science and Technology Regional Office No. VIII is pleased to announce the names of the Qualifiers for the 2023 Undergraduate Scholarship Programs Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sequi autem, magni magnam at reiciendis sit dolor iure saepe accusamus nulla id illum in facilis fugiat, sint debitis labore delectus? Quasi ullam, corporis alias cupiditate, eveniet laudantium labore voluptas commodi provident facere necessitatibus minima consequuntur fugit explicabo laborum ipsum deleniti.
                             </p>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toNews()">View</button>
                         </div>
                     </div>
-                    <div class="news">
+                    <div class="news" onclick="navigateTabPro2('News')">
                         <div class="news-img-box">
                             <img src="img/news/news-img4.jpg" alt="" class="news-img">
                         </div>
@@ -459,10 +639,9 @@
                             <p class="news-def">
                                 Super Typhoon Egay may have left a trail of devastation in the Ilocos Region, but together, we can be a beacon of hope for those affected indigent families in Pagudpud.Let us unite under the banner of compassion as DOST-MAYSA launches a Donation Drive for our fellow Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quia repudiandae officiis ipsum, minima similique, asperiores molestiae dolor a iusto vero corporis, magni doloribus facere distinctio possimus eveniet eligendi itaque nemo tempora debitis reiciendis vel rem facilis! Culpa suscipit aspernatur eligendi laboriosam, doloribus nobis neque, ipsum hic est corrupti sed.
                             </p>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toNews()">View</button>
                         </div>
                     </div>
-                    <div class="news">
+                    <div class="news" onclick="navigateTabPro2('News')">
                         <div class="news-img-box">
                             <img src="img/news/news-img5.jpg" alt="" class="news-img">
                         </div>
@@ -476,10 +655,9 @@
                             <p class="news-def">
                                 The Department of Science and Technology Region 1 (DOST 1) conducted an Exit Conference to 85 DOST-Science Education Institute (SEI) graduating scholars from Pangasinan on July 12-13, 2023 at Provincial Training and Development Center, Lingayen, Pangasinan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatum quibusdam quisquam itaque, voluptates ducimus id eaque quod hic blanditiis aperiam error, beatae voluptate neque optio quos suscipit veritatis. Saepe praesentium officia ratione quis quasi sit adipisci suscipit magni eos blanditiis. Fuga a ea totam! Eos dicta corrupti delectus id.
                             </p>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toNews()">View</button>
                         </div>
                     </div>
-                    <div class="news">
+                    <div class="news" onclick="navigateTabPro2('News')">
                         <div class="news-img-box">
                             <img src="img/news/news-img6.jpg" alt="" class="news-img">
                         </div>
@@ -493,10 +671,9 @@
                             <p class="news-def">
                                 University of the Philippines Diliman - After an intense battle of wits among five teams from DOST - PUSO, consisting of three members each, two teams have emerged victorious, securing their spots in the final round of Prevail 2023 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste earum atque ipsam, consequuntur id molestias asperiores sapiente quod odit suscipit quaerat totam ratione magni consectetur quam rem quae nihil deleniti ea culpa, corrupti ipsa consequatur quo delectus. Voluptatem sint quidem itaque deserunt doloremque molestias sequi, ex dolorem amet error labore.
                             </p>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toNews()">View</button>
                         </div>
                     </div>
-                    <div class="news">
+                    <div class="news" onclick="navigateTabPro2('News')">
                         <div class="news-img-box">
                             <img src="img/news/news-img5.jpg" alt="" class="news-img">
                         </div>
@@ -510,10 +687,9 @@
                             <p class="news-def">
                                 The Department of Science and Technology Region 1 (DOST 1) conducted an Exit Conference to 85 DOST-Science Education Institute (SEI) graduating scholars from Pangasinan on July 12-13, 2023 at Provincial Training and Development Center, Lingayen, Pangasinan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatum quibusdam quisquam itaque, voluptates ducimus id eaque quod hic blanditiis aperiam error, beatae voluptate neque optio quos suscipit veritatis. Saepe praesentium officia ratione quis quasi sit adipisci suscipit magni eos blanditiis. Fuga a ea totam! Eos dicta corrupti delectus id.
                             </p>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toNews()">View</button>
                         </div>
                     </div>
-                    <div class="news">
+                    <div class="news" onclick="navigateTabPro2('News')">
                         <div class="news-img-box">
                             <img src="img/news/news-img6.jpg" alt="" class="news-img">
                         </div>
@@ -527,20 +703,20 @@
                             <p class="news-def">
                                 University of the Philippines Diliman - After an intense battle of wits among five teams from DOST - PUSO, consisting of three members each, two teams have emerged victorious, securing their spots in the final round of Prevail 2023 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste earum atque ipsam, consequuntur id molestias asperiores sapiente quod odit suscipit quaerat totam ratione magni consectetur quam rem quae nihil deleniti ea culpa, corrupti ipsa consequatur quo delectus. Voluptatem sint quidem itaque deserunt doloremque molestias sequi, ex dolorem amet error labore.
                             </p>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toNews()">View</button>
                         </div>
                     </div>
                 </div>
                 <div class="" style="text-align: center;">
-                    <input type="button" value="View More" class="button" style="border: rgba(0, 0, 0, 0.4) solid 1px;" onclick="toNews()">
+                    <input type="button" value="View More" class="button" style="border: rgba(0, 0, 0, 0.4) solid 1px;" onclick="navigateTabPro2('News')">
                 </div>
             </div>
             
         </section>
 
+        <!-- CONTACT US -->
         <section class="contact" id="contact">
             <div class="containers">
-                <form action="contact.php" method="get" id="contactForm">
+                <form onsubmit="handleFormSubmission(event)" id="contactForm">
                     <div class="contact-form">
                         <div class="contact-us-grid">
                             <h2 class="get-in-touch">
@@ -564,6 +740,8 @@
             </div>
         </section>
     </main>
+
+    <!-- FOOTER -->
     <footer class="py-4">
         <div class="row">
           <div class="col-6 col-md-3 mb-3">
@@ -589,15 +767,17 @@
             <form>
               <h5 id="fttitle">Subscribe to our newsletter</h5>
               <p>Monthly digest of what's new and exciting from us.</p>
-              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <div class="w-100 gap-1 d-flex justify-content-end ">
                 <label for="newsletter1" class="visually-hidden">Email address</label>
-                <input id="newsletter1" type="email" class="form-control" placeholder="Email address">
-                <button class="btn" type="button" style="background-color: #34C1D5; color: white;">Subscribe</button>
+                <input id="newsletter1" type="email" class="form-control" placeholder="Email address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                <input type="submit" value="Subscribe" class="button" onclick="subscribeNewsletter()" style="background-color: #34C1D5; color: white; margin-top: 0px; padding: 10px;">
               </div>
             </form>
           </div>
         </div>
     </footer>
+
+    <!-- ALL RIGHTS RESERVED -->
     <div class="arr d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
         <p>© 2023 Company, Inc. All rights reserved.</p>
         <ul class="list-unstyled d-flex">
@@ -616,18 +796,16 @@
 
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/bundles/4.20.0/compiled.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- SCROLLING AND SLIDESHOW -->
     <script src="main.js"></script>
     <script src="calendar.js"></script>
-    <script>
-        function toProjects() {
-            window.location.href = 'pages/programsandprojects/proandpro.html';
-        }
 
-        function toNews() {
-            window.location.href = 'pages/programsandprojects/proandpro.html';
-        }
-    </script>
-
+    <!-- NAVIGATE TABS FROM THE NAVBARS -->
     <script>
         function navigateTabAboutUs(tabName) {
             window.location.href = `pages/about-us/aboutus.html?tab=${tabName}`;
@@ -640,28 +818,128 @@
         }
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
+    <!-- LOGIN FORM -->
     <script>
-        function submitForm() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+        function lgformbtn() {
+            let email = document.getElementById("lg-email").value;
+            let pass = document.getElementById("lg-pass").value;
+            let errorMessage = document.getElementById("error-message");
 
-            const toastMessage = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
-
-            Toastify({
-                text: toastMessage,
-                duration: 5000,
-                gravity: "bottom",
-                position: "right",
-                close:true,
-                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-            }).showToast();
+            if (email === 'cancino@gmail.com' && pass === '123') {
+                window.location.href = `admin.html`;
+            } else {
+                errorMessage.innerHTML = 'Invalid username or password';
+            }
         }
     </script>
-      
 
+    <!-- MEMBERSHIP FORM -->
+    <script>
+        function submitMembershipForm() {
+
+            $('.close').click();
+
+            var email = document.getElementById("email").value;
+            var fullName = document.getElementById("fullName").value;
+            var course = document.getElementById("course").value;
+            var yearLevel = document.getElementById("yearlevel").value;
+            var scholarshipType = document.getElementById("scholarshipType").value;
+            var yearAward = document.getElementById("yearaward").value;
+
+            var thankYouMessage = `
+                <p style="text-align: justify">Thank you for expressing interest in joining the DOST-PSU UCC Scholars’ Organization. We've received your details, and we'll be in touch with you shortly. Stay tuned for further updates!</p>
+                <p style="text-align: left">
+                    Email: ${email}
+                    <br>Full Name: ${fullName}
+                    <br>Course: ${course}
+                    <br>Year Level: ${yearLevel}
+                    <br>Scholarship Type: ${scholarshipType}
+                    <br>Year of Award: ${yearAward}
+                </p>
+            `;
+
+            Swal.fire({
+                title: 'Thank You!',
+                icon: 'success',
+                html: thankYouMessage,
+                confirmButtonText: 'OK'
+            });
+        }
+
+    </script>
+        
+    <!-- GET IN TOUCH FORM -->
+    <script>
+        function handleFormSubmission(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            var popupMessage =
+             `  <p style="text-align: left">
+                    Name: ${name}
+                    <br>Email: ${email}
+                    <br>Subject: ${subject}
+                    <br>Message: ${message}
+                </p>
+            `;
+
+            Swal.fire({
+                title: 'Your message has been received. We will get back to you soon!',
+                icon: 'success',
+                html: popupMessage,
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+
+    <!-- EMAIL SUBSCRIPTION -->
+    <script>
+        function subscribeNewsletter() {
+            // Get the email input element
+            const emailInput = document.getElementById('newsletter1');
+            
+            // Get the entered email value
+            const email = emailInput.value.trim();
+
+            // Validate email format using a regular expression
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                // Show an error toast if the email is not in a valid format
+                Toastify({
+                    text: 'Please enter a valid email address.',
+                    duration: 3000,
+                    gravity: 'bottom',
+                    backgroundColor: '#FF6347', // Red color for error
+                    stopOnFocus: true,
+                }).showToast();
+                // Clear the input field
+                emailInput.value = '';
+                return;
+            }
+
+            // Perform any additional logic (e.g., send data to PHP)
+
+            // Show a success toast if everything is valid
+            Toastify({
+                text: `Thank you for subscribing, ${email}!`,
+                duration: 3000,
+                gravity: 'bottom',
+                backgroundColor: '#34C1D5', // Blue color for success
+                stopOnFocus: true,
+            }).showToast();
+
+            // Clear the input field
+            emailInput.value = '';
+        }
+
+    </script>
+    
 </body>
 </html>
