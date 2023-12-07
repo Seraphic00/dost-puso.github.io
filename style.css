@@ -348,74 +348,39 @@ main{
         }
     }
 
-    .about-us{
-        background-color: white;
-        
-        .containers{
+    .aboutus{
+        .containers {
             padding-top: 64px;
-			padding-bottom: 64px;
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            grid-gap: 50px;
-
-            @media (max-width: 950px){
-                grid-template-columns: repeat(1,1fr);
-                grid-gap: 20px;
-
-                .grid-item-1 {
-                    order: 2;
-                }
-                
-                .grid-item-2 {
-                    order: 1;
-                }
-            }
+            padding-bottom: 64px;
 
             @media (min-width: 1300px) {
-                #ab-seemore{
+                #ab-seemore {
                     display: none;
                 }
             }
 
             @media (max-width: 1300px) {
-                .aboutus-def{
+                .aboutus-def {
                     overflow: hidden;
                     display: -webkit-box;
                     -webkit-line-clamp: 10;
-                            line-clamp: 10;
+                    line-clamp: 10;
                     -webkit-box-orient: vertical;
                 }
             }
 
-            @media (max-width: 950px) {
-                .officers-img, slideshow-text{
-                    transform:scale(0.9); 
-                    transform-origin: center center;
-            
-                    -webkit-transform:scale(0.9); 
-                    -webkit-transform-origin: center center;
-                }
-            }
-
-
-            .officers-img{
-                height: 500px;
-                width: 500px;
-                position: relative;
-                max-width: 1000px;
-
-                @media (max-width: 950px) {
-                    height: 600px;
-                    width: 600px;
-                    margin: auto;
-                }
-                
-                .officers{
+            .officers-img {
+                height: auto;
+                width: 100%;
+                margin: auto;
+    
+                .officers {
                     display: none;
                     border-radius: 1rem;
                 }
     
-                .prevv, .nextt {
+                .prevv,
+                .nextt {
                     cursor: pointer;
                     position: absolute;
                     top: 50%;
@@ -432,48 +397,47 @@ main{
     
                 .nextt {
                     right: 0;
-                    
                 }
     
-                .prevv:hover, .nextt:hover {
-                    background-color: rgba(0,0,0,0.8);
+                .prevv:hover,
+                .nextt:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
                 }
-
-                .fadee{
+    
+                .fadee {
                     transition: opacity 0.3s ease-in-out;
                 }
-
-                @keyframes .fadee{
-                    from {opacity: 0.8}
-                    to {opacity: 1}
+    
+                @keyframes fadee {
+                    from {
+                        opacity: 0.8;
+                    }
+                    to {
+                        opacity: 1;
+                    }
                 }
             }
 
-            .officers-images{
-                width: 400px;
-            }
-            .officers-images .officers {
+
+    
+            .officers-img .officers {
                 transition: transform 0.3s ease-in-out;
             }
-
-            .officers:hover{
+    
+            .officers:hover {
                 transform: scale(1.1);
                 transition: transform 0.3s ease-in-out;
             }
 
-            .slideshow-text{
+            .slideshow-text {
                 text-align: justify;
                 line-height: 1.5;
-
-                /* .section-title a{
-                    text-decoration: none;
-                    color: #313131;
-                    fon
-                } */
+                padding-left: 50px;
+                font-size: 16px;
             }
+
             
         }
-        
     }
 
     .calendar{
@@ -941,9 +905,9 @@ main{
                     .form-text, .form-mes{
                         display: block;
                         box-shadow: rgba(0, 0, 0, 0.9) 10px;
-                        border: 2px solid white; /* Change the color as needed */
-                        border-radius: 5px; /* Add rounded corners if desired */
-                        outline: none; /* Remove the default focus outline */
+                        border: 2px solid white;
+                        border-radius: 5px;
+                        outline: none;
                         padding: 12px;
                         font-size: 10pt;
                         color: #313131;
@@ -960,6 +924,20 @@ main{
                     }
 
                     
+                }
+
+                @media (max-width:855px) {
+                    grid-template-columns: repeat(2,1fr);
+    
+                    .contact-us-grid{
+                        grid-column: span 2;
+                        padding-right: 0;
+                    }
+
+                    .form-grid{
+                        grid-template-columns: auto auto;
+                        grid-gap: 10px;
+                    }
                 }
 			}
 
@@ -978,10 +956,7 @@ main{
 
 footer{
     background-color: white;
-    padding-left: 100px;
-    padding-right: 100px;
     align-items: center;
-    transform: scale(0.95);
 
     #fttitle{
         font-weight: 800;
@@ -1001,12 +976,6 @@ footer{
     font-size: 16px;
     padding: 10px;
     transition: right 0.3s ease;
-}
-  
-.arr{
-    padding-left: 100px;
-    padding-right: 100px;
-    transform: scale(0.95);
 }
 
 

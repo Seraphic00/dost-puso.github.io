@@ -27,68 +27,6 @@
 <body>
 
     <!-- NAVBAR -->
-    <!-- <header>
-        <div class="containers" id="headerscroll">
-            <a href="#" class="dostpuso">
-                <img id="title-logo" src="img/logo/logo.png" alt="">
-                <h2 id="title-name" style="margin-bottom: 0rem;">DOST-PUSO</h2>
-            </a>
-            <div class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <div class="nbar">
-                <ul class="nlinks">
-                    <li class="nlink">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="nlink dropdown-arrow">
-                        <a href="pages/about-us/aboutus.html">About Us 
-                            <span class="material-icons dropdown-icon">
-                            arrow_drop_down
-                        </span></a>
-                        <ul class="dropdown">
-                            <li><button class="navbtn" onclick="navigateTabAboutUs('History')">History</button></li>
-                            <li><button class="navbtn" onclick="navigateTabAboutUs('Dost Puso Logo')">DOST PUSO Logo</button></li>
-                            <li><button class="navbtn" onclick="navigateTabAboutUs('Vision')">Vision</button></li>
-                            <li><button class="navbtn" onclick="navigateTabAboutUs('Mission')">Mission</button></li>
-                            <li><button class="navbtn" onclick="navigateTabAboutUs('Officers')">Officers</button></li>
-                        </ul>
-                    </li>
-                    <li class="nlink dropdown-arrow">
-                        <a href="pages/programsandprojects/proandpro.html">Programs and Projects 
-                            <span class="material-icons dropdown-icon">
-                            arrow_drop_down
-                        </span></a>
-                        <ul class="dropdown">
-                            <li><button class="navbtn" onclick="navigateTabPro2('Calendar')">Calendars of Activities</button></li>
-                            <li><button class="navbtn" onclick="navigateTabPro2('Gallery')">Gallery</button></li>
-                            <li><button class="navbtn" onclick="navigateTabPro2('News')">News</button></li>
-                        </ul>
-                    </li>
-                    <li class="nlink dropdown-arrow">
-                        <a href="pages/scholarships/scholarships.html">Scholarships
-                            <span class="material-icons dropdown-icon">
-                                arrow_drop_down
-                        </span></a>
-                        <ul class="dropdown">
-                            <li><button class="navbtn" onclick="navigateTabScholar('Undergraduate Scholarship')">S&T Undergraduate Scholarship</button></li>
-                            <li><button class="navbtn" onclick="navigateTabScholar('Junior Level Science Scholarships')">Junior Level Science Scholarships (JLSS)</button></li>
-                        </ul>
-                    </li>
-                    <li class="nlink">
-                        <a href="#contact">Contacts</a>
-                    </li>
-                    <li class="nlink" style="background-color: #34C1D5; color: white; border-radius: 8px; padding:5px; padding-left: 20px; padding-right: 20px; margin-top: 2px;">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalLoginForm">Log In</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="sidebar">
-            </div>
-        </div>
-    </header> -->
 
     <nav class="navbar navbar-expand-xl fixed-top" id="navbar">
         <div class="containers container-fluid">
@@ -376,30 +314,32 @@
         </section>
         
         <!-- ABOUT US -->
-        <section class="about-us" id="about-us">
+        <section class="aboutus" id="aboutus">
             <div class="containers">
-                <div class="officers-img grid-item-1">
-                    <a href="#" onclick="navigateTabAboutUs('Officers', false);">
-                        <img class="officers fadee" src="img/officers/one.png" style="width:100%">
-                        <img class="officers fadee" src="img/officers/two.png" style="width:100%">
-                        <img class="officers fadee" src="img/officers/three.png" style="width:100%">
-                        <img class="officers fadee" src="img/officers/four.png" style="width:100%">
-                    </a>
-                    <a class="prevv" onclick="plusSlidess(-1)">&#10094;</a>
-                    <a class="nextt" onclick="plusSlidess(1)">&#10095;</a>
-                </div>
-                <div class="slideshow-text grid-item-2">
-                    <h2><a href="pages/about-us/aboutus.html" >About Us</a></h2>
-                    <p class="aboutus-def">
-                        The DOST-PSU UCC Scholars’ Organization, affectionately known as DOST-PUSO, had its humble beginnings on October 1, 2022. Founded by a group of passionate Department of Science and Technology (DOST) scholars at Pangasinan State University's Urdaneta City Campus, the organization's inception marked the commencement of a remarkable journey.
-                        <br>
-                        <br>
-                        As DOST-PUSO continues to grow, adapt, and evolve, it remains steadfast in its mission to inspire and empower scholars, promote scientific literacy, and serve the nation with unwavering dedication. The organization's journey is a testament to what can be achieved when passionate individuals come together with a shared vision, driven by a love for education, science, and service to the Philippines.
-                        <br>
-                        <br>
-                        In a short span of time, DOST-PUSO achieved remarkable milestones. The organization became a hub for fostering academic excellence, nurturing leadership skills, and promoting patriotic values. It organized numerous training workshops, seminars, and outreach programs that not only enhanced the skills and knowledge of its members but also extended the benefits of science and technology to the wider community.
-                    </p>
-                    <span id="ab-seemore"><a href="/pages/about-us/aboutus.html" style="color: black;">See More.</a></span>
+                <div class="row featurette">
+                    <div class="slideshow-text col-md-7 order-md-2">
+                        <h2 class="featurette-heading fw-normal lh-1"><a href="pages/about-us/aboutus.html" >About Us</a></h2>
+                        <p class="aboutus-def">
+                            The DOST-PSU UCC Scholars’ Organization, affectionately known as DOST-PUSO, had its humble beginnings on October 1, 2022. Founded by a group of passionate Department of Science and Technology (DOST) scholars at Pangasinan State University's Urdaneta City Campus, the organization's inception marked the commencement of a remarkable journey.
+                            <br>
+                            <br>
+                            As DOST-PUSO continues to grow, adapt, and evolve, it remains steadfast in its mission to inspire and empower scholars, promote scientific literacy, and serve the nation with unwavering dedication. The organization's journey is a testament to what can be achieved when passionate individuals come together with a shared vision, driven by a love for education, science, and service to the Philippines.
+                            <br>
+                            <br>
+                            In a short span of time, DOST-PUSO achieved remarkable milestones. The organization became a hub for fostering academic excellence, nurturing leadership skills, and promoting patriotic values. It organized numerous training workshops, seminars, and outreach programs that not only enhanced the skills and knowledge of its members but also extended the benefits of science and technology to the wider community.
+                        </p>
+                        <span id="ab-seemore"><a href="/pages/about-us/aboutus.html" style="color: black;">See More.</a></span>
+                    </div>
+                    <div class="officers-img col-md-5 order-md-1">
+                        <a href="#" onclick="navigateTabAboutUs('Officers', false);">
+                            <img class="officers fadee featurette-image img-fluid mx-auto" src="img/officers/one.png" style="width:100%">
+                            <img class="officers fadee featurette-image img-fluid mx-auto" src="img/officers/two.png" style="width:100%">
+                            <img class="officers fadee featurette-image img-fluid mx-auto" src="img/officers/three.png" style="width:100%">
+                            <img class="officers fadee featurette-image img-fluid mx-auto" src="img/officers/four.png" style="width:100%">
+                        </a>
+                        <a class="prevv" onclick="plusSlidess(-1)">&#10094;</a>
+                        <a class="nextt" onclick="plusSlidess(1)">&#10095;</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -781,13 +721,13 @@
                                 <a href="pages/contacts/contacts.html">Get in touch</a>
                             </h2>
                             <p class="fill-get">
-                                Fill ou the form below to get in touch with us. We are here to answer any questions you may have and provide the information you need.
+                                Fill out the form below to get in touch with us. We are here to answer any questions you may have and provide the information you need.
                             </p>
                         </div>
                         <div class="form-grid">
                             <input type="text" name="name" id="name" class="form-text" placeholder="Name" required>
                             <input type="email" name="email" id="email" class="form-text" placeholder="Email" required>
-                            <input type="subject" name="subject" id="subject" class="form-text" placeholder="Subject" required>
+                            <input type="text" name="subject" id="subject" class="form-text" placeholder="Subject" required>
                             <textarea name="message" id="message"  class="form-mes" placeholder="Message" cols="30" rows="5" required></textarea>
                         </div>
                     </div>
@@ -801,37 +741,39 @@
 
     <!-- FOOTER -->
     <footer class="py-4">
-        <div class="row">
-          <div class="col-6 col-md-3 mb-3">
-            <h5 id="fttitle">DOST - PSU UCC Scholars’ Organization</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="https://urdaneta.psu.edu.ph/" target="_blank" class="nav-link p-0 text-dark">Pangasinan State University</a></li>
-              <li class="nav-item mb-2"><a href="https://www.google.com/search?q=urdaneta+pangasinan&rlz=1C1UEAD_enPH1027PH1027&oq=urdaneta+pang&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyBwgBEC4YgAQyBwgCEAAYgAQyDAgDEAAYFBiHAhiABDIHCAQQABiABDIHCAUQABiABDIGCAYQRRg8MgYIBxBFGDzSAQg3MTgzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" target="_blank" class="nav-link p-0 text-dark">Urdaneta, Pangasinan 2428</a></li>
-              <li class="nav-item mb-2"><a href="tel:+631 2345-678" target="_blank" class="nav-link p-0 text-dark">+(631) 2345-678</a></li>
-              <li class="nav-item mb-2"><a href="mailto:dostpuso@gmail.com" class="nav-link p-0 text-dark">dostpuso@gmail.com</a></li>
-            </ul>
-          </div>
-    
-          <div class="col-6 col-md-4 mb-3" style="padding-left: 30px;">
-            <h5 id="fttitle">QUICKLINKS</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="https://www.facebook.com/dost.sicap/" target="_blank" class="nav-link p-0 text-dark">DOST Scholars’ Inter-Campus Association of Pangasinan (DOST SICAP)</a></li>
-              <li class="nav-item mb-2"><a href="https://www.facebook.com/dostmaysa" target="_blank" class="nav-link p-0 text-dark">DOST Mobilized Amianan Youth Scholars’ Association (DOST MAYSA)</a></li>
-              <li class="nav-item mb-2"><a href="https://www.dost.gov.ph/" target="_blank" class="nav-link p-0 text-dark">DOST Science and Education Institute (DOST SEI)</a></li>
-            </ul>
-          </div>
-    
-          <div class="col-md-4 offset-md-1 mb-3">
-            <form>
-              <h5 id="fttitle">Subscribe to our newsletter</h5>
-              <p>Monthly digest of what's new and exciting from us.</p>
-              <div class="w-100 gap-1 d-flex justify-content-end ">
-                <label for="newsletter1" class="visually-hidden">Email address</label>
-                <input id="newsletter1" type="email" class="form-control" placeholder="Email address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
-                <input type="submit" value="Subscribe" class="button" onclick="subscribeNewsletter()" style="background-color: #34C1D5; color: white; margin-top: 0px; padding: 10px;">
+        <div class="containers">
+            <div class="row">
+                <div class="col-6 col-md-3 mb-3">
+                  <h5 id="fttitle">DOST - PSU UCC Scholars’ Organization</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="https://urdaneta.psu.edu.ph/" target="_blank" class="nav-link p-0 text-dark">Pangasinan State University</a></li>
+                    <li class="nav-item mb-2"><a href="https://www.google.com/search?q=urdaneta+pangasinan&rlz=1C1UEAD_enPH1027PH1027&oq=urdaneta+pang&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyBwgBEC4YgAQyBwgCEAAYgAQyDAgDEAAYFBiHAhiABDIHCAQQABiABDIHCAUQABiABDIGCAYQRRg8MgYIBxBFGDzSAQg3MTgzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" target="_blank" class="nav-link p-0 text-dark">Urdaneta, Pangasinan 2428</a></li>
+                    <li class="nav-item mb-2"><a href="tel:+631 2345-678" target="_blank" class="nav-link p-0 text-dark">+(631) 2345-678</a></li>
+                    <li class="nav-item mb-2"><a href="mailto:dostpuso@gmail.com" class="nav-link p-0 text-dark">dostpuso@gmail.com</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-6 col-md-4 mb-3" style="padding-left: 30px;">
+                  <h5 id="fttitle">QUICKLINKS</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="https://www.facebook.com/dost.sicap/" target="_blank" class="nav-link p-0 text-dark">DOST Scholars’ Inter-Campus Association of Pangasinan (DOST SICAP)</a></li>
+                    <li class="nav-item mb-2"><a href="https://www.facebook.com/dostmaysa" target="_blank" class="nav-link p-0 text-dark">DOST Mobilized Amianan Youth Scholars’ Association (DOST MAYSA)</a></li>
+                    <li class="nav-item mb-2"><a href="https://www.dost.gov.ph/" target="_blank" class="nav-link p-0 text-dark">DOST Science and Education Institute (DOST SEI)</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-md-4 offset-md-1 mb-3">
+                  <form>
+                    <h5 id="fttitle">Subscribe to our newsletter</h5>
+                    <p>Monthly digest of what's new and exciting from us.</p>
+                    <div class="w-100 gap-1 d-flex justify-content-end ">
+                      <label for="newsletter1" class="visually-hidden">Email address</label>
+                      <input id="newsletter1" type="email" class="form-control" placeholder="Email address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                      <input type="submit" value="Subscribe" class="button" onclick="subscribeNewsletter()" style="background-color: #34C1D5; color: white; margin-top: 0px; padding: 10px;">
+                    </div>
+                  </form>
+                </div>
               </div>
-            </form>
-          </div>
         </div>
     </footer>
 
@@ -841,20 +783,23 @@
     </div>
 
     <!-- ALL RIGHTS RESERVED -->
-    <div class="arr d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
-        <p>© 2023 DOST PSU UCC Scholars’ Organization. All rights reserved.</p>
-        <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/profile.php?id=100087394325109" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-          </svg></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/messages/t/100212236238367" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
-            <path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/>
-          </svg></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="mailto:dostpuso@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-check-fill" viewBox="0 0 16 16">
-            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207z"/>
-            <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
-          </svg></a></li>
-        </ul>
+    
+    <div class="containers">
+        <div class="arr d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
+            <p>© 2023 DOST PSU UCC Scholars’ Organization. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+              <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/profile.php?id=100087394325109" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+              </svg></a></li>
+              <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/messages/t/100212236238367" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+                <path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/>
+              </svg></a></li>
+              <li class="ms-3"><a class="link-body-emphasis" href="mailto:dostpuso@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-check-fill" viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207z"/>
+                <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
+              </svg></a></li>
+            </ul>
+        </div>
     </div>
 
     
@@ -1037,37 +982,6 @@
             });
         });
     </script>
-    
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var nav = document.querySelector('nav');
-            var container = document.getElementById('headerscroll');
-
-            var originalStyles = {
-                backgroundColor: getComputedStyle(nav).backgroundColor,
-                boxShadow: getComputedStyle(nav).boxShadow,
-                paddingTop: getComputedStyle(container).paddingTop,
-                paddingBottom: getComputedStyle(container).paddingBottom,
-                borderRadius: getComputedStyle(container).borderRadius
-            };
-
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 0) {
-                    nav.style.backgroundColor = 'white';
-                    nav.style.boxShadow = '0 1px 20px 0 rgba(0,0,0,.2)';
-                    container.style.paddingTop = '16px';
-                    container.style.paddingBottom = '16px';
-                    container.style.borderRadius = '20px';
-                } else {
-                    nav.style.backgroundColor = originalStyles.backgroundColor;
-                    nav.style.boxShadow = originalStyles.boxShadow;
-                    container.style.paddingTop = originalStyles.paddingTop;
-                    container.style.paddingBottom = originalStyles.paddingBottom;
-                    container.style.borderRadius = originalStyles.borderRadius;
-                }
-            });
-        });
-    </script> -->
 
     <!-- WHITE BG-NAV WHEN SCROLLING -->
     <script>
