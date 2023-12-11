@@ -20,8 +20,6 @@ th,td{
 .logo-section {
     text-align: center;
 
-    
-
     @media (max-width:500px) {
         transform: scale(0.9);
     }
@@ -51,8 +49,7 @@ th,td{
 
 
 .logoimg {
-    /* Additional styles for the image if needed */
-    display: inline-block; /* Ensures the image behaves as an inline block */
+    display: inline-block;
 }
 
 .brdupper{

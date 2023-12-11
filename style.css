@@ -963,6 +963,10 @@ footer{
     }
 }
 
+
+
+
+
 #scrollToTopBtn {
     display: none;
     position: fixed;
@@ -978,12 +982,10 @@ footer{
     transition: right 0.3s ease;
 }
 
-
 .custom-modal-content {
     width: 90%;
     margin: auto;
 }
-
 
 .blue-uppercase-label {
     text-transform: uppercase;
