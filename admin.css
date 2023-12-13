@@ -17,25 +17,11 @@
     --bs-gutter-x:0px !important;
 }
 
-.sbar{
-    background-color: #e4f6f9;
-    padding: 20px;
-}
-
 .title{
     text-transform: uppercase;
     color: black;
-    font-weight: bolder;
-    font-size: 32px
-}
-
-.tabsection{
-    background-color: #E2FBFF;
-
-    h4{
-        text-transform: uppercase;
-        font-weight: bolder;
-    }
+    font-size: 40px;
+    font-family: Oregon;
 }
 
 
@@ -72,4 +58,48 @@
 
 .seccontent{
     margin-top: 100px;
+    background-color: transparent;
+}
+
+#aboutuscard{
+    display: grid;
+}
+
+.card{
+    min-height: 100px;
+    margin: 10px;
+    padding: 20px;
+    border: none;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    justify-content: center;
+
+    .cardtitle{
+        text-transform: uppercase;
+        font-weight: bolder;
+        color: black;
+        font-size: x-large;
+    }
+}
+
+.cardfortitle{
+    background-color: #0091a1;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    justify-content: center;
+}
+
+.edit{
+    text-align: end;
+}
+
+.tabsection{
+
+    h5{
+        text-transform: uppercase;
+        font-weight: bolder;
+        text-align: center;
+        color: white;
+        margin: 0px 0px 0px;
+    }
 }

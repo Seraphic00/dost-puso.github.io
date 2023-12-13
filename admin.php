@@ -104,15 +104,46 @@
       </div>
       <div class="p-4 seccontent">
         <div class="tabsection" id="aboutus">
-          <h4>About Us</h4>
-          <p>This is the content for the "About Us" tab. </p>
-          <table>
-            <thead>
+          <table class="table">
+            <thead class="thead-dark">
               <tr>
-                <th>Position</th>
-                <th>Name</th>
+                <th>POSITION</th>
+                <th>NAME</th>
+                <th></th>
               </tr>
             </thead>
+            <tbody>
+              <?php
+              $servername = "localhost";
+              $username = "root";
+              $password = "";
+              $database = "dostpuso";
+              
+              $connection = new mysqli($servername,$username,$password,$database);
+
+              if ($connection->connect_error){
+                die("Conncection failed: " . $connection->connect_error);
+              }
+              
+              $sql = "SELECT * FROM officers";
+              $result = $connection->query($sql);
+
+              if (!$result){
+                die("Invalid query: " . $connection->connect_error);
+              }
+              
+              while($row = $result->fetch_assoc()){
+                echo "<tr>
+                  <td>". $row["position"]."</td>
+                  <td>". $row["name"]."</td>
+                  <td>
+                    <a class='btn btn-primary btn-sm' href='update'>Update</a>
+                    <a class='btn btn-danger btn-sm' href='delete'>Delete</a>
+                  </td>
+                </tr>";
+              }
+              ?>
+            </tbody>
           </table>
         </div>
             
