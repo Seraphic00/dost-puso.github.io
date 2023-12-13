@@ -1,3 +1,4 @@
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
@@ -12,8 +13,15 @@
     font-family: 'Raleway', sans-serif;
 }
 
+
+
+
+/* SMOOTH SCROLL BEHAVIOUR */
 html{scroll-behavior:smooth}
 
+
+
+/* STYLING BUTTONS*/
 .button{
     appearance: none;
     border: none;
@@ -34,12 +42,9 @@ html{scroll-behavior:smooth}
     font-weight: 450;
 }
 
-dl, ol, ul {
-    margin-top: 0;
-    margin-bottom: 0rem;
-}
 
 
+/* CONTAINERS */
 .containers{
     max-width: 1600px;
     margin: 0 auto;
@@ -63,10 +68,11 @@ dl, ol, ul {
 	}
 }
 
+
+/* SUBHEADINGS */
 section h2{
     margin-bottom: 30px;
 }
-
 section h2 a{
     text-transform: uppercase;
     color: #313131;
@@ -76,13 +82,10 @@ section h2 a{
     text-decoration: none;
 }
 
-img{
-    max-width: 100%;
-}
 
+/* NAVBAR */
 nav{
     box-shadow: none;
-    
     .containers{
         padding-top: 20px;
         padding-bottom: 10px;
@@ -113,19 +116,23 @@ nav{
         }
     }
 }
-
-#navbar {
+/* Navbar transparent bg when at top */
+#navbar{
     background-color: transparent !important;
     box-shadow: none !important;
 }
-
+/* Navbar white bg when scrolling */
 #navbar.white-bg {
     background-color: white !important;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1) !important;
 }
 
+
+
+/* MAIN */
 main{
 
+    /* BANNER */
     .bannerslideshow{
         color: black;
         position: relative;
@@ -348,6 +355,7 @@ main{
         }
     }
 
+    /* ABOUT US */
     .aboutus{
         .containers {
             padding-top: 64px;
@@ -440,6 +448,7 @@ main{
         }
     }
 
+    /* CALENDAR OF ACTIVITIES */
     .calendar{
 
         .containers{
@@ -665,6 +674,7 @@ main{
         }
     }
 
+    /* GALLERY */
     .gallery{
 
         .containers{
@@ -765,6 +775,7 @@ main{
         }
     }
  
+    /* LATEST NEWS*/
     .latest-news{
 
         .containers{
@@ -807,20 +818,19 @@ main{
                     }
                     .news-content{
                         padding: 12px;
-                        text-align: justify;
+                        word-break: break-all;
                         grid-column: span 3;
 
                         .news-date{
                             padding-top: 5px;
                             font-style: oblique;
-                            font-size: 70%;
+                            font-size: 80%;
                             margin-bottom: 0;
                         }
 
                         .news-title{
                             font-weight: 600;
                             padding-top: 5px;
-                            font-size: 12px;
                             margin-bottom: 0;
                             overflow: hidden;
                             display: -webkit-box;
@@ -831,28 +841,15 @@ main{
                         }
 
                         .news-def{
-                            font-size: 60%;
+                            font-size: 80%;
+                            padding-top: 5px;
                             padding-top: 5px;
                             overflow: hidden;
+                            text-overflow: ellipsis;
                             display: -webkit-box;
                             -webkit-line-clamp: 3;
                                     line-clamp: 3;
                             -webkit-box-orient: vertical;
-                        }
-
-                        .news-def{
-                            font-size: 60%;
-                            padding-top: 5px;
-                            max-height: 50px;
-                            text-overflow: ellipsis;
-                            overflow: hidden;
-                        }
-
-                        .news-see-more{
-                            grid-row: span 1;
-                            font-size: 60%;
-                            padding-top: 5px;
-                            color: #09c7e0;
                         }
 
                     }
@@ -863,6 +860,7 @@ main{
         }
     }
 
+    /* CONTACTS */
     .contact{
 		background-color: white;
         background-image: url('img/waves/wave3.png');
@@ -954,6 +952,7 @@ main{
     
 }
 
+/* FOOTER */
 footer{
     background-color: white;
     align-items: center;
@@ -965,8 +964,13 @@ footer{
 
 
 
+/* Remove the default padding from bootstrap */
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
 
-
+/* Back to top button */
 #scrollToTopBtn {
     display: none;
     position: fixed;
@@ -982,18 +986,40 @@ footer{
     transition: right 0.3s ease;
 }
 
+/* Modal */
 .custom-modal-content {
     width: 90%;
     margin: auto;
 }
 
+/* Label */
 .blue-uppercase-label {
     text-transform: uppercase;
     color: black;
 }
 
+/* CHANGE THE DEFAULT BG COLOR OF DROPDOWN -ITEM */
+.dropdown-item:hover{
+    background-color: #09c7e0  !important;
+}
 
-  
+
+.no-border {
+    border: 0;
+}
+
+.animated-icon {
+    animation: rotateAnimation 1s infinite; /* Adjust the animation properties */
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 
 

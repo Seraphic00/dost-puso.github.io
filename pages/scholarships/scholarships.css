@@ -1,8 +1,9 @@
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
     font-family: Oregon;
-    src: url(/fonts/ORD_____.TTF);
+    src: url(../../fonts/ORD_____.TTF);
 }
 
 *{
@@ -13,45 +14,20 @@
 }
    
 
+
+/* TABLE PADDING */
 th,td{
     padding: 10px;
 }
 
-.logo-section {
-    text-align: center;
-}
-
-.logo-sec{
-    display: grid;
-    grid-auto-flow: column;
-    text-align: left;
-    align-items: center;
-}
-
-.logoimg {
-    /* Additional styles for the image if needed */
-    display: inline-block; /* Ensures the image behaves as an inline block */
-}
-
+/* BREADCRUMBS */
 .brdupper{
     text-transform: uppercase;
     font-size: 12px;
 }
 
-.himg{
-    width: 1200px;
-    height: auto;
-    align-items: center;
-    padding: 30px;
-    margin: auto;
-}
 
-#vmbold{
-    color: #34C1D5;
-    font-weight: bold;
-    font-size: x-large;
-}
-
+/* TABS */
 .tbs{
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     .tab {
@@ -110,6 +86,8 @@ th,td{
     }
 }
 
+
+/* FOOTER */
 footer{
     background-color: white;
     padding-left: 100px;
@@ -137,6 +115,7 @@ footer{
 	}
 }
 
+/* CHANGE FOOTER BACKGROUND WAVE TO NONE WHEN AT SMALLER SCREEN SIZE */
 .ft{
     @media (max-width: 700px) {
         background-image: none;
@@ -144,6 +123,8 @@ footer{
     }
 }
 
+
+/* COPYRIGHT SECTION */
 .arr{
     padding-left: 100px;
     padding-right: 100px;

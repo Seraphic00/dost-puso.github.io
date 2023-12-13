@@ -1,10 +1,9 @@
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 @font-face {
     font-family: Oregon;
-    src: url(/fonts/ORD_____.TTF);
+    src: url(../../fonts/ORD_____.TTF);
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -13,44 +12,23 @@
 }
    
 
+/* TABLE PADDING */
 th,td{
     padding: 10px;
 }
 
-.logo-section {
-    text-align: center;
-}
 
-.logo-sec{
-    display: grid;
-    grid-auto-flow: column;
-    text-align: left;
-    align-items: center;
-}
 
-.logoimg {
-    display: inline-block;
-}
 
+/* BREAD CRUMB */
 .brdupper{
     text-transform: uppercase;
     font-size: 12px;
 }
 
-.himg{
-    width: 1200px;
-    height: auto;
-    align-items: center;
-    padding: 30px;
-    margin: auto;
-}
 
-#vmbold{
-    color: #34C1D5;
-    font-weight: bold;
-    font-size: x-large;
-}
 
+/* TABS */
 .tbs{
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     .tab {
@@ -121,7 +99,9 @@ th,td{
     }
 }
 
-.lgrp{
+
+/* CALENDAR GRID COLUMN RESIZING */
+.cal-grp{
     display: grid;
     grid-template-columns: repeat(5,1fr);
 
@@ -156,7 +136,10 @@ th,td{
     }
 }
 
-.overlay {
+
+
+/* GRAY OVERLAY FOR POPUP for Calendar*/
+.overlayCal {
     display: none;
     position: fixed;
     top: 0;
@@ -165,8 +148,8 @@ th,td{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
-
-.popup {
+/* OPEN POPUP CONTENT for Calendar */
+.popupCal {
     display: none;
     position: fixed;
     top: 50%;
@@ -175,20 +158,53 @@ th,td{
     padding: 20px;
     background-color: #fff;
 }
-
-.popup-close {
+/* CLOSE POPUP CONTENT for Calendar*/
+.popupCal-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 20px;
+    font-size: xx-large;
     cursor: pointer;
-    color: #fff; /* Set color to white or the desired color */
+    color: #fff;
 }
-
+/* BORDER for Calendar*/
 .calpop{
     padding: 20px;
     border: rgba(0,0,0,0.2) 1px solid;
 }
 
+
+/* GRAY OVERLAY FOR POPUP for Gallery*/
+.overlayGal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* OPEN POPUP CONTENT for Gallery*/
+.popupGal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+}
+/* CLOSE POPUP CONTENT for Gallery*/
+.popupGal-close {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: xx-large;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* PROGRAMS GRID WITH SCROLLBAR */
 .programs{
     width: 100%;
     max-height: 2000px;
@@ -248,29 +264,24 @@ th,td{
     height: 0px;
     width: 5px;
 }
-
 .programs:hover::-webkit-scrollbar {
     height: 10px;
     width: 5px;
     transition: width 0.5s ease-in-out;
 }
-
 .programs::-webkit-scrollbar-thumb {
     background-color: #09c7e0;
     border-radius: 100px;
     transition: background-color 0.5s ease-in-out;
 }
-
 .programs::-webkit-scrollbar-track {
     background-color: #ccc;
     border-radius: 100px;
 }
-
 .programs:hover::-webkit-scrollbar-track {
     background-color: #ccc;
     transition: background-color 0.5s ease-in-out;
 }
-
 .programs:hover::-webkit-scrollbar-thumb {
     background-color: #09c7e0;
     border-radius: 50px;
@@ -278,11 +289,12 @@ th,td{
     transform: scaleX(1.5);
 }
 
+
+/* LATEST NEWS */
 .latest-news-grid {
     display: flex;
     flex-wrap: wrap;
 }
-
 .news {
     width: 100%;
     margin-bottom: 20px;
@@ -290,16 +302,25 @@ th,td{
     transition: transform 0.3s ease;
     padding: 20px;
 }
-
+.news-img-box {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
 .news-img {
     width: 100%;
     height: auto;
 }
-
-.news-content {
-    padding: 15px;
+.news-title{
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.news-date{
+    font-size: smaller;
 }
 
+
+
+/* PAGINATION */
 .pagination {
     display: flex;
     list-style: none;
@@ -307,12 +328,10 @@ th,td{
     margin: 20px 0;
     justify-content: center;
 }
-
 .pagination li {
     margin-right: 10px;
     cursor: pointer;
 }
-
 .pagination li a {
     text-decoration: none;
     color: #34C1D5;
@@ -320,17 +339,14 @@ th,td{
     padding: 5px 10px;
     transition: background-color 0.3s ease;
 }
-
 .pagination li a:hover {
     background-color: #34C1D5;
     color: #fff;
 }
-
 .pagination li a.active {
     background-color: #555;
     color: #fff;
 }
-
 #prevButton,
 #nextButton {
       display: inline-block;
@@ -338,6 +354,9 @@ th,td{
       cursor: pointer;
 }
 
+
+
+/* FOOTER */
 footer{
     background-color: white;
     padding-left: 100px;
@@ -365,6 +384,7 @@ footer{
 	}
 }
 
+/* CHANGE FOOTER BACKGROUND WAVE TO NONE WHEN AT SMALLER SCREEN SIZE */
 .ft{
     @media (max-width: 700px) {
         background-image: none;
@@ -372,6 +392,8 @@ footer{
     }
 }
 
+
+/* COPYRIGHT SECTION*/
 .arr{
     padding-left: 100px;
     padding-right: 100px;

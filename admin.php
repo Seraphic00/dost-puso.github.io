@@ -23,8 +23,6 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="img/logo/logo.png" type="image/x-icon">
 
-    
-
 </head>
 <body data-new-gr-c-s-check-loaded="14.1143.0" data-gr-ext-installed="">
     
@@ -112,7 +110,7 @@
             <thead>
               <tr>
                 <th>Position</th>
-                th
+                <th>Name</th>
               </tr>
             </thead>
           </table>

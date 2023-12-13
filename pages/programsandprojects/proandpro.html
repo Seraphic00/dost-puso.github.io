@@ -5,21 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> DOST PUSO - Programs and Projects</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <!-- ICONS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
   rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="proandpro.css">
+
+  <!-- FAVICON -->
   <link rel="shortcut icon" href="../../img/logo/logo.png" type="image/x-icon">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header class="py-3 fixed-top margin-bottom" style="box-shadow: 0 1px 20px 0 rgba(0,0,0,0.2); background-color: white;">
     <div class="container d-flex flex-wrap justify-content-center align-items-center" style="background-color: white; padding-top: 10px;">
       <a href="../../index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
@@ -32,11 +33,11 @@
     </div>
   </header>
 
-  <!-- Padding -->
+  <!-- PADDING FROM HEADER -->
   <div class="pdtop" style="height: 100px;"></div>
 
   <main> 
-    <!-- Bread Crumb --> 
+    <!-- BREAD CRUMB --> 
     <div class="container" style="padding-top: 20px;">
       <nav aria-label="breadcrumb" style="border:rgba(0, 0, 0, 0.1) 1px solid;background-color: #f1f1f1;">
         <ol class="breadcrumb breadcrumb-chevron p-2 rounded-3" style="--bs-breadcrumb-margin-bottom: 0rem; --bs-breadcrumb-divider: '>';">
@@ -56,8 +57,8 @@
       </nav>
     </div>
 
-    <!-- Tabs -->
-    <section style="padding-top: 10px; padding-bottom: 64px;">
+    <!-- TABS -->
+    <div style="padding-top: 10px; padding-bottom: 64px;">
       <div class="container">
         <div class="tbs">
           <div class="tab">
@@ -65,335 +66,334 @@
             <button class="tablinks" data-tab="Gallery" onclick="openTab(event, 'Gallery')">Gallery</button>
             <button class="tablinks" data-tab="News" onclick="openTab(event, 'News')">News</button>
           </div>           
-          
           <div class="tbcon">
             <div id="Calendar" class="tabcontent active">
               <div class="con">
                 <h3 class="tbcontitle">Calendar of Activities <span id="calendar-ay">(2023 - 2024)</span></h3>
                 <p class="aboutus-title-p">
-                    <div class="projects">
-                        <div class="cal-scroll">
-                            <div class="lgrp">
-                              <div class="overlay" id="overlay"></div>
-                              <div onclick="openPopup(this)" class="calpop">
-                                <div class="calevent">
-                                  <p class="cal-day">05</p>
-                                  <h6 class="mb-0 cal-my">October 2023</h6>
-                                  <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
-                                </div>
-                                <div class="calpophidden" style="display: none;">
-                                  <hr>
-                                  <p>
-                                    <b>Goals/Objectives:</b>
-                                    <br>
-                                    Elect capable and responsible officers to act as leaders of DOST – PUSO
-                                  </p>
-                                  <p>
-                                    <b>Expected Output:</b>
-                                    <br>
-                                    Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
-                                  </p>
-                                  <p>
-                                    <b>Key Staff Involved:</b>
-                                    <br>
-                                    All PSU Urdaneta City Campus DOST Scholars
-                                  </p>
-                                  <p>
-                                    <b>Resources to be Utilized:</b>
-                                    <br>
-                                    Microsoft Teams
-                                  </p>
-                                </div>
-                              </div>
-                              <div onclick="openPopup(this)" class="calpop">
-                                <div class="calevent">
-                                  <p class="cal-day">05</p>
-                                  <h6 class="mb-0 cal-my">October 2023</h6>
-                                  <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
-                                </div>
-                                <div class="calpophidden" style="display: none;">
-                                  <hr>
-                                  <p>
-                                    <b>Goals/Objectives:</b>
-                                    <br>
-                                    Elect capable and responsible officers to act as leaders of DOST – PUSO
-                                  </p>
-                                  <p>
-                                    <b>Expected Output:</b>
-                                    <br>
-                                    Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
-                                  </p>
-                                  <p>
-                                    <b>Key Staff Involved:</b>
-                                    <br>
-                                    All PSU Urdaneta City Campus DOST Scholars
-                                  </p>
-                                  <p>
-                                    <b>Resources to be Utilized:</b>
-                                    <br>
-                                    Microsoft Teams
-                                  </p>
-                                </div>
-                              </div>
-                              <div onclick="openPopup(this)" class="calpop">
-                                <div class="calevent">
-                                  <p class="cal-day">05</p>
-                                  <h6 class="mb-0 cal-my">October 2023</h6>
-                                  <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
-                                </div>
-                                <div class="calpophidden" style="display: none;">
-                                  <hr>
-                                  <p>
-                                    <b>Goals/Objectives:</b>
-                                    <br>
-                                    Elect capable and responsible officers to act as leaders of DOST – PUSO
-                                  </p>
-                                  <p>
-                                    <b>Expected Output:</b>
-                                    <br>
-                                    Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
-                                  </p>
-                                  <p>
-                                    <b>Key Staff Involved:</b>
-                                    <br>
-                                    All PSU Urdaneta City Campus DOST Scholars
-                                  </p>
-                                  <p>
-                                    <b>Resources to be Utilized:</b>
-                                    <br>
-                                    Microsoft Teams
-                                  </p>
-                                </div>
-                              </div>
-                              <div onclick="openPopup(this)" class="calpop">
-                                <div class="calevent">
-                                  <p class="cal-day">05</p>
-                                  <h6 class="mb-0 cal-my">October 2023</h6>
-                                  <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
-                                </div>
-                                <div class="calpophidden" style="display: none;">
-                                  <hr>
-                                  <p>
-                                    <b>Goals/Objectives:</b>
-                                    <br>
-                                    Elect capable and responsible officers to act as leaders of DOST – PUSO
-                                  </p>
-                                  <p>
-                                    <b>Expected Output:</b>
-                                    <br>
-                                    Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
-                                  </p>
-                                  <p>
-                                    <b>Key Staff Involved:</b>
-                                    <br>
-                                    All PSU Urdaneta City Campus DOST Scholars
-                                  </p>
-                                  <p>
-                                    <b>Resources to be Utilized:</b>
-                                    <br>
-                                    Microsoft Teams
-                                  </p>
-                                </div>
-                              </div>
-                              <div onclick="openPopup(this)" class="calpop">
-                                <div class="calevent">
-                                  <p class="cal-day">05</p>
-                                  <h6 class="mb-0 cal-my">October 2023</h6>
-                                  <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
-                                </div>
-                                <div class="calpophidden" style="display: none;">
-                                  <hr>
-                                  <p>
-                                    <b>Goals/Objectives:</b>
-                                    <br>
-                                    Elect capable and responsible officers to act as leaders of DOST – PUSO
-                                  </p>
-                                  <p>
-                                    <b>Expected Output:</b>
-                                    <br>
-                                    Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
-                                  </p>
-                                  <p>
-                                    <b>Key Staff Involved:</b>
-                                    <br>
-                                    All PSU Urdaneta City Campus DOST Scholars
-                                  </p>
-                                  <p>
-                                    <b>Resources to be Utilized:</b>
-                                    <br>
-                                    Microsoft Teams
-                                  </p>
-                                </div>
-                              </div>
-                              <div onclick="openPopup(this)" class="calpop">
-                                <div class="calevent">
-                                  <p class="cal-day">05</p>
-                                  <h6 class="mb-0 cal-my">October 2023</h6>
-                                  <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
-                                </div>
-                                <div class="calpophidden" style="display: none;">
-                                  <hr>
-                                  <p>
-                                    <b>Goals/Objectives:</b>
-                                    <br>
-                                    Elect capable and responsible officers to act as leaders of DOST – PUSO
-                                  </p>
-                                  <p>
-                                    <b>Expected Output:</b>
-                                    <br>
-                                    Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
-                                  </p>
-                                  <p>
-                                    <b>Key Staff Involved:</b>
-                                    <br>
-                                    All PSU Urdaneta City Campus DOST Scholars
-                                  </p>
-                                  <p>
-                                    <b>Resources to be Utilized:</b>
-                                    <br>
-                                    Microsoft Teams
-                                  </p>
-                                </div>
-                              </div>
-                              <div onclick="openPopup(this)" class="calpop">
-                                <div class="calevent">
-                                  <p class="cal-day">05</p>
-                                  <h6 class="mb-0 cal-my">October 2023</h6>
-                                  <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
-                                </div>
-                                <div class="calpophidden" style="display: none;">
-                                  <hr>
-                                  <p>
-                                    <b>Goals/Objectives:</b>
-                                    <br>
-                                    Elect capable and responsible officers to act as leaders of DOST – PUSO
-                                  </p>
-                                  <p>
-                                    <b>Expected Output:</b>
-                                    <br>
-                                    Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
-                                  </p>
-                                  <p>
-                                    <b>Key Staff Involved:</b>
-                                    <br>
-                                    All PSU Urdaneta City Campus DOST Scholars
-                                  </p>
-                                  <p>
-                                    <b>Resources to be Utilized:</b>
-                                    <br>
-                                    Microsoft Teams
-                                  </p>
-                                </div>
-                              </div>
-                              <div onclick="openPopup(this)" class="calpop">
-                                <div class="calevent">
-                                  <p class="cal-day">05</p>
-                                  <h6 class="mb-0 cal-my">October 2023</h6>
-                                  <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
-                                </div>
-                                <div class="calpophidden" style="display: none;">
-                                  <hr>
-                                  <p>
-                                    <b>Goals/Objectives:</b>
-                                    <br>
-                                    Elect capable and responsible officers to act as leaders of DOST – PUSO
-                                  </p>
-                                  <p>
-                                    <b>Expected Output:</b>
-                                    <br>
-                                    Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
-                                  </p>
-                                  <p>
-                                    <b>Key Staff Involved:</b>
-                                    <br>
-                                    All PSU Urdaneta City Campus DOST Scholars
-                                  </p>
-                                  <p>
-                                    <b>Resources to be Utilized:</b>
-                                    <br>
-                                    Microsoft Teams
-                                  </p>
-                                </div>
-                              </div>
-                              <div onclick="openPopup(this)" class="calpop">
-                                <div class="calevent">
-                                  <p class="cal-day">05</p>
-                                  <h6 class="mb-0 cal-my">October 2023</h6>
-                                  <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
-                                </div>
-                                <div class="calpophidden" style="display: none;">
-                                  <hr>
-                                  <p>
-                                    <b>Goals/Objectives:</b>
-                                    <br>
-                                    Elect capable and responsible officers to act as leaders of DOST – PUSO
-                                  </p>
-                                  <p>
-                                    <b>Expected Output:</b>
-                                    <br>
-                                    Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
-                                  </p>
-                                  <p>
-                                    <b>Key Staff Involved:</b>
-                                    <br>
-                                    All PSU Urdaneta City Campus DOST Scholars
-                                  </p>
-                                  <p>
-                                    <b>Resources to be Utilized:</b>
-                                    <br>
-                                    Microsoft Teams
-                                  </p>
-                                </div>
-                              </div>
-                              <div onclick="openPopup(this)" class="calpop">
-                                <div class="calevent">
-                                  <p class="cal-day">05</p>
-                                  <h6 class="mb-0 cal-my">October 2023</h6>
-                                  <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
-                                </div>
-                                <div class="calpophidden" style="display: none;">
-                                  <hr>
-                                  <p>
-                                    <b>Goals/Objectives:</b>
-                                    <br>
-                                    Elect capable and responsible officers to act as leaders of DOST – PUSO
-                                  </p>
-                                  <p>
-                                    <b>Expected Output:</b>
-                                    <br>
-                                    Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
-                                  </p>
-                                  <p>
-                                    <b>Key Staff Involved:</b>
-                                    <br>
-                                    All PSU Urdaneta City Campus DOST Scholars
-                                  </p>
-                                  <p>
-                                    <b>Resources to be Utilized:</b>
-                                    <br>
-                                    Microsoft Teams
-                                  </p>
-                                </div>
-                              </div>
-                              <div class="popup" id="popup" style="padding: 30px;">
-                                <span class="popup-close" onclick="closePopup()" style="color: black; transform: scale(1.5);">&times;</span>
-                                <div id="popupContent" class="calpop" aria-current="true">
-                                  <div class="calevent">
-                                    <p class="cal-day"><span><h6 class="mb-0 cal-my"></h6></span></p>
-                                    <p class="mb-0 opacity-75 cal-def"></p>
-                                  </div>
-                                  <div class="calpophidden">
-                                    <hr>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                  <div class="projects">
+                    <div class="cal-scroll">
+                      <div class="cal-grp">
+                        <div class="overlayCal" id="overlayCal"></div>
+                        <div onclick="openPopupCalendar(this)" class="calpop">
+                          <div class="calevent">
+                            <p class="cal-day">05</p>
+                            <h6 class="mb-0 cal-my">October 2023</h6>
+                            <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
+                          </div>
+                          <div class="calpophidden" style="display: none;">
+                            <hr>
+                            <p>
+                              <b>Goals/Objectives:</b>
+                              <br>
+                              Elect capable and responsible officers to act as leaders of DOST – PUSO
+                            </p>
+                            <p>
+                              <b>Expected Output:</b>
+                              <br>
+                              Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
+                            </p>
+                            <p>
+                              <b>Key Staff Involved:</b>
+                              <br>
+                              All PSU Urdaneta City Campus DOST scholars
+                            </p>
+                            <p>
+                              <b>Resources to be Utilized:</b>
+                              <br>
+                              Microsoft teams
+                            </p>
+                          </div>
                         </div>
+                        <div onclick="openPopupCalendar(this)" class="calpop">
+                          <div class="calevent">
+                            <p class="cal-day">05</p>
+                            <h6 class="mb-0 cal-my">October 2023</h6>
+                            <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
+                          </div>
+                          <div class="calpophidden" style="display: none;">
+                            <hr>
+                            <p>
+                              <b>Goals/Objectives:</b>
+                              <br>
+                              Elect capable and responsible officers to act as leaders of DOST – PUSO
+                            </p>
+                            <p>
+                              <b>Expected Output:</b>
+                              <br>
+                              Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
+                            </p>
+                            <p>
+                              <b>Key Staff Involved:</b>
+                              <br>
+                              All PSU Urdaneta City Campus DOST scholars
+                            </p>
+                            <p>
+                              <b>Resources to be Utilized:</b>
+                              <br>
+                              Microsoft teams
+                            </p>
+                          </div>
+                        </div>
+                        <div onclick="openPopupCalendar(this)" class="calpop">
+                          <div class="calevent">
+                            <p class="cal-day">05</p>
+                            <h6 class="mb-0 cal-my">October 2023</h6>
+                            <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
+                          </div>
+                          <div class="calpophidden" style="display: none;">
+                            <hr>
+                            <p>
+                              <b>Goals/Objectives:</b>
+                              <br>
+                              Elect capable and responsible officers to act as leaders of DOST – PUSO
+                            </p>
+                            <p>
+                              <b>Expected Output:</b>
+                              <br>
+                              Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
+                            </p>
+                            <p>
+                              <b>Key Staff Involved:</b>
+                              <br>
+                              All PSU Urdaneta City Campus DOST scholars
+                            </p>
+                            <p>
+                              <b>Resources to be Utilized:</b>
+                              <br>
+                              Microsoft teams
+                            </p>
+                          </div>
+                        </div>
+                        <div onclick="openPopupCalendar(this)" class="calpop">
+                          <div class="calevent">
+                            <p class="cal-day">05</p>
+                            <h6 class="mb-0 cal-my">October 2023</h6>
+                            <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
+                          </div>
+                          <div class="calpophidden" style="display: none;">
+                            <hr>
+                            <p>
+                              <b>Goals/Objectives:</b>
+                              <br>
+                              Elect capable and responsible officers to act as leaders of DOST – PUSO
+                            </p>
+                            <p>
+                              <b>Expected Output:</b>
+                              <br>
+                              Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
+                            </p>
+                            <p>
+                              <b>Key Staff Involved:</b>
+                              <br>
+                              All PSU Urdaneta City Campus DOST scholars
+                            </p>
+                            <p>
+                              <b>Resources to be Utilized:</b>
+                              <br>
+                              Microsoft teams
+                            </p>
+                          </div>
+                        </div>
+                        <div onclick="openPopupCalendar(this)" class="calpop">
+                          <div class="calevent">
+                            <p class="cal-day">05</p>
+                            <h6 class="mb-0 cal-my">October 2023</h6>
+                            <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
+                          </div>
+                          <div class="calpophidden" style="display: none;">
+                            <hr>
+                            <p>
+                              <b>Goals/Objectives:</b>
+                              <br>
+                              Elect capable and responsible officers to act as leaders of DOST – PUSO
+                            </p>
+                            <p>
+                              <b>Expected Output:</b>
+                              <br>
+                              Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
+                            </p>
+                            <p>
+                              <b>Key Staff Involved:</b>
+                              <br>
+                              All PSU Urdaneta City Campus DOST scholars
+                            </p>
+                            <p>
+                              <b>Resources to be Utilized:</b>
+                              <br>
+                              Microsoft teams
+                            </p>
+                          </div>
+                        </div>
+                        <div onclick="openPopupCalendar(this)" class="calpop">
+                          <div class="calevent">
+                            <p class="cal-day">05</p>
+                            <h6 class="mb-0 cal-my">October 2023</h6>
+                            <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
+                          </div>
+                          <div class="calpophidden" style="display: none;">
+                            <hr>
+                            <p>
+                              <b>Goals/Objectives:</b>
+                              <br>
+                              Elect capable and responsible officers to act as leaders of DOST – PUSO
+                            </p>
+                            <p>
+                              <b>Expected Output:</b>
+                              <br>
+                              Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
+                            </p>
+                            <p>
+                              <b>Key Staff Involved:</b>
+                              <br>
+                              All PSU Urdaneta City Campus DOST scholars
+                            </p>
+                            <p>
+                              <b>Resources to be Utilized:</b>
+                              <br>
+                              Microsoft teams
+                            </p>
+                          </div>
+                        </div>
+                        <div onclick="openPopupCalendar(this)" class="calpop">
+                          <div class="calevent">
+                            <p class="cal-day">05</p>
+                            <h6 class="mb-0 cal-my">October 2023</h6>
+                            <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
+                          </div>
+                          <div class="calpophidden" style="display: none;">
+                            <hr>
+                            <p>
+                              <b>Goals/Objectives:</b>
+                              <br>
+                              Elect capable and responsible officers to act as leaders of DOST – PUSO
+                            </p>
+                            <p>
+                              <b>Expected Output:</b>
+                              <br>
+                              Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
+                            </p>
+                            <p>
+                              <b>Key Staff Involved:</b>
+                              <br>
+                              All PSU Urdaneta City Campus DOST scholars
+                            </p>
+                            <p>
+                              <b>Resources to be Utilized:</b>
+                              <br>
+                              Microsoft teams
+                            </p>
+                          </div>
+                        </div>
+                        <div onclick="openPopupCalendar(this)" class="calpop">
+                          <div class="calevent">
+                            <p class="cal-day">05</p>
+                            <h6 class="mb-0 cal-my">October 2023</h6>
+                            <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
+                          </div>
+                          <div class="calpophidden" style="display: none;">
+                            <hr>
+                            <p>
+                              <b>Goals/Objectives:</b>
+                              <br>
+                              Elect capable and responsible officers to act as leaders of DOST – PUSO
+                            </p>
+                            <p>
+                              <b>Expected Output:</b>
+                              <br>
+                              Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
+                            </p>
+                            <p>
+                              <b>Key Staff Involved:</b>
+                              <br>
+                              All PSU Urdaneta City Campus DOST scholars
+                            </p>
+                            <p>
+                              <b>Resources to be Utilized:</b>
+                              <br>
+                              Microsoft teams
+                            </p>
+                          </div>
+                        </div>
+                        <div onclick="openPopupCalendar(this)" class="calpop">
+                          <div class="calevent">
+                            <p class="cal-day">05</p>
+                            <h6 class="mb-0 cal-my">October 2023</h6>
+                            <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
+                          </div>
+                          <div class="calpophidden" style="display: none;">
+                            <hr>
+                            <p>
+                              <b>Goals/Objectives:</b>
+                              <br>
+                              Elect capable and responsible officers to act as leaders of DOST – PUSO
+                            </p>
+                            <p>
+                              <b>Expected Output:</b>
+                              <br>
+                              Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
+                            </p>
+                            <p>
+                              <b>Key Staff Involved:</b>
+                              <br>
+                              All PSU Urdaneta City Campus DOST scholars
+                            </p>
+                            <p>
+                              <b>Resources to be Utilized:</b>
+                              <br>
+                              Microsoft teams
+                            </p>
+                          </div>
+                        </div>
+                        <div onclick="openPopupCalendar(this)" class="calpop">
+                          <div class="calevent">
+                            <p class="cal-day">05</p>
+                            <h6 class="mb-0 cal-my">October 2023</h6>
+                            <p class="mb-0 opacity-75 cal-def">Election of DOST – PUSO Officers</p>
+                          </div>
+                          <div class="calpophidden" style="display: none;">
+                            <hr>
+                            <p>
+                              <b>Goals/Objectives:</b>
+                              <br>
+                              Elect capable and responsible officers to act as leaders of DOST – PUSO
+                            </p>
+                            <p>
+                              <b>Expected Output:</b>
+                              <br>
+                              Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)
+                            </p>
+                            <p>
+                              <b>Key Staff Involved:</b>
+                              <br>
+                              All PSU Urdaneta City Campus DOST scholars
+                            </p>
+                            <p>
+                              <b>Resources to be Utilized:</b>
+                              <br>
+                              Microsoft teams
+                            </p>
+                          </div>
+                        </div>
+                        <div class="popupCal" id="popupCal">
+                          <span class="popupCal-close" onclick="closePopupCalendar()" style="color: black; transform: scale(1.5);">&times;</span>
+                          <div id="popupContentCal" class="calpop" aria-current="true">
+                          <div class="calevent">
+                            <p class="cal-day"><span><h6 class="mb-0 cal-my"></h6></span></p>
+                            <p class="mb-0 cal-def"></p>
+                          </div>
+                          <div class="calpophidden">
+                            <hr>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </p>
               </div>   
             </div>
@@ -402,302 +402,278 @@
                   <h3 class="tbcontitle">Gallery</h3>
                   <p class="aboutus-title-p">
                     <div class="programs">
-                      <div class="program" style="background-image: url('../../img/activities/one.png');">
-                          <div class="content" onclick="toProjects()">
-                              <h3 class="programname">2024 Undergraduate Scholarships Campaign</h3>
-                              <p class="programdef">
-                                  DOST-Science Education Institute (DOST-SEI) proudly announces the opening of applications for the 2024 DOST Undergraduate Scholarships! In line with this announcement, the DOST Scholars’ Intercampus Association of Pangasinan (DOST-SICAP) conducted a campaign on this day, November 14, 2023, at Daniel Maramba High School, unlocking opportunities for students to soar higher! They extend their heartfelt salute to the aspiring minds ready to apply for the DOST-SEI Undergraduate Scholarship Program.
-                              </p>
-                          </div>
+                      <div class="overlayGal" id="overlayGal"></div>
+                      <div onclick="openPopupGallery(this)" class="program" style="background-image: url('../../img/activities/one.png');">
+                        <div class="content">
+                          <h3 class="programname">2024 Undergraduate Scholarships Campaign</h3>
+                          <p class="programdef">
+                            DOST-Science Education Institute (DOST-SEI) proudly announces the opening of applications for the 2024 DOST Undergraduate Scholarships! In line with this announcement, the DOST Scholars’ Intercampus Association of Pangasinan (DOST-SICAP) conducted a campaign on this day, November 14, 2023, at Daniel Maramba High School, unlocking opportunities for students to soar higher! They extend their heartfelt salute to the aspiring minds ready to apply for the DOST-SEI Undergraduate Scholarship Program.
+                          </p>
+                        </div>
                       </div>
-                      <div class="program" style="background-image: url('../../img/activities/two.jpg');">
-                          <div class="content" onclick="toProjects()">
-                              <h3 class="programname">National DOST Scholars’ Summit 2023</h3>
-                              <p class="programdef">Clear the runway, Quezon City! 🤩
-                                  DOST - PUSO has gracefully touched down, bringing their boundless enthusiasm to the National DOST Scholars’ Summit at the University of the Philippines, Diliman. Get set for an electrifying showcase of brilliance and a fusion of ideas that will leave you in awe! Sheesh!🚀🔥
-                              </p>
-                          </div>
+                      <div onclick="openPopupGallery(this)" class="program" style="background-image: url('../../img/activities/two.jpg');">
+                        <div class="content">
+                          <h3 class="programname">National DOST Scholars’ Summit 2023</h3>
+                          <p class="programdef">Clear the runway, Quezon City! 🤩
+                            DOST - PUSO has gracefully touched down, bringing their boundless enthusiasm to the National DOST Scholars’ Summit at the University of the Philippines, Diliman. Get set for an electrifying showcase of brilliance and a fusion of ideas that will leave you in awe! Sheesh!🚀🔥
+                          </p>
+                        </div>
                       </div>
-                      <div class="program" style="background-image: url('../../img/activities/three.png');">
-                          <div class="content" onclick="toProjects()">
-                              <h3 class="programname">DOST - SEI Leadership Bootcamp 2023</h3>
-                              <p class="programdef">The Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and</p>
-                          </div>
+                      <div onclick="openPopupGallery(this)" class="program" style="background-image: url('../../img/activities/three.png');">
+                        <div class="content">
+                          <h3 class="programname">DOST - SEI Leadership Bootcamp 2023</h3>
+                          <p class="programdef">The Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and</p>
+                        </div>
                       </div>
-                      <div class="program" style="background-image: url('../../img/activities/four.png');">
-                          <div class="content" onclick="toProjects()">
-                              <h3 class="programname">Padayon Pantry</h3>
-                              <p class="programdef">Padayon Pantry is all setup! With the help of the DOST-PUSO and DOST-SICAP members, the pantry was successfully assembled                            </p>
-                          </div>
+                      <div onclick="openPopupGallery(this)" class="program" style="background-image: url('../../img/activities/four.png');">
+                        <div class="content">
+                          <h3 class="programname">Padayon Pantry</h3>
+                          <p class="programdef">Padayon Pantry is all setup! With the help of the DOST-PUSO and DOST-SICAP members, the pantry was successfully assembled                            </p>
+                        </div>
                       </div>
-                      <div class="program" style="background-image: url('../../img/activities/one.png');">
-                          <div class="content" onclick="toProjects()">
-                              <h3 class="programname">2024 Undergraduate Scholarships Campaign</h3>
-                              <p class="programdef">
-                                  DOST-Science Education Institute (DOST-SEI) proudly announces the opening of applications for the 2024 DOST Undergraduate Scholarships! In line with this announcement, the DOST Scholars’ Intercampus Association of Pangasinan (DOST-SICAP) conducted a campaign on this day, November 14, 2023, at Daniel Maramba High School, unlocking opportunities for students to soar higher! They extend their heartfelt salute to the aspiring minds ready to apply for the DOST-SEI Undergraduate Scholarship Program.
-                              </p>
-                          </div>
+                      <div onclick="openPopupGallery(this)" class="program" style="background-image: url('../../img/activities/one.png');">
+                        <div class="content">
+                          <h3 class="programname">2024 Undergraduate Scholarships Campaign</h3>
+                          <p class="programdef">
+                            DOST-Science Education Institute (DOST-SEI) proudly announces the opening of applications for the 2024 DOST Undergraduate Scholarships! In line with this announcement, the DOST Scholars’ Intercampus Association of Pangasinan (DOST-SICAP) conducted a campaign on this day, November 14, 2023, at Daniel Maramba High School, unlocking opportunities for students to soar higher! They extend their heartfelt salute to the aspiring minds ready to apply for the DOST-SEI Undergraduate Scholarship Program.
+                          </p>
+                        </div>
                       </div>
-                      <div class="program" style="background-image: url('../../img/activities/two.jpg');">
-                          <div class="content" onclick="toProjects()">
-                              <h3 class="programname">National DOST Scholars’ Summit 2023</h3>
-                              <p class="programdef">Clear the runway, Quezon City! 🤩
-                                  DOST - PUSO has gracefully touched down, bringing their boundless enthusiasm to the National DOST Scholars’ Summit at the University of the Philippines, Diliman. Get set for an electrifying showcase of brilliance and a fusion of ideas that will leave you in awe! Sheesh!🚀🔥
-                              </p>
-                          </div>
+                      <div onclick="openPopupGallery(this)" class="program" style="background-image: url('../../img/activities/two.jpg');">
+                        <div class="content">
+                          <h3 class="programname">National DOST Scholars’ Summit 2023</h3>
+                          <p class="programdef">Clear the runway, Quezon City! 🤩
+                            DOST - PUSO has gracefully touched down, bringing their boundless enthusiasm to the National DOST Scholars’ Summit at the University of the Philippines, Diliman. Get set for an electrifying showcase of brilliance and a fusion of ideas that will leave you in awe! Sheesh!🚀🔥
+                          </p>
+                        </div>
                       </div>
-                      <div class="program" style="background-image: url('../../img/activities/three.png');">
-                          <div class="content" onclick="toProjects()">
-                              <h3 class="programname">DOST - SEI Leadership Bootcamp 2023</h3>
-                              <p class="programdef">The Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and</p>
-                          </div>
+                      <div onclick="openPopupGallery(this)" class="program" style="background-image: url('../../img/activities/three.png');">
+                        <div class="content">
+                          <h3 class="programname">DOST - SEI Leadership Bootcamp 2023</h3>
+                          <p class="programdef">The Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and</p>
+                        </div>
                       </div>
-                      <div class="program" style="background-image: url('../../img/activities/four.png');">
-                          <div class="content" onclick="toProjects()">
-                              <h3 class="programname">Padayon Pantry</h3>
-                              <p class="programdef">Padayon Pantry is all setup! With the help of the DOST-PUSO and DOST-SICAP members, the pantry was successfully assembled                            </p>
-                          </div>
+                      <div onclick="openPopupGallery(this)" class="program" style="background-image: url('../../img/activities/four.png');">
+                        <div class="content">
+                          <h3 class="programname">Padayon Pantry</h3>
+                          <p class="programdef">Padayon Pantry is all setup! With the help of the DOST-PUSO and DOST-SICAP members, the pantry was successfully assembled                            </p>
+                        </div>
                       </div>
-                      <div class="program" style="background-image: url('../../img/activities/one.png');">
-                          <div class="content" onclick="toProjects()">
-                              <h3 class="programname">2024 Undergraduate Scholarships Campaign</h3>
-                              <p class="programdef">
-                                  DOST-Science Education Institute (DOST-SEI) proudly announces the opening of applications for the 2024 DOST Undergraduate Scholarships! In line with this announcement, the DOST Scholars’ Intercampus Association of Pangasinan (DOST-SICAP) conducted a campaign on this day, November 14, 2023, at Daniel Maramba High School, unlocking opportunities for students to soar higher! They extend their heartfelt salute to the aspiring minds ready to apply for the DOST-SEI Undergraduate Scholarship Program.
-                              </p>
-                          </div>
+                      <div onclick="openPopupGallery(this)" class="program" style="background-image: url('../../img/activities/one.png');">
+                        <div class="content">
+                          <h3 class="programname">2024 Undergraduate Scholarships Campaign</h3>
+                          <p class="programdef">
+                            DOST-Science Education Institute (DOST-SEI) proudly announces the opening of applications for the 2024 DOST Undergraduate Scholarships! In line with this announcement, the DOST Scholars’ Intercampus Association of Pangasinan (DOST-SICAP) conducted a campaign on this day, November 14, 2023, at Daniel Maramba High School, unlocking opportunities for students to soar higher! They extend their heartfelt salute to the aspiring minds ready to apply for the DOST-SEI Undergraduate Scholarship Program.
+                          </p>
+                        </div>
                       </div>
-                      <div class="program" style="background-image: url('../../img/activities/two.jpg');">
-                          <div class="content" onclick="toProjects()">
-                              <h3 class="programname">National DOST Scholars’ Summit 2023</h3>
-                              <p class="programdef">Clear the runway, Quezon City! 🤩
-                                  DOST - PUSO has gracefully touched down, bringing their boundless enthusiasm to the National DOST Scholars’ Summit at the University of the Philippines, Diliman. Get set for an electrifying showcase of brilliance and a fusion of ideas that will leave you in awe! Sheesh!🚀🔥
-                              </p>
-                          </div>
+                      <div onclick="openPopupGallery(this)" class="program" style="background-image: url('../../img/activities/two.jpg');">
+                        <div class="content">
+                          <h3 class="programname">National DOST Scholars’ Summit 2023</h3>
+                          <p class="programdef">Clear the runway, Quezon City! 🤩
+                            DOST - PUSO has gracefully touched down, bringing their boundless enthusiasm to the National DOST Scholars’ Summit at the University of the Philippines, Diliman. Get set for an electrifying showcase of brilliance and a fusion of ideas that will leave you in awe! Sheesh!🚀🔥
+                          </p>
+                        </div>
                       </div>
-                      <div class="program" style="background-image: url('../../img/activities/three.png');">
-                          <div class="content" onclick="toProjects()">
-                              <h3 class="programname">DOST - SEI Leadership Bootcamp 2023</h3>
-                              <p class="programdef">The Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and</p>
-                          </div>
+                      <div onclick="openPopupGallery(this)" class="program" style="background-image: url('../../img/activities/three.png');">
+                        <div class="content">
+                          <h3 class="programname">DOST - SEI Leadership Bootcamp 2023</h3>
+                          <p class="programdef">The Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and</p>
+                        </div>
                       </div>
-                      <div class="program" style="background-image: url('../../img/activities/four.png');">
-                          <div class="content" onclick="toProjects()">
-                              <h3 class="programname">Padayon Pantry</h3>
-                              <p class="programdef">Padayon Pantry is all setup! With the help of the DOST-PUSO and DOST-SICAP members, the pantry was successfully assembled                            </p>
+                      <div onclick="openPopupGallery(this)" class="program" style="background-image: url('../../img/activities/four.png');">
+                        <div class="content">
+                          <h3 class="programname">Padayon Pantry</h3>
+                          <p class="programdef">Padayon Pantry is all setup! With the help of the DOST-PUSO and DOST-SICAP members, the pantry was successfully assembled                            </p>
+                        </div>
+                      </div>
+                      <div class="popupGal" id="popupGal">
+                        <span class="popupGal-close" onclick="closePopupGallery()" style="color: black; transform: scale(1.5);">&times;</span>
+                        <div id="popupContentGal" class="calpop" aria-current="true">
+                          <div class="content">
                           </div>
+                        </div>
                       </div>
                     </div>
                   </p>
                 </div>
             </div> 
             <div id="News" class="tabcontent">
-                <div class="con">
-                  <div class="latest-news-grid">
+              <div class="con">
+                <h3 class="tbcontitle">Latest News</h3>
+                <div class="latest-news-grid">
                     <div class="news">
-                        <div class="news-img-box">
-                            <img src="/img/news/news-img1.png" alt="" class="news-img">
-                        </div>
-                        <div class="news-content">
-                            <p class="news-date">
-                                18 Oct 2023
-                            </p>
-                            <p class="news-title">
-                                2023 National Youth Science, Technology, and Innovation Festival (NYSTIF) happening this 25-28 October 2023 at The PICC Forum Tent!
-                            </p>
-                            <p class="news-def">
-                                As the population of Scholars in the province of Pangasinan continuously grew, the appointment of leaders and officers who are dedicated, competent, and adaptable to changes is important in order to attain the association's main goal Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat consequuntur consectetur tenetur tempore odio odit praesentium maiores ullam repellendus! Dolorem.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="news">
-                        <div class="news-img-box">
-                            <img src="/img/news/news-img2.png" alt="" class="news-img">
-                        </div>
-                        <div class="news-content">
-                            <p class="news-date">
-                                30 Sept 2023
-                            </p>
-                            <p class="news-title">
-                                New Elected Officers of DOST Scholars’ Inter-Campus Association of Pangasinan for the Academic year 2023-2024. 
-                            </p>
-                            <p class="news-def">
-                                As the population of Scholars in the province of Pangasinan continuously grew, the appointment of leaders and officers who are dedicated, competent, and adaptable to changes is important in order to attain the association's main goal and Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio vel natus obcaecati ab inventore mollitia error eius quia! Doloribus hic quidem earum commodi ratione quisquam, tempora labore itaque quia suscipit neque enim. Autem quibusdam quasi corrupti. Aliquam, voluptatum fuga. Cum quis dolorum quisquam sapiente labore voluptatem id omnis molestias enim?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="news">
-                        <div class="news-img-box">
-                            <img src="/img/news/news-img3.png" alt="" class="news-img">
-                        </div>
-                        <div class="news-content">
-                            <p class="news-date">
-                                06  Sept 2023
-                            </p>
-                            <p class="news-title">
-                                Congratulations to PSUnians, DOST 2023 S&T UNDERGRADUATE SCHOLARSHIP QUALIFIERS! 
-                            </p>
-                            <p class="news-def">
-                                The Department of Science and Technology Regional Office No. VIII is pleased to announce the names of the Qualifiers for the 2023 Undergraduate Scholarship Programs Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sequi autem, magni magnam at reiciendis sit dolor iure saepe accusamus nulla id illum in facilis fugiat, sint debitis labore delectus? Quasi ullam, corporis alias cupiditate, eveniet laudantium labore voluptas commodi provident facere necessitatibus minima consequuntur fugit explicabo laborum ipsum deleniti.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="news">
-                        <div class="news-img-box">
-                            <img src="/img/news/news-img4.jpg" alt="" class="news-img">
-                        </div>
-                        <div class="news-content">
-                            <p class="news-date">
-                                29 July 2023
-                            </p>
-                            <p class="news-title">
-                                Super Typhoon Egay: Donation Drive led by DOST- MAYSA for all affected indigent families in Pagudpud, Ilocos Norte.  
-                            </p>
-                            <p class="news-def">
-                                Super Typhoon Egay may have left a trail of devastation in the Ilocos Region, but together, we can be a beacon of hope for those affected indigent families in Pagudpud.Let us unite under the banner of compassion as DOST-MAYSA launches a Donation Drive for our fellow Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quia repudiandae officiis ipsum, minima similique, asperiores molestiae dolor a iusto vero corporis, magni doloribus facere distinctio possimus eveniet eligendi itaque nemo tempora debitis reiciendis vel rem facilis! Culpa suscipit aspernatur eligendi laboriosam, doloribus nobis neque, ipsum hic est corrupti sed.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="news">
-                        <div class="news-img-box">
-                            <img src="/img/news/news-img5.jpg" alt="" class="news-img">
-                        </div>
-                        <div class="news-content">
-                            <p class="news-date">
-                                13 July 2023
-                            </p>
-                            <p class="news-title">
-                                2023 DOST-Scholars’ Exit Conference at  Lingayen, Pangasinan 
-                            </p>
-                            <p class="news-def">
-                                The Department of Science and Technology Region 1 (DOST 1) conducted an Exit Conference to 85 DOST-Science Education Institute (SEI) graduating scholars from Pangasinan on July 12-13, 2023 at Provincial Training and Development Center, Lingayen, Pangasinan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatum quibusdam quisquam itaque, voluptates ducimus id eaque quod hic blanditiis aperiam error, beatae voluptate neque optio quos suscipit veritatis. Saepe praesentium officia ratione quis quasi sit adipisci suscipit magni eos blanditiis. Fuga a ea totam! Eos dicta corrupti delectus id.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="news">
-                        <div class="news-img-box">
-                            <img src="/img/news/news-img6.jpg" alt="" class="news-img">
-                        </div>
-                        <div class="news-content">
-                            <p class="news-date">
-                                7 May 2023
-                            </p>
-                            <p class="news-title">
-                                DOST-PUSO Secures Two Spots for Prevail 2023 Final Round
-                            </p>
-                            <p class="news-def">
-                                University of the Philippines Diliman - After an intense battle of wits among five teams from DOST - PUSO, consisting of three members each, two teams have emerged victorious, securing their spots in the final round of Prevail 2023 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste earum atque ipsam, consequuntur id molestias asperiores sapiente quod odit suscipit quaerat totam ratione magni consectetur quam rem quae nihil deleniti ea culpa, corrupti ipsa consequatur quo delectus. Voluptatem sint quidem itaque deserunt doloremque molestias sequi, ex dolorem amet error labore.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="news">
-                        <div class="news-img-box">
-                            <img src="/img/news/news-img5.jpg" alt="" class="news-img">
-                        </div>
-                        <div class="news-content">
-                            <p class="news-date">
-                                13 July 2023
-                            </p>
-                            <p class="news-title">
-                                2023 DOST-Scholars’ Exit Conference at  Lingayen, Pangasinan 
-                            </p>
-                            <p class="news-def">
-                                The Department of Science and Technology Region 1 (DOST 1) conducted an Exit Conference to 85 DOST-Science Education Institute (SEI) graduating scholars from Pangasinan on July 12-13, 2023 at Provincial Training and Development Center, Lingayen, Pangasinan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatum quibusdam quisquam itaque, voluptates ducimus id eaque quod hic blanditiis aperiam error, beatae voluptate neque optio quos suscipit veritatis. Saepe praesentium officia ratione quis quasi sit adipisci suscipit magni eos blanditiis. Fuga a ea totam! Eos dicta corrupti delectus id.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="news">
-                        <div class="news-img-box">
-                            <img src="/img/news/news-img6.jpg" alt="" class="news-img">
-                        </div>
-                        <div class="news-content">
-                            <p class="news-date">
-                                7 May 2023
-                            </p>
-                            <p class="news-title">
-                                DOST-PUSP Secures Two Spots for Prevail 2023 Final Round
-                            </p>
-                            <p class="news-def">
-                                University of the Philippines Diliman - After an intense battle of wits among five teams from DOST - PUSO, consisting of three members each, two teams have emerged victorious, securing their spots in the final round of Prevail 2023 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste earum atque ipsam, consequuntur id molestias asperiores sapiente quod odit suscipit quaerat totam ratione magni consectetur quam rem quae nihil deleniti ea culpa, corrupti ipsa consequatur quo delectus. Voluptatem sint quidem itaque deserunt doloremque molestias sequi, ex dolorem amet error labore.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="news">
-                      <div class="news-img-box">
-                          <img src="/img/news/news-img5.jpg" alt="" class="news-img">
-                      </div>
                       <div class="news-content">
-                          <p class="news-date">
-                              13 July 2023
-                          </p>
-                          <p class="news-title">
-                              2023 DOST-Scholars’ Exit Conference at  Lingayen, Pangasinan 
-                          </p>
-                          <p class="news-def">
-                              The Department of Science and Technology Region 1 (DOST 1) conducted an Exit Conference to 85 DOST-Science Education Institute (SEI) graduating scholars from Pangasinan on July 12-13, 2023 at Provincial Training and Development Center, Lingayen, Pangasinan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatum quibusdam quisquam itaque, voluptates ducimus id eaque quod hic blanditiis aperiam error, beatae voluptate neque optio quos suscipit veritatis. Saepe praesentium officia ratione quis quasi sit adipisci suscipit magni eos blanditiis. Fuga a ea totam! Eos dicta corrupti delectus id.
-                          </p>
+                        <hr>
+                        <p class="news-title">
+                            2023 National Youth Science, Technology, and Innovation Festival (NYSTIF) happening this 25-28 October 2023 at The PICC Forum Tent!
+                        </p>
+                        <p class="news-date">
+                          18 Oct 2023
+                        </p>
+                        <hr>
+                        <p class="news-def">
+                            As the population of Scholars in the province of Pangasinan continuously grew, the appointment of leaders and officers who are dedicated, competent, and adaptable to changes is important in order to attain the association's main goal Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat consequuntur consectetur tenetur tempore odio odit praesentium maiores ullam repellendus! Dolorem.
+                        </p>
                       </div>
-                  </div>
-                  <div class="news">
                       <div class="news-img-box">
-                          <img src="/img/news/news-img6.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img1.png" alt="" class="news-img">
+                        <img src="../../img/news/news-img1.png" alt="" class="news-img">
+                        <img src="../../img/news/news-img1.png" alt="" class="news-img">
                       </div>
+                    </div>
+                    <div class="news">
                       <div class="news-content">
-                          <p class="news-date">
-                              7 May 2023
-                          </p>
-                          <p class="news-title">
-                              DOST-PUSO Secures Two Spots for Prevail 2023 Final Round
-                          </p>
-                          <p class="news-def">
-                              University of the Philippines Diliman - After an intense battle of wits among five teams from DOST - PUSO, consisting of three members each, two teams have emerged victorious, securing their spots in the final round of Prevail 2023 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste earum atque ipsam, consequuntur id molestias asperiores sapiente quod odit suscipit quaerat totam ratione magni consectetur quam rem quae nihil deleniti ea culpa, corrupti ipsa consequatur quo delectus. Voluptatem sint quidem itaque deserunt doloremque molestias sequi, ex dolorem amet error labore.
-                          </p>
+                        <hr>
+                        <p class="news-title">
+                          New Elected Officers of DOST Scholars’ Inter-Campus Association of Pangasinan for the Academic year 2023-2024. 
+                        </p>
+                        <p class="news-date">
+                          30 Sept 2023
+                        </p>
+                        <hr>
+                        <p class="news-def">
+                          As the population of Scholars in the province of Pangasinan continuously grew, the appointment of leaders and officers who are dedicated, competent, and adaptable to changes is important in order to attain the association's main goal and Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio vel natus obcaecati ab inventore mollitia error eius quia! Doloribus hic quidem earum commodi ratione quisquam, tempora labore itaque quia suscipit neque enim. Autem quibusdam quasi corrupti. Aliquam, voluptatum fuga. Cum quis dolorum quisquam sapiente labore voluptatem id omnis molestias enim?
+                        </p>
                       </div>
-                  </div>
-                  <div class="news">
                       <div class="news-img-box">
-                          <img src="/img/news/news-img5.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img2.png" alt="" class="news-img">
+                        <img src="../../img/news/news-img2.png" alt="" class="news-img">
+                        <img src="../../img/news/news-img2.png" alt="" class="news-img">
                       </div>
+                    </div>
+                    <div class="news">
                       <div class="news-content">
-                          <p class="news-date">
-                              13 July 2023
-                          </p>
-                          <p class="news-title">
-                              2023 DOST-Scholars’ Exit Conference at  Lingayen, Pangasinan 
-                          </p>
-                          <p class="news-def">
-                              The Department of Science and Technology Region 1 (DOST 1) conducted an Exit Conference to 85 DOST-Science Education Institute (SEI) graduating scholars from Pangasinan on July 12-13, 2023 at Provincial Training and Development Center, Lingayen, Pangasinan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatum quibusdam quisquam itaque, voluptates ducimus id eaque quod hic blanditiis aperiam error, beatae voluptate neque optio quos suscipit veritatis. Saepe praesentium officia ratione quis quasi sit adipisci suscipit magni eos blanditiis. Fuga a ea totam! Eos dicta corrupti delectus id.
-                          </p>
+                        <hr>
+                        <p class="news-title">
+                          Congratulations to PSUnians, DOST 2023 S&T UNDERGRADUATE SCHOLARSHIP QUALIFIERS! 
+                        </p>
+                        <p class="news-date">
+                          06  Sept 2023
+                        </p>
+                        <hr>
+                        <p class="news-def">
+                          The Department of Science and Technology Regional Office No. VIII is pleased to announce the names of the Qualifiers for the 2023 Undergraduate Scholarship Programs Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sequi autem, magni magnam at reiciendis sit dolor iure saepe accusamus nulla id illum in facilis fugiat, sint debitis labore delectus? Quasi ullam, corporis alias cupiditate, eveniet laudantium labore voluptas commodi provident facere necessitatibus minima consequuntur fugit explicabo laborum ipsum deleniti.
+                        </p>
                       </div>
-                  </div>
-                  <div class="news">
                       <div class="news-img-box">
-                          <img src="/img/news/news-img6.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img3.png" alt="" class="news-img">
+                        <img src="../../img/news/news-img3.png" alt="" class="news-img">
+                        <img src="../../img/news/news-img3.png" alt="" class="news-img">
                       </div>
+                    </div>
+                    <div class="news">
                       <div class="news-content">
-                          <p class="news-date">
-                              7 May 2023
-                          </p>
-                          <p class="news-title">
-                              DOST-PUSP Secures Two Spots for Prevail 2023 Final Round
-                          </p>
-                          <p class="news-def">
-                              University of the Philippines Diliman - After an intense battle of wits among five teams from DOST - PUSO, consisting of three members each, two teams have emerged victorious, securing their spots in the final round of Prevail 2023 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste earum atque ipsam, consequuntur id molestias asperiores sapiente quod odit suscipit quaerat totam ratione magni consectetur quam rem quae nihil deleniti ea culpa, corrupti ipsa consequatur quo delectus. Voluptatem sint quidem itaque deserunt doloremque molestias sequi, ex dolorem amet error labore.
-                          </p>
+                        <hr>
+                        <p class="news-title">
+                          Super Typhoon Egay: Donation Drive led by DOST- MAYSA for all affected indigent families in Pagudpud, Ilocos Norte.  
+                        </p>
+                        <p class="news-date">
+                          29 July 2023
+                        </p>
+                        <hr>
+                        <p class="news-def">
+                          Super Typhoon Egay may have left a trail of devastation in the Ilocos Region, but together, we can be a beacon of hope for those affected indigent families in Pagudpud.Let us unite under the banner of compassion as DOST-MAYSA launches a Donation Drive for our fellow Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quia repudiandae officiis ipsum, minima similique, asperiores molestiae dolor a iusto vero corporis, magni doloribus facere distinctio possimus eveniet eligendi itaque nemo tempora debitis reiciendis vel rem facilis! Culpa suscipit aspernatur eligendi laboriosam, doloribus nobis neque, ipsum hic est corrupti sed.
+                        </p>
                       </div>
-                  </div>
-                  </div>
-                  <ul class="pagination" id="pagination">
-                  </ul>
+                      <div class="news-img-box">
+                        <img src="../../img/news/news-img4.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img4.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img4.jpg" alt="" class="news-img">
+                      </div>
+                    </div>
+                    <div class="news">
+                      <div class="news-content">
+                        <hr>
+                        <p class="news-title">
+                          2023 DOST-Scholars’ Exit Conference at  Lingayen, Pangasinan 
+                        </p>
+                        <p class="news-date">
+                          13 July 2023
+                        </p>
+                        <hr>
+                        <p class="news-def">
+                          The Department of Science and Technology Region 1 (DOST 1) conducted an Exit Conference to 85 DOST-Science Education Institute (SEI) graduating scholars from Pangasinan on July 12-13, 2023 at Provincial Training and Development Center, Lingayen, Pangasinan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatum quibusdam quisquam itaque, voluptates ducimus id eaque quod hic blanditiis aperiam error, beatae voluptate neque optio quos suscipit veritatis. Saepe praesentium officia ratione quis quasi sit adipisci suscipit magni eos blanditiis. Fuga a ea totam! Eos dicta corrupti delectus id.
+                        </p>
+                      </div>
+                      <div class="news-img-box">
+                        <img src="../../img/news/news-img5.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img5.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img5.jpg" alt="" class="news-img">
+                      </div>
+                    </div>
+                    <div class="news">
+                      <div class="news-content">
+                        <hr>
+                        <p class="news-title">
+                          DOST-PUSO Secures Two Spots for Prevail 2023 Final Round
+                        </p>
+                        <p class="news-date">
+                          7 May 2023
+                        </p>
+                        <hr>
+                        <p class="news-def">
+                          University of the Philippines Diliman - After an intense battle of wits among five teams from DOST - PUSO, consisting of three members each, two teams have emerged victorious, securing their spots in the final round of Prevail 2023 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste earum atque ipsam, consequuntur id molestias asperiores sapiente quod odit suscipit quaerat totam ratione magni consectetur quam rem quae nihil deleniti ea culpa, corrupti ipsa consequatur quo delectus. Voluptatem sint quidem itaque deserunt doloremque molestias sequi, ex dolorem amet error labore.
+                        </p>
+                      </div>
+                      <div class="news-img-box">
+                        <img src="../../img/news/news-img6.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img6.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img6.jpg" alt="" class="news-img">
+                      </div>
+                    </div>
+                    <div class="news">
+                      <div class="news-content">
+                        <hr>
+                        <p class="news-title">
+                          2023 DOST-Scholars’ Exit Conference at  Lingayen, Pangasinan 
+                        </p>
+                        <p class="news-date">
+                          13 July 2023
+                        </p>
+                        <hr>
+                        <p class="news-def">
+                          The Department of Science and Technology Region 1 (DOST 1) conducted an Exit Conference to 85 DOST-Science Education Institute (SEI) graduating scholars from Pangasinan on July 12-13, 2023 at Provincial Training and Development Center, Lingayen, Pangasinan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatum quibusdam quisquam itaque, voluptates ducimus id eaque quod hic blanditiis aperiam error, beatae voluptate neque optio quos suscipit veritatis. Saepe praesentium officia ratione quis quasi sit adipisci suscipit magni eos blanditiis. Fuga a ea totam! Eos dicta corrupti delectus id.
+                        </p>
+                      </div>
+                      <div class="news-img-box">
+                        <img src="../../img/news/news-img5.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img5.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img5.jpg" alt="" class="news-img">
+                      </div>
+                    </div>
+                    <div class="news">
+                      <div class="news-content">
+                        <hr>
+                        <p class="news-title">
+                          DOST-PUSP Secures Two Spots for Prevail 2023 Final Round
+                        </p>
+                        <p class="news-date">
+                          7 May 2023
+                        </p>
+                        <hr>
+                        <p class="news-def">
+                          University of the Philippines Diliman - After an intense battle of wits among five teams from DOST - PUSO, consisting of three members each, two teams have emerged victorious, securing their spots in the final round of Prevail 2023 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste earum atque ipsam, consequuntur id molestias asperiores sapiente quod odit suscipit quaerat totam ratione magni consectetur quam rem quae nihil deleniti ea culpa, corrupti ipsa consequatur quo delectus. Voluptatem sint quidem itaque deserunt doloremque molestias sequi, ex dolorem amet error labore.
+                        </p>
+                      </div>
+                      <div class="news-img-box">
+                        <img src="../../img/news/news-img6.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img6.jpg" alt="" class="news-img">
+                        <img src="../../img/news/news-img6.jpg" alt="" class="news-img">
+                      </div>
+                    </div>
                 </div>
+                <ul class="pagination" id="pagination"></ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <!-- Footer -->
-  <section class="ft" style="background-image: url('../../img/waves/wave6.png');">
+  <div class="ft" style="background-image: url('../../img/waves/wave6.png');">
     <footer style="background-color: transparent; padding-top: 80px;">
       <div class="row">
         <div class="col-6 col-md-3 mb-3">
@@ -709,7 +685,6 @@
             <li class="nav-item mb-2"><a href="mailto:dostpuso@gmail.com" class="nav-link p-0 text-dark">dostpuso@gmail.com</a></li>
           </ul>
         </div>
-  
         <div class="col-6 col-md-4 mb-3" style="padding-left: 30px;">
           <h5 id="fttitle">QUICKLINKS</h5>
           <ul class="nav flex-column">
@@ -718,7 +693,6 @@
             <li class="nav-item mb-2"><a href="https://www.dost.gov.ph/" target="_blank" class="nav-link p-0 text-dark">DOST Science and Education Institute (DOST SEI)</a></li>
           </ul>
         </div>
-  
         <div class="col-md-4 offset-md-1 mb-3">
           <form>
             <h5 id="fttitle">Subscribe to our newsletter</h5>
@@ -732,29 +706,42 @@
         </div>
       </div>
     </footer>
-  </section>
-  <section style="background-color: #E2FBFF;">
+  </div>
+  <div style="background-color: #E2FBFF;">
     <div class="arr d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
-      <p>© 2023 Company, Inc. All rights reserved.</p>
+      <p>© 2023 DOST PSU UCC Scholars’ Organization. All rights reserved.</p>
       <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/profile.php?id=100087394325109" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-        </svg></a></li>
-        <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/messages/t/100212236238367" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
-          <path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/>
-        </svg></a></li>
-        <li class="ms-3"><a class="link-body-emphasis" href="mailto:dostpuso@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-check-fill" viewBox="0 0 16 16">
-          <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207z"/>
-          <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
-        </svg></a></li>
+        <li class="ms-3">
+          <a class="link-body-emphasis" href="https://www.facebook.com/profile.php?id=100087394325109" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+            </svg>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a class="link-body-emphasis" href="https://www.facebook.com/messages/t/100212236238367" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+              <path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/>
+            </svg>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a class="link-body-emphasis" href="mailto:dostpuso@gmail.com">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-check-fill" viewBox="0 0 16 16">
+              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207z"/>
+              <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
+            </svg>
+          </a>
+        </li>
       </ul>
     </div>
-  </section>
+  </div>
 
-  <script src="/bootstrap/js/bootstrap.min.js"></script>
+  <!-- JS -->
+  <script src="../../bootstrap/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-  <!-- Switch Tabs -->
+  <!-- SWITCHING TABS -->
   <script>
     function openTab(evt, tabName) {
       var i, tabcontent, tablinks;
@@ -788,31 +775,48 @@
     }
   </script>
   
-  <!-- Pop Up for Gallery -->
+  <!-- POP UP FOR CALENDAR -->
   <script>
-    function openPopup(clickedElement) {
+    function openPopupCalendar(clickedElement) {
       var day = clickedElement.querySelector('.cal-day').textContent;
       var month = clickedElement.querySelector('.cal-my').textContent;
-      var content = clickedElement.querySelector('.cal-def')?.textContent || clickedElement.querySelector('.opacity-75')?.textContent;
-      var objective = clickedElement.querySelector('.calpophidden').textContent;
+      var content = clickedElement.querySelector('.cal-def')?.textContent;
+      var objectiveHTML = clickedElement.querySelector('.calpophidden').innerHTML;
 
-      var popupContent = document.getElementById('popupContent');
-      popupContent.querySelector('.cal-day').textContent = day;
-      popupContent.querySelector('.cal-my').textContent = month;
-      popupContent.querySelector('.opacity-75').textContent = content;
-      popupContent.querySelector('.calpophidden').textContent = objective;
+      var popupContentCal = document.getElementById('popupContentCal');
+      popupContentCal.querySelector('.cal-day').textContent = day;
+      popupContentCal.querySelector('.cal-my').textContent = month;
+      popupContentCal.querySelector('.cal-def').textContent = content;
+      popupContentCal.querySelector('.calpophidden').innerHTML = objectiveHTML;
 
-      document.getElementById('overlay').style.display = 'block';
-      document.getElementById('popup').style.display = 'block';
+      document.getElementById('overlayCal').style.display = 'block';
+      document.getElementById('popupCal').style.display = 'block';
     }
 
-    function closePopup() {
-      document.getElementById('overlay').style.display = 'none';
-      document.getElementById('popup').style.display = 'none';
+    function closePopupCalendar() {
+      document.getElementById('overlayCal').style.display = 'none';
+      document.getElementById('popupCal').style.display = 'none';
     }
   </script>
 
-  <!-- Pagination Tabs-->
+<script>
+  function openPopupGallery(clickedElement) {
+    var content = clickedElement.querySelector('.content').innerHTML;
+
+    var popupContentGal = document.getElementById('popupContentGal');
+    popupContentGal.querySelector('.content').innerHTML = content;
+
+    document.getElementById('overlayGal').style.display = 'block';
+    document.getElementById('popupGal').style.display = 'block';
+  }
+
+  function closePopupGallery() {
+    document.getElementById('overlayGal').style.display = 'none';
+    document.getElementById('popupGal').style.display = 'none';
+  }
+</script>
+
+  <!-- PAGINATION-->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const newsGrid = document.querySelector('.latest-news-grid');
