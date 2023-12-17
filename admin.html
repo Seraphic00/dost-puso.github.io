@@ -19,259 +19,407 @@
     <link rel="stylesheet" href="test.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
     <link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="img/logo/logo.png" type="image/x-icon">
 
     
-
 </head>
 <body data-new-gr-c-s-check-loaded="14.1143.0" data-gr-ext-installed="">
-    
-  <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
-    <div class="offcanvas-header">
-            <img src="img/logo/header-logo.png" alt="" width="90%" height="auto">
-            <button type="button" class="btn-close text-reset" id="closeButton" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  
+  <!-- SIDEBAR -->
+  <div class="offcanvas offcanvas-end w-35" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false" style="background-color: #c1f9ff; box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);">
+    <div class="offcanvas-header offhd">
+      <button type="button" class="btn-close text-reset" id="closeButton" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class="profile d-flex align-items-start">
+        <img class="avatar" src="img/profile/1.png" width="100px" height="100px">
+        <div class="profile-info">
+          <h3 class="profile-name">James Batungbakal</h3>
+          <p>
+            <a href="#" onclick="updateProfile()">Update Profile</a> |
+            <a href="#" onclick="confirmSignOut()">Sign out</a>
+          </p>
+        </div>
+      </div>
     </div>
-    <hr>
-    <div class="offcanvas-body px-0">
+    <hr style="margin: 0px;">
+    <div class="offcanvas-body px-0" style="background-color: white; padding: 20px !important;">
       <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start navpad" id="menu">
         <li class="nav-item">
+          <hr>
           <a class="nav-link" href="#" onclick="changeTab('aboutus')">
             About Us
           </a>
+          <hr>
           <ul>
-            <li><a class="tab-link" href="">History</a></li>
-            <li><a class="tab-link" href="">DOST PUSO Logo</a></li>
-            <li><a class="tab-link" href="">Vision</a></li>
-            <li><a class="tab-link" href="">Mission</a></li>
-            <li><a class="tab-link" href="">Officers</a></li>
+            <li>History</li>
+            <li>DOST PUSO Logo</li>
+            <li>Vision</li>
+            <li>Mission</a></li>
+            <li>Officers</a></li>
           </ul>
         </li>
         <li class="nav-item">
+          <hr>
           <a class="nav-link" href="#" onclick="changeTab('proandpro')">
             Programs and Projects
           </a>
+          <hr>
           <ul>
-            <li><a class="tab-link" href="">Calendar of Activities</a></li>
-            <li><a class="tab-link" href="">Gallery</a></li>
-            <li><a class="tab-link" href="">News</a></li>
-            <li><a class="tab-link" href="">Resources</a></li>
+            <li>Calendar of Activities</li>
+            <li>Gallery</li>
+            <li>News</li>
+            <li>Resources</li>
           </ul>
         </li>
         <li class="nav-item">
+          <hr>
           <a class="nav-link" href="#" onclick="changeTab('scholarship')">
             Scholarships
           </a>
+          <hr>
           <ul>
-            <li><a class="tab-link" href="">Junior Level Science Scholarships (JLSS)</a></li>
-            <li><a class="tab-link" href="">S&T Undergraduate Scholarship</a></li>
+            <li>Junior Level Science Scholarships (JLSS)</li>
+            <li>S&T Undergraduate Scholarship</li>
           </ul>
         </li>
         <li class="nav-item">
+          <hr>
           <a class="nav-link" href="#" onclick="changeTab('contacts')">
             Contacts
           </a>
+          <hr>
         </li>
         <li class="nav-item">
+          <hr>
           <a class="nav-link" href="#" onclick="changeTab('messages')">
             Messages
           </a>
+          <hr>
         </li>
         <li class="nav-item">
+          <hr>
           <a class="nav-link" href="#" onclick="changeTab('membership')">
             Membership Request
           </a>
+          <hr>
         </li>
         <li class="nav-item">
+          <hr>
           <a class="nav-link" href="#" onclick="changeTab('accounts')">
             Accounts
           </a>
+          <hr>
         </li>
       </ul>
     </div>
   </div>
-  <div class="container-fluid" style="background-color: #f3ffff;">
+  
+  <!-- CONTENT -->
+  <div class="container-fluid">
     <div class="row">
-      <div class="p-4 fixed-top nv">
-        <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+      <div class="p-4 fixed-top nv" style="padding-left: 100px !important; padding-right: 100px !important;">
+        <img src="img/logo/logo.png" width="50px" height="auto">
+        <h1 class="title">DOST - PSU UCC Scholars’ Organization</h1>
+        <button class="btn d-flex ms-auto" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
           <i class="fs-3 material-icons" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">menu</i>
         </button>
-        <h1 class="title">DOST - PSU UCC Scholars’ Organization</h3>
-        <div class="navbar-nav d-flex ms-auto">
-          <div class="nav-item text-nowrap">
-            <a class="nav-link px-3" href="#" onclick="confirmSignOut()">Sign out</a>
-          </div>
-        </div>
       </div>
       <div class="p-4 seccontent">
         <div class="tabsection" id="aboutus">
-          <div class="cardfortitle">
-            <h5>About Us</h5>
-          </div>
+          <h5 class="cardfortitle">About Us</h5>
           <div class="cards" id="aboutuscard">
-            <div class="card">
+            <div class="card" onclick="editCard('History', 'historyContent')">
               <p class="d-flex justify-content-between">
                 <span class="cardtitle">HISTORY</span>
-                <a href="#" class="edit">Edit</a></p>
-              <p class="aboutus-title-p">
-                The DOST-PSU UCC Scholars’ Organization, affectionately known as DOST-PUSO, had its humble beginnings on October 1, 2022. Founded by a group of passionate Department of Science and Technology (DOST) scholars at Pangasinan State University's Urdaneta City Campus, the organization's inception marked the commencement of a remarkable journey.
-                <br>
-                <br>
-                As DOST-PUSO continues to grow, adapt, and evolve, it remains steadfast in its mission to inspire and empower scholars, promote scientific literacy, and serve the nation with unwavering dedication. The organization's journey is a testament to what can be achieved when passionate individuals come together with a shared vision, driven by a love for education, science, and service to the Philippines.
-                <br>
-                <br>
-                In a short span of time, DOST-PUSO achieved remarkable milestones. The organization became a hub for fostering academic excellence, nurturing leadership skills, and promoting patriotic values. It organized numerous training workshops, seminars, and outreach programs that not only enhanced the skills and knowledge of its members but also extended the benefits of science and technology to the wider community.
+                <a href="#" class="edit">Edit</a>
               </p>
+              <div class="hidden-content" id="historyContent" style="padding: 10px; text-align: justify;">
+                The DOST-PSU UCC Scholars’ Organization, affectionately known as DOST-PUSO, had its humble beginnings on October 1, 2022. Founded by a group of passionate Department of Science and Technology (DOST) scholars at Pangasinan State University's Urdaneta City Campus, the organization's inception marked the commencement of a remarkable journey.
+                <br><br>
+                As DOST-PUSO continues to grow, adapt, and evolve, it remains steadfast in its mission to inspire and empower scholars, promote scientific literacy, and serve the nation with unwavering dedication. The organization's journey is a testament to what can be achieved when passionate individuals come together with a shared vision, driven by a love for education, science, and service to the Philippines.
+                <br><br>
+                In a short span of time, DOST-PUSO achieved remarkable milestones. The organization became a hub for fostering academic excellence, nurturing leadership skills, and promoting patriotic values. It organized numerous training workshops, seminars, and outreach programs that not only enhanced the skills and knowledge of its members but also extended the benefits of science and technology to the wider community.
+              </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="editCard('Logo', 'logoContent')">
               <p class="d-flex justify-content-between">
                 <span class="cardtitle">DOST PUSO LOGO</span>
                 <a href="#" class="edit">Edit</a>
               </p>
-              <p class="aboutus-title-p">The official logo of the DOST-PSU UCC Scholars’ Organization is its official symbol. Each element represents the following:</p>
-              <p class="aboutus-title-p">The three-color scheme of the logo was inspired by the DOST Logo and represents the unknown (black), truth and enlightenment (white), and progress (blue) <br> The heart-shaped logo was inspired by the organization's name, "PUSO," which means "heart.</p>
-              <p class="aboutus-title-p">The chain-like structure of the logo represents the shared bonds among the patriot scholars of PSU UCC, which are strengthened by the organization's mission and vision.</p>
-              <p class="aboutus-title-p">The square in the center of the logo, which was formed by the interlocking of the two chains represents each side the organization's four core values: Patriotic, Unwavering Service, Servant Leadership, and Optimistic.</p>
+              <p class="hidden-content" id="logoContent" style="padding: 10px; text-align: justify;">
+                The official logo of the DOST-PSU UCC Scholars’ Organization is its official symbol. Each element represents the following:<br><br>
+                (a) The three-color scheme of the logo was inspired by the DOST Logo and represents the unknown (black), truth and enlightenment (white), and progress (blue) <br>
+                (b)The heart-shaped logo was inspired by the organization's name, "PUSO," which means "heart. <br>
+                (c) The chain-like structure of the logo represents the shared bonds among the patriot scholars of PSU UCC, which are strengthened by the organization's mission and vision. <br>
+                (d) The square in the center of the logo, which was formed by the interlocking of the two chains represents each side the organization's four core values: Patriotic, Unwavering Service, Servant Leadership, and Optimistic.
+              </p>
             </div>
-            <div class="card">
+            <div class="card" onclick="editCard('Vision', 'visionContent')">
               <p class="d-flex justify-content-between">
                 <span class="cardtitle">Vision</span>
                 <a href="#" class="edit">Edit</a>
               </p>
-              <p class="aboutus-title-p">The organization shall envision a community of scholars who are <span id="vmbold">P</span>assionate about serving the nation, <span id="vmbold">U</span>nified by the same aspiration, <span id="vmbold">S</span>teadfast in the face of adversity, and <span id="vmbold">O</span>ptimistic toward creating a better country. </p>
+              <p class="hidden-content" id="visionContent" style="padding: 10px; text-align: justify;">
+                The organization shall envision a community of scholars who are <span id="vmbold">P</span>assionate about serving the nation, <span id="vmbold">U</span>nified by the same aspiration, <span id="vmbold">S</span>teadfast in the face of adversity, and <span id="vmbold">O</span>ptimistic toward creating a better country. 
+              </p>
             </div>
-            <div class="card">
+            <div class="card" onclick="editCard('Mission', 'missionContent')">
               <p class="d-flex justify-content-between">
                 <span class="cardtitle">Mission</span>
                 <a href="#" class="edit">Edit</a>
               </p>
-              <p class="aboutus-title-p">The DOST-PSU UCC Scholars' Organization (DOST-PUSO) shall strive to pursue: <br>
-                <span id="vmbold">P</span>romote development of the nation's most steadfast, enthusiastic, innovative, and patriotic scholars through relevant trainings and workshops, collaboration, leadership and academic excellence; <br>
-                <span id="vmbold">U</span>nify DOST scholars of PSU UCC with one vision and mission; <br>
-                <span id="vmbold">S</span>upport, empower, and encourage patriot scholars to take an active role in nation building; and <br>
-                <span id="vmbold">O</span>ffer unwavering act of service to the nation. <br>
+              <p class="hidden-content" id="missionContent" style="padding: 10px; text-align: justify;">
+                  The DOST-PSU UCC Scholars' Organization (DOST-PUSO) shall strive to pursue: <br>
+                  <span id="vmbold">P</span>romote development of the nation's most steadfast, enthusiastic, innovative, and patriotic scholars through relevant trainings and workshops, collaboration, leadership and academic excellence; <br>
+                  <span id="vmbold">U</span>nify DOST scholars of PSU UCC with one vision and mission; <br>
+                  <span id="vmbold">S</span>upport, empower, and encourage patriot scholars to take an active role in nation building; and <br>
+                  <span id="vmbold">O</span>ffer unwavering act of service to the nation. <br>
               </p>
             </div>
-            <div class="card">
-              <p class="d-flex justify-content-between">
-                <span class="cardtitle">Officers</span>
-                <a href="#" class="edit">Edit</a>
-              </p>
-              <table class="offtable" style="border: 1px solid black;">
-                <tr style="border-bottom: 1px solid black;">
-                  <th style="font-weight: 1000;">POSITION</th>
-                  <th style="font-weight: 1000;">NAME OF OFFICER</th>
-                </tr>
-                <tr>
-                  <th>President</th>
-                  <td>PRINCE JOHN R. BASUEL</td>
-                </tr>
-                <tr>
-                  <th>Internal Vice-President</th>
-                  <td>BEVERLY G. BAUTISTA</td>
-                </tr>
-                <tr>
-                  <th>External Vice-President</th>
-                  <td>LAIZA E. GUARDIANA</td>
-                </tr>
-                <tr>
-                  <th>Secretary</th>
-                  <td>KEITH FRANCIS M. BUENO</td>
-                </tr>
-                <tr>
-                  <th>Treasurer</th>
-                  <td>CHARLOTTE JOBE C. DE OCAMPO</td>
-                </tr>
-                <tr>
-                  <th>Auditor</th>
-                  <td>CHRISTIAN B. GALERA</td>
-                </tr>
-                <tr>
-                  <th></th>
-                  <td>NICOLE V. DE NIEVA</td>
-                </tr>
-                <tr>
-                  <th>Business Manager</th>
-                  <td>CHRISTOPHER C. ANTOLIN</td>
-                </tr>
-                <tr>
-                  <th></th>
-                  <td>COCOY S. MENDOZA</td>
-                </tr>
-                <tr>
-                  <th>P.R.O.</th>
-                  <td>DIAN E. GARCIA</td>
-                </tr>
-                <tr>
-                  <th></th>
-                  <td>PRINCESS ERIKA R. CALIMLIM</td>
-                </tr>
-                <tr>
-                  <th>Representatives</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th>BSCE</th>
-                  <td>DAVE ARDEN F. ESTRADA</td>
-                </tr>
-                <tr>
-                  <th>BSEE</th>
-                  <td>JUSTINE RAYMART D. GASCON</td>
-                </tr>
-                <tr>
-                  <th>BSCoE</th>
-                  <td>DENVER JOHN C. LAMARCA</td>
-                </tr>
-                <tr>
-                  <th>BSME</th>
-                  <td>JOHN CARLO L. PASTER</td>
-                </tr>
-                <tr>
-                  <th>BSIT</th>
-                  <td>RICKALIEN C. DELIZO</td>
-                </tr>
-                <tr>
-                  <th>BS Architecture</th>
-                  <td>CHARMAGNE ERICA B. CABANCLA</td>
-                </tr>
-                <tr>
-                  <th>BS Mathematics</th>
-                  <td>MARIA JESSA R. CANCINO</td>
-                </tr>
-              </table>
+            <div class="card cardofficer">
+              <span class="cardtitle">Officers</span>
+              <div id="padbot">
+                <div class="row pt-3 officertable">
+                  <div class="col-md-12 col-sm-12 col-12 p-2 ">
+                    <table id="tblData" class="table table-bordered table-hover table-striped">
+                      <thead>
+                        <tr>
+                          <th class="tdSr">Position</th>
+                          <th class="tdName">Name</th>
+                          <th class="tdAction">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="tdSr">President</td>
+                          <td class="tdName">PRINCE JOHN R. BASUEL</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">Internal Vice-President</td>
+                          <td class="tdName">BEVERLY G. BAUTISTA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">External Vice-President</td>
+                          <td class="tdName">LAIZA E. GUARDIANA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">Secretary</td>
+                          <td class="tdName">KEITH FRANCIS M. BUENO</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">Treasurer</td>
+                          <td class="tdName">CHARLOTTE JOBE C. DE OCAMPO</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">Auditor</td>
+                          <td class="tdName">CHRISTIAN B. GALERA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">NICOLE V. DE NIEVA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">Business Manager</td>
+                          <td class="tdName">CHRISTOPHER C. ANTOLIN</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">COCOY S. MENDOZA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">P.R.O.</td>
+                          <td class="tdName">DIAN E. GARCIA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">PRINCESS ERIKA R. CALIMLIM</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">Representatives</td>
+                          <td class="tdName"></td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">BSCE</td>
+                          <td class="tdName">DAVE ARDEN F. ESTRADA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">JUSTINE RAYMART D. GASCON</td>
+                          <td class="tdAction">
+                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">DENVER JOHN C. LAMARCA</td>
+                          <td class="tdAction">
+                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">JOHN CARLO L. PASTER</td>
+                          <td class="tdAction">
+                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">RICKALIEN C. DELIZO</td>
+                          <td class="tdAction">
+                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">BS Architecture</td>
+                          <td class="tdName">CHARMAGNE ERICA B. CABANCLA</td>
+                          <td class="tdAction">
+                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">BS Mathematics</td>
+                          <td class="tdName">MARIA JESSA R. CANCINO</td>
+                          <td class="tdAction">
+                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="row addbtn">
+                  <div class="col-md-12 text-right">
+                    <input type="button" id="btnAdd" class="btn btn-primary" value="Add New" />
+                  </div>
+                </div>
+              </div>
             </div>
-            
           </div>
         </div>
-            
+
         <div class="tabsection" id="proandpro">
           <div class="cardfortitle">
             <h5>Programs and Projects</h5>
           </div>
           <div class="cards" id="proandprocard">
             <div class="card">
-              <p class="d-flex justify-content-between">
-                <span class="cardtitle">Calendar of activities</span>
-                <a href="#" class="edit">Edit</a></p>
+              <span class="cardtitle">Calendar of Activities</span>
+              <div class="container">
+                <div id="padbot">
+                  <div class="row pt-3 calendartable">
+                    <div class="col-md-12 col-sm-12 col-12 p-2 ">
+                      <table id="tblData2" class="table table-bordered table-hover table-striped">
+                        <thead>
+                          <tr>
+                            <th>Day</th>
+                            <th>Month</th>
+                            <th>Year</th>
+                            <th>Goals/Objectives</th>
+                            <th>Expected Output</th>
+                            <th>Key Staff Involved</th>
+                            <th>Resources to be Utilized</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                              <td class="tdDay">05</td>
+                              <td class="tdMonth">October</td>
+                              <td class="tdYear">2023</td>
+                              <td class="tdGoals">Elect capable and responsible officers to act as leaders of DOST – PUSO</td>
+                              <td class="tdExpectedOutput">Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)</td>
+                              <td class="tdKeyStaff">All PSU Urdaneta City Campus DOST scholars</td>
+                              <td class="tdResources">Microsoft teams</td>
+                              <td class="tdAction">
+                                  <button class='btn btn-success btn-sm btn-edit2'> Edit </button>
+                                  <button class='btn btn-danger btn-sm btn-delete2'> Delete </button>
+                              </td>
+                          </tr>
+                      </tbody>
+                      </table>
+                      <button id="btnAdd2" class="btn btn-primary">Add New</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="card">
-              <p class="d-flex justify-content-between">
-                <span class="cardtitle">Gallery</span>
-                <a href="#" class="edit">Edit</a>
-              </p>
+            <div class="card" onclick="editCardwithImage('Gallery', 'galleryContent')">
+              <span class="cardtitle">Gallery</span>
+              <div class="hidden-content" id="galleryContent" style="padding: 10px; text-align: justify;">
+                <div id="activityList">
+                </div>
+              </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="editCard('News', 'newsContent')">
               <p class="d-flex justify-content-between">
                 <span class="cardtitle">News</span>
-                <a href="#" class="edit">Edit</a>
+                <a href="#" class="edit" data-toggle="modal" data-target="#editCardModal">Edit</a>
               </p>
-            </div>
-            <div class="card">
-              <p class="d-flex justify-content-between">
-                <span class="cardtitle">Resources</span>
-                <a href="#" class="edit">Edit</a>
-              </p>
+              <div class="hidden-content" id="newsContent" style="padding: 10px; text-align: justify;">
+                <div id="newsList" class="news-container">
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -322,15 +470,137 @@
     </div>
   </div>
 
+
+  <!-- MODAL FOR EDITING PROFILE -->
+  <div class="modal fade" id="updateProfileModal" tabindex="-1" role="dialog" aria-labelledby="updateProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateProfileModalLabel">Update Profile</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <label for="newProfileName">New Profile Name:</label>
+          <input type="text" id="newProfileName" class="form-control" required>
+          <label for="avatarSelection">Select Avatar:</label>
+          <div id="avatarSelection" class="d-flex flex-wrap">
+            <img src="img/profile/1.png" alt="Avatar 1" class="avatar-thumbnail" onclick="selectAvatar('img/profile/1.png')">
+            <img src="img/profile/2.png" alt="Avatar 2" class="avatar-thumbnail" onclick="selectAvatar('img/profile/2.png')">
+            <img src="img/profile/3.png" alt="Avatar 3" class="avatar-thumbnail" onclick="selectAvatar('img/profile/3.png')">
+          </div>
+          <input type="hidden" id="selectedAvatar" value="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="saveProfileChanges()">Save Changes</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL FOR EDITING THE CARDS-->
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog resizemodal" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #34C1D5; color: white;">
+          <h5 class="modal-title" id="editModalLabel">Edit Card Content</h5>
+        </div>
+        <div class="modal-body" style="padding: 30px;">
+          <p id="orig" style="text-align: justify;"></p>
+          <label for="editedContent" style="text-transform: uppercase; text-decoration: underline; font-weight: bolder;">Type your changes:</label>
+          <textarea class="form-control" id="editedContent" rows="10"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" style="background-color: #34C1D5; color: white;" onclick="saveChanges()">Save Changes</button>
+          <button type="button" class="btn btn-secondary" onclick="closemodal()" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL FOR EDITING THE CARDS (Gallery)-->
+  <div class="modal fade" id="editCardModal" tabindex="-1" role="dialog" aria-labelledby="editCardModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editCardModalLabel">Edit Activity</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form for editing activity -->
+          <form id="editForm">
+            <div class="form-group">
+              <label for="editTitle">Title:</label>
+              <input type="text" class="form-control" id="editTitle" required>
+            </div>
+            <div class="form-group">
+              <label for="editDefinition">Definition:</label>
+              <textarea class="form-control" id="editDefinition" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="editImage">Image URL:</label>
+              <input type="text" class="form-control" id="editImage" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="saveChanges()">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editCardModal" tabindex="-1" role="dialog" aria-labelledby="editCardModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editCardModalLabel">Edit News Item</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form for editing news item -->
+          <form id="editForm">
+            <div class="form-group">
+              <label for="editNewsTitle">Title:</label>
+              <input type="text" class="form-control" id="editNewsTitle" required>
+            </div>
+            <div class="form-group">
+              <label for="editNewsDate">Date:</label>
+              <input type="date" class="form-control" id="editNewsDate" required>
+            </div>
+            <div class="form-group">
+              <label for="editNewsDefinition">Definition:</label>
+              <textarea class="form-control" id="editNewsDefinition" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="editNewsImage">Image URL:</label>
+              <input type="text" class="form-control" id="editNewsImage" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="saveNewsChanges()">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OVERLAY -->
+  <div id="overlay"></div>
+
+
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="text/javascript" src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/bundles/4.20.0/compiled.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="..."></script>
   <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
   <!-- SIGNOUT -->
@@ -355,6 +625,359 @@
     function signOut() {
         window.location.href = 'index.html';
     }
+  </script>
+
+  <!-- Sidebar Overlay -->
+  <script>
+    var offcanvas = document.getElementById('offcanvas');
+    var overlay = document.getElementById('overlay');
+
+    offcanvas.addEventListener('show.bs.offcanvas', function () {
+        overlay.style.display = 'block';
+    });
+
+    offcanvas.addEventListener('hide.bs.offcanvas', function () {
+        overlay.style.display = 'none';
+    });
+
+  </script>
+
+  <!-- For editing Profile -->
+  <script>
+    function updateProfile() {
+      $('#newProfileName').val($('.profile-name').text());
+      $('#updateProfileModal').modal('show');
+    }
+  
+    function selectAvatar(avatarUrl) {
+      document.getElementById('selectedAvatar').value = avatarUrl;
+      $('.avatar-thumbnail').removeClass('selected');
+      $(`.avatar-thumbnail[src="${avatarUrl}"]`).addClass('selected');
+    }
+  
+    function saveProfileChanges() {
+      var newProfileName = document.getElementById('newProfileName').value;
+      var selectedAvatar = document.getElementById('selectedAvatar').value;
+  
+      if (newProfileName.trim() === '') {
+        alert('Please enter a valid profile name.');
+        return;
+      }
+  
+      $('.profile-info h3').text(newProfileName);
+  
+      if (selectedAvatar !== '') {
+        $('.avatar').attr('src', selectedAvatar);
+      }
+  
+      $('#avatarSelection').append('<div style="clear:both;"></div>');
+  
+      $('#updateProfileModal').modal('hide');
+    }
+  </script>
+  
+  <!-- For editing Card Content-->
+  <script>
+    var cardContentId;
+
+    function editCard(cardContent, contentId) {
+      var hiddenContentforOrg = document.getElementById(contentId).innerHTML;
+      var hiddenContentforEdi = document.getElementById(contentId).innerText;
+
+      document.getElementById('orig').innerHTML = hiddenContentforOrg;
+      document.getElementById('editedContent').value = hiddenContentforEdi;
+      document.getElementById('editModalLabel').innerHTML = `Edit ${cardContent} Content`;
+      cardContentId = contentId;
+      $('#editModal').modal('show');
+    }
+
+    function saveChanges() {
+      var editedContent = document.getElementById('editedContent').value;
+      document.getElementById('orig').innerText = editedContent;
+      
+      document.getElementById(cardContentId).innerHTML = editedContent;
+      
+      console.log("User edited content:", editedContent);
+    }
+
+    function closemodal(){
+      $('#editModal').modal('hide');
+    }
+  </script>
+
+  <!-- Officers CRUD -->
+  <script>
+    var emptyRow = "<tr><td colspan='3' class='text-center'> No Records Available</td></tr>";
+    var emptyNewRow = "<tr class='trNewRow'>";
+    emptyNewRow = emptyNewRow + "    <td class='tdSr'>";
+    emptyNewRow = emptyNewRow + "        <input type='text' class='form-control txtSr' placeholder='Enter Position'/>";
+    emptyNewRow = emptyNewRow + "    </td>";
+    emptyNewRow = emptyNewRow + "    <td class='tdName'>";
+    emptyNewRow = emptyNewRow + "        <input type='text' class='form-control txtName' placeholder='Enter Name'/>";
+    emptyNewRow = emptyNewRow + "    </td>";
+    emptyNewRow = emptyNewRow + "    <td class='tdAction'>";
+    emptyNewRow = emptyNewRow + "        <button class='btn btn-sm btn-success btn-save'> Save</button>";
+    emptyNewRow = emptyNewRow + "        <button class='btn btn-sm btn-success btn-cancel'> Cancel</button>";
+    emptyNewRow = emptyNewRow + "    </td>";
+    emptyNewRow = emptyNewRow + "</tr>";
+
+    var rowButtons = "<button class='btn btn-success btn-sm btn-edit' > Edit </button>  <button class='btn btn-danger btn-sm btn-delete' > Delete </button> ";
+    var rowUpdateButtons = "<button class='btn btn-success btn-sm btn-save' > Update </button>  <button class='btn btn-danger btn-sm btn-save' > Cancel </button> ";
+
+    $(document).ready(function () {
+        updateNoRecordsMessage();
+
+        $("#btnAdd").click(function () {
+            if ($("#tblData tbody tr").length === 1 && $("#tblData tbody tr td").hasClass("text-center")) {
+                $("#tblData tbody").html("");
+            }
+            $("#tblData tbody").append(emptyNewRow);
+        });
+
+        $('#tblData').on('click', '.btn-save', function () {
+            const position = $(this).parent().parent().find(".txtSr").val();
+            $(this).parent().parent().find(".tdSr").html("" + position + "");
+            const name = $(this).parent().parent().find(".txtName").val();
+            $(this).parent().parent().find(".tdName").html("" + name + "");
+            $(this).parent().parent().find(".tdAction").html(rowButtons);
+            updateNoRecordsMessage();
+        });
+
+        $('#tblData').on('click', '.btn-danger', function () {
+            $(this).parent().parent().remove();
+            updateNoRecordsMessage();
+        });
+
+        $('#tblData').on('click', '.btn-cancel', function () {
+            $(this).parent().parent().remove();
+            updateNoRecordsMessage();
+        });
+
+        $('#tblData').on('click', '.btn-edit', function () {
+            const position = $(this).parent().parent().find(".tdSr").html();
+            $(this).parent().parent().find(".tdSr").html("<input type='text' value='" + position + "' class='form-control txtSr' placeholder='Enter Position'/>");
+            const name = $(this).parent().parent().find(".tdName").html();
+            $(this).parent().parent().find(".tdName").html("<input type='text' value='" + name + "' class='form-control txtName' placeholder='Enter Name'/>");
+            $(this).parent().parent().find(".tdAction").html(rowUpdateButtons);
+        });
+
+        function updateNoRecordsMessage() {
+            if ($("#tblData tbody tr").length === 0) {
+                $("#tblData tbody").html(emptyRow);
+            }
+        }
+    });
+  </script>
+
+  <!-- Calendar CRUD -->
+  <script>
+    var emptyRow2 = "<tr><td colspan='8' class='text-center'>No Records Available</td></tr>";
+    var emptyNewRow2 = "<tr class='trNewRow'>";
+    emptyNewRow2 += "<td class='tdDay'><input type='text' class='form-control' /></td>";
+    emptyNewRow2 += "<td class='tdMonth'><input type='text' class='form-control' /></td>";
+    emptyNewRow2 += "<td class='tdYear'><input type='text' class='form-control' /></td>";
+    emptyNewRow2 += "<td class='tdGoals'><textarea class='form-control'></textarea></td>";
+    emptyNewRow2 += "<td class='tdExpectedOutput'><textarea class='form-control'></textarea></td>";
+    emptyNewRow2 += "<td class='tdKeyStaff'><textarea class='form-control'></textarea></td>";
+    emptyNewRow2 += "<td class='tdResources'><textarea class='form-control'></textarea></td>";
+    emptyNewRow2 += "<td class='tdAction'><button class='btn btn-success btn-sm btn-save2'>Save</button>";
+    emptyNewRow2 += "<button class='btn btn-danger btn-sm btn-cancel2'>Cancel</button></td></tr>";
+
+
+    var rowButtons2 = "<button class='btn btn-success btn-sm btn-edit2'>Edit</button>";
+    rowButtons2 += "<button class='btn btn-danger btn-sm btn-delete2'>Delete</button>";
+
+    $(document).ready(function () {
+      updateNoRecordsMessage2();
+
+      $("#btnAdd2").click(function () {
+        if ($("#tblData2 tbody tr").length === 1 && $("#tblData2 tbody tr td").hasClass("text-center")) {
+          $("#tblData2 tbody").html("");
+        }
+        $("#tblData2 tbody").append(emptyNewRow2);
+      });
+
+      $('#tblData2').on('click', '.btn-save2', function () {
+        var values = $(this).parent().siblings().children('input').map(function () {
+          return $(this).val();
+        }).get();
+
+        var newRow = "<tr>";
+        for (var i = 0; i < values.length; i++) {
+          newRow += "<td>" + values[i] + "</td>";
+        }
+        newRow += "<td>" + rowButtons2 + "</td></tr>";
+
+        $(this).parent().parent().replaceWith(newRow);
+        updateNoRecordsMessage2();
+      });
+
+      $('#tblData2').on('click', '.btn-delete2', function () {
+        $(this).parent().parent().remove();
+        updateNoRecordsMessage2();
+      });
+
+      $('#tblData2').on('click', '.btn-cancel2', function () {
+        $(this).parent().parent().remove();
+        updateNoRecordsMessage2();
+      });
+
+      $('#tblData2').on('click', '.btn-edit2', function () {
+        var values = $(this).parent().siblings('td').map(function () {
+            return $(this).text();
+        }).get();
+
+        var editRow = "<tr class='trNewRow'>";
+        for (var i = 0; i < values.length; i++) {
+            if (i === 3 || i === 4 || i === 5 || i === 6 || i == 7) {
+              editRow += "<td><textarea class='form-control edit-mode'>" + values[i] + "</textarea></td>";
+            } else {
+              editRow += "<td><input type='text' class='form-control edit-mode' value='" + values[i] + "'/></td>";
+            }
+        }
+        editRow += "<td><button class='btn btn-success btn-sm btn-save2'>Save</button>";
+        editRow += "<button class='btn btn-danger btn-sm btn-cancel2'>Cancel</button></td></tr>";
+
+        $(this).parent().parent().replaceWith(editRow);
+      });
+
+      function updateNoRecordsMessage2() {
+        if ($("#tblData2 tbody tr").length === 0) {
+          $("#tblData2 tbody").html(emptyRow2);
+        }
+      }
+    });
+  </script>
+
+  <!-- Gallery Editing -->
+  <script>
+    const activities = [
+      { title: '2024 Undergraduate Scholarships Campaign', definition: 'DOST-Science Education Institute (DOST-SEI) proudly announces the opening of applications for the 2024 DOST Undergraduate Scholarships! In line with this announcement, the DOST Scholars’ Intercampus Association of Pangasinan (DOST-SICAP) conducted a campaign on this day, November 14, 2023, at Daniel Maramba High School, unlocking opportunities for students to soar higher! They extend their heartfelt salute to the aspiring minds ready to apply for the DOST-SEI Undergraduate Scholarship Program.', image: 'img/activities/one.png' },
+      { title: 'National DOST Scholars’ Summit 2023', definition: 'Clear the runway, Quezon City! 🤩 DOST - PUSO has gracefully touched down, bringing their boundless enthusiasm to the National DOST Scholars’ Summit at the University of the Philippines, Diliman. Get set for an electrifying showcase of brilliance and a fusion of ideas that will leave you in awe! Sheesh!🚀🔥', image: 'img/activities/two.jpg' },
+      { title: 'DOST - SEI Leadership Bootcamp 2023', definition: 'The Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and', image: 'img/activities/three.png' },
+      { title: 'Padayon Pantry', definition: 'Padayon Pantry is all setup! With the help of the DOST-PUSO and DOST-SICAP members, the pantry was successfully assembled', image: 'img/activities/four.png' }
+    ];
+
+    function displayActivities() {
+      const activityList = document.getElementById('activityList');
+      activityList.innerHTML = '';
+
+      activities.forEach((activity, index) => {
+        const activityDiv = document.createElement('div');
+        activityDiv.className = 'activity-container';
+        activityDiv.innerHTML = `
+          <div style="display: flex; align-items: center;">
+            <img src="${activity.image}" alt="Activity Image" style="max-width: 100px; margin-right: 10px;">
+            <div>
+              <strong>${activity.title}</strong>: ${activity.definition} 
+              <a href="#" onclick="editActivity(${index})">Edit</a> 
+              <a href="#" onclick="deleteActivity(${index})">Delete</a>
+            </div>
+          </div>
+        `;
+        activityList.appendChild(activityDiv);
+      });
+    }
+
+    function editActivity(index) {
+      const activity = activities[index];
+      document.getElementById('editTitle').value = activity.title;
+      document.getElementById('editDefinition').value = activity.definition;
+      document.getElementById('editImage').value = activity.image;
+
+      $('#editCardModal').modal('show');
+    }
+
+    function saveChanges() {
+      const editTitle = document.getElementById('editTitle').value;
+      const editDefinition = document.getElementById('editDefinition').value;
+      const editImage = document.getElementById('editImage').value;
+
+      const selectedIndex = activities.findIndex(activity => activity.title === editTitle);
+      if (selectedIndex !== -1) {
+        activities[selectedIndex] = { title: editTitle, definition: editDefinition, image: editImage };
+      }
+
+      displayActivities();
+
+      $('#editCardModal').modal('hide');
+    }
+
+    function deleteActivity(index) {
+      activities.splice(index, 1);
+
+      displayActivities();
+    }
+
+    displayActivities();
+  </script>
+
+  <!-- News Editing -->
+  <script>
+    const newsItems = [
+      { title: '2023 NATIONAL YOUTH SCIENCE, TECHNOLOGY, AND INNOVATION FESTIVAL (NYSTIF) HAPPENING THIS 25-28 OCTOBER 2023 AT THE PICC FORUM TENT!', date: '18 Oct 2023', definition: 'As the population of Scholars in the province of Pangasinan continuously grew, the appointment of leaders and officers who are dedicated, competent, and adaptable to changes is important in order to attain the association', image: 'img/news/news-img1.png' },
+      { title: 'NEW ELECTED OFFICERS OF DOST SCHOLARS’ INTER-CAMPUS ASSOCIATION OF PANGASINAN FOR THE ACADEMIC YEAR 2023-2024.', date: '30 Sept 2023', definition: 'As the population of Scholars in the province of Pangasinan continuously grew, the appointment of leaders and officers who are dedicated, competent, and adaptable to changes is important in order to attain the association', image: 'img/news/news-img2.png' },
+      { title: 'CONGRATULATIONS TO PSUNIANS, DOST 2023 S&T UNDERGRADUATE SCHOLARSHIP QUALIFIERS!', date: '06 Sept 2023', definition: 'The Department of Science and Technology Regional Office No. VIII is pleased to announce the names of the Qualifiers for the 2023 Undergraduate Scholarship Programs Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sequi autem, magni magnam at reiciendis sit dolor iure saepe accusamus nulla id illum in facilis fugiat, sint debitis labore delectus? Quasi ullam, corporis alias cupiditate, eveniet laudantium labore voluptas commodi provident facere necessitatibus minima consequuntur fugit explicabo laborum ipsum deleniti.', image: 'img/news/news-img3.png' },
+      { title: 'SUPER TYPHOON EGAY: DONATION DRIVE LED BY DOST- MAYSA FOR ALL AFFECTED INDIGENT FAMILIES IN PAGUDPUD, ILOCOS NORTE.', date: '29 July 2023', definition: 'Super Typhoon Egay may have left a trail of devastation in the Ilocos Region, but together, we can be a beacon of hope for those affected indigent families in Pagudpud.Let us unite under the banner of compassion as DOST-MAYSA launches a Donation Drive for our fellow Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quia repudiandae officiis ipsum, minima similique, asperiores molestiae dolor a iusto vero corporis, magni doloribus facere distinctio possimus eveniet eligendi itaque nemo tempora debitis reiciendis vel rem facilis! Culpa suscipit aspernatur eligendi laboriosam, doloribus nobis neque, ipsum hic est corrupti sed.', image: 'img/news/news-img4.jpg' },
+      { title: '2023 DOST-SCHOLARS’ EXIT CONFERENCE AT LINGAYEN, PANGASINAN', date: '13 July 2023', definition: 'The Department of Science and Technology Region 1 (DOST 1) conducted an Exit Conference to 85 DOST-Science Education Institute (SEI) graduating scholars from Pangasinan on July 12-13, 2023 at Provincial Training and Development Center, Lingayen, Pangasinan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatum quibusdam quisquam itaque, voluptates ducimus id eaque quod hic blanditiis aperiam error, beatae voluptate neque optio quos suscipit veritatis. Saepe praesentium officia ratione quis quasi sit adipisci suscipit magni eos blanditiis. Fuga a ea totam! Eos dicta corrupti delectus id.', image: 'img/news/news-img5.jpg' },
+    
+    ];
+
+    function displayNewsItems() {
+      const newsList = document.getElementById('newsList');
+      newsList.innerHTML = '';
+
+      newsItems.forEach((news, index) => {
+        const newsDiv = document.createElement('div');
+        newsDiv.className = 'news-container';
+        newsDiv.innerHTML = `
+          <div style="display: flex; align-items: center;">
+            <img src="${news.image}" alt="News Image" style="max-width: 100px; margin-right: 10px;">
+            <div>
+              <strong>${news.title}</strong> (${news.date}): ${news.definition} 
+              <a href="#" onclick="editNewsItem(${index})">Edit</a> 
+              <a href="#" onclick="deleteNewsItem(${index})">Delete</a>
+            </div>
+          </div>
+        `;
+        newsList.appendChild(newsDiv);
+      });
+    }
+
+    function editNewsItem(index) {
+      const newsItem = newsItems[index];
+      document.getElementById('editNewsTitle').value = newsItem.title;
+      document.getElementById('editNewsDate').value = newsItem.date;
+      document.getElementById('editNewsDefinition').value = newsItem.definition;
+      document.getElementById('editNewsImage').value = newsItem.image;
+
+      $('#editCardModal').modal('show');
+    }
+
+    function saveNewsChanges() {
+      const editNewsTitle = document.getElementById('editNewsTitle').value;
+      const editNewsDate = document.getElementById('editNewsDate').value;
+      const editNewsDefinition = document.getElementById('editNewsDefinition').value;
+      const editNewsImage = document.getElementById('editNewsImage').value;
+
+      const selectedIndex = newsItems.findIndex(news => news.title === originalTitle);
+
+      if (selectedIndex !== -1) {
+        newsItems[selectedIndex] = { title: editNewsTitle, date: editNewsDate, definition: editNewsDefinition, image: editNewsImage };
+
+        displayNewsItems();
+
+        $('#editCardModal').modal('hide');
+      }
+    }
+
+    function deleteNewsItem(index) {
+      newsItems.splice(index, 1);
+
+      displayNewsItems();
+    }
+
+    displayNewsItems();
   </script>
 
   <!-- CHANGE TABS -->

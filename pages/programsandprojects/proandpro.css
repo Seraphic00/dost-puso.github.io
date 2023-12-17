@@ -147,6 +147,7 @@ th,td{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1023000;
 }
 /* OPEN POPUP CONTENT for Calendar */
 .popupCal {
@@ -157,6 +158,7 @@ th,td{
     transform: translate(-50%, -50%);
     padding: 20px;
     background-color: #fff;
+    z-index: 1024000;
 }
 /* CLOSE POPUP CONTENT for Calendar*/
 .popupCal-close {
@@ -183,6 +185,7 @@ th,td{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1023000;
 }
 /* OPEN POPUP CONTENT for Gallery*/
 .popupGal {
@@ -193,6 +196,7 @@ th,td{
     transform: translate(-50%, -50%);
     padding: 20px;
     background-color: #fff;
+    z-index: 1024000;
 }
 /* CLOSE POPUP CONTENT for Gallery*/
 .popupGal-close {
@@ -304,7 +308,6 @@ th,td{
 }
 .news-img-box {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
 }
 .news-img {
     width: 100%;

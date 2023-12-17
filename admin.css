@@ -13,6 +13,11 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.row{
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+}
+
 .container-fluid, .row{
     --bs-gutter-x:0px !important;
 }
@@ -20,12 +25,65 @@
 .title{
     text-transform: uppercase;
     color: black;
-    font-size: 40px;
+    font-size: 35px;
     font-family: Oregon;
+    padding-top: 15px;
 }
 
 
 /* SIDEBAR */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Adjust the last value for opacity */
+    display: none;
+    z-index: 1040;
+}
+
+.offcanvas{
+    border: none;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+
+    .offhd{
+        display: block;
+    
+        .profile{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            margin-top: 20px;
+            
+    
+            .avatar{
+                border-radius: 50px;
+                margin-left: 20px;
+            }
+    
+            .profile-info{
+                padding-left: 10px;
+                grid-column: span 2;
+                display: grid;
+            }
+        }
+    }
+}
+
+.nav-item{
+    width: 100%;
+
+    hr{
+        border-color: #ccc;
+        margin: 0px;
+    }
+
+    ul{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
 .nav-link{
     color: black;
     text-transform: uppercase;
@@ -56,50 +114,203 @@
     padding-right: 20px;
 }
 
+
+/* Avatar */
+.avatar-thumbnail {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.avatar-thumbnail.selected {
+    border: 2px solid #007bff;
+}
+
+
+
+.tabsection{
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+
+
+/* Cards */
 .seccontent{
     margin-top: 100px;
     background-color: transparent;
 }
-
-#aboutuscard{
+.cards{
     display: grid;
 }
 
 .card{
-    min-height: 100px;
-    margin: 10px;
-    padding: 20px;
+    margin: 15px;
+    padding: 10px;
     border: none;
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
     justify-content: center;
+    background-color: white !important;
 
     .cardtitle{
         text-transform: uppercase;
-        font-weight: bolder;
         color: black;
-        font-size: x-large;
+        /* text-align: center; */
+        text-decoration: underline;
+        color: #04606c;
+        font-weight: bolder;
     }
 }
 
 .cardfortitle{
-    background-color: #0091a1;
-    margin: 5px;
-    padding: 5px;
+    padding: 15px;
     border: none;
-    justify-content: center;
+    background-color: #09c7e0;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bolder;
+}
+
+.modal-dialog {
+    max-width: 80% !important;
 }
 
 .edit{
     text-align: end;
 }
 
-.tabsection{
 
-    h5{
-        text-transform: uppercase;
-        font-weight: bolder;
-        text-align: center;
-        color: white;
-        margin: 0px 0px 0px;
+
+
+/* OFFICERS */
+@media (min-width: 576px) {
+    .jumbotron {
+        padding: 1rem 2rem;
     }
+}
+
+.tdSr {
+    width: 33.33%;
+}
+
+.tdName {
+    width: 50%;
+}
+
+.tdAction {
+    width: 16.67%;
+}
+
+
+/* Calendar */
+
+.tdDay {
+    width: 5.8823529412%;
+}
+
+.tdMonth {
+    width: 11.7647058824%;
+}
+
+.tdYear {
+    width: 17.6470588235%;
+}
+
+.tdGoals {
+    width: 17.6470588235%;
+}
+
+.tdKeyStaff {
+    width: 17.6470588235%;
+}
+
+.tdResources {
+    width: 17.6470588235%;
+}
+
+.tdAction {
+    width: 11.7647058824%;
+}
+
+
+/* Customize button styles (edit,delete,add) */
+#tblData .btn-edit {
+    background-color: #34C1D5;
+    color: #fff;
+    border: none;
+}
+
+#tblData2 .btn-edit2 {
+    background-color: #34C1D5;
+    color: #fff;
+    border: none;
+}
+
+#tblData .btn-delete {
+    background-color: #0f545e !important;
+    color: #fff !important;
+    border: none;
+}
+
+#tblData2 .btn-delete2 {
+    background-color: #0f545e !important;
+    color: #fff !important;
+    border: none;
+}
+
+#btnAdd {
+    background-color: rgb(0, 0, 0); 
+    color: #fff;
+    border: none;
+}
+
+#btnAdd2 {
+    background-color: rgb(0, 0, 0); 
+    color: #fff;
+    border: none;
+}
+
+#tblData .btn-edit:hover,
+#tblData .btn-delete:hover,
+#btnAdd:hover {
+    filter: brightness(90%);
+}
+
+#tblData2 .btn-edit2:hover,
+#tblData2 .btn-delete2:hover,
+#btnAdd2:hover {
+    filter: brightness(90%);
+}
+
+.edit-mode {
+    width: 100%;
+}
+
+#padbot{
+    padding-bottom: 30px;
+}
+
+.officertable {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.calendartable{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.addbtn{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.activity-container {
+    margin-bottom: 10px;
+}
+
+.news-container {
+    margin-bottom: 10px;
 }
