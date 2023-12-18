@@ -545,7 +545,7 @@
               <label for="editImage">Image URL:</label>
               <input type="text" class="form-control" id="editImage" required>
             </div>
-            <button type="button" class="btn btn-primary" onclick="saveChanges()">Save Changes</button>
+            <button type="button" class="btn btn-primary" onclick="saveGalleryChanges()">Save Changes</button>
           </form>
         </div>
       </div>
@@ -888,7 +888,7 @@
       $('#editCardModal').modal('show');
     }
 
-    function saveChanges() {
+    function saveGalleryChanges() {
       const editTitle = document.getElementById('editTitle').value;
       const editDefinition = document.getElementById('editDefinition').value;
       const editImage = document.getElementById('editImage').value;
