@@ -1,277 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <style>
-        @media (min-width: 576px) {
-            .jumbotron {
-                padding: 1rem 2rem;
-            }
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Gallery</title>
+  <style>
+    .albumcard {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+    }
 
-        .tdSr {
-            width: 33.33%;
-        }
+    .album {
+      margin-bottom: 10px;
+    }
 
-        .tdName {
-            width: 50%;
-        }
+    .photo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin: 5px;
+    }
 
-        .tdAction {
-            width: 16.67%;
-        }
-    </style>
+    .photo-container {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(100px, 1fr));
+      grid-gap: 5px;
+    }
+
+    .photo-actions {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .close {
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="jumbotron text-center bg-success text-white">
-            <h1>Jquery Inline Table Editing</h1>
-            <p>Add Row to Table, Edit and Delete</p>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-right">
-                <input type="button" id="btnAdd" class="btn btn-primary para" value="Add New" />
-            </div>
-        </div>
-        <div class="row pt-3">
-            <div class="col-md-12 col-sm-12 col-12 p-2 ">
-                <table id="tblData" class="table table-bordered table-hover table-striped">
-                    <thead>
-                        <tr>
-                            <th class="tdSr">Position</th>
-                            <th class="tdName">Name</th>
-                            <th class="tdAction">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="tdSr">President</td>
-                            <td class="tdName">PRINCE JOHN R. BASUEL</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr">Internal Vice-President</td>
-                            <td class="tdName">BEVERLY G. BAUTISTA</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr">External Vice-President</td>
-                            <td class="tdName">LAIZA E. GUARDIANA</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr">Secretary</td>
-                            <td class="tdName">KEITH FRANCIS M. BUENO</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr">Treasurer</td>
-                            <td class="tdName">CHARLOTTE JOBE C. DE OCAMPO</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr">Auditor</td>
-                            <td class="tdName">CHRISTIAN B. GALERA</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">NICOLE V. DE NIEVA</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr">Business Manager</td>
-                            <td class="tdName">CHRISTOPHER C. ANTOLIN</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">COCOY S. MENDOZA</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr">P.R.O.</td>
-                            <td class="tdName">DIAN E. GARCIA</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">PRINCESS ERIKA R. CALIMLIM</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr">Representatives</td>
-                            <td class="tdName"></td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr">BSCE</td>
-                            <td class="tdName">DAVE ARDEN F. ESTRADA</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">JUSTINE RAYMART D. GASCON</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">DENVER JOHN C. LAMARCA</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">JOHN CARLO L. PASTER</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">RICKALIEN C. DELIZO</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr">BS Architecture</td>
-                            <td class="tdName">CHARMAGNE ERICA B. CABANCLA</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdSr">BS Mathematics</td>
-                            <td class="tdName">MARIA JESSA R. CANCINO</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm'> Delete </button>
-                            </td>
-                        </tr>
 
-                    </tbody>
-                </table>
-            </div>
+<div id="gallery">
+  <!-- Add new albums here -->
+  <div class="albumcard" id="album1">
+    <span class="cardtitle">DOST Campaign 2023</span>
+    <br>
+    <span class="carddescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+    <div class="hidden-content" id="album1Content">
+      <div class="album">
+        <div id="album1List" class="photo-container">
+          <!-- Display fixed photos here -->
+          <div>
+            <img class="photo" src="img/gallery/one.jpg" alt="First Photo" data-fixed="true">
+            <button onclick="deletePhoto('album1List', this)">Delete</button>
+          </div>
+          <div>
+            <img class="photo" src="img/gallery/two.jpg" alt="Second Photo" data-fixed="true">
+            <button onclick="deletePhoto('album1List', this)">Delete</button>
+          </div>
         </div>
+        <div class="photo-actions">
+          <button onclick="uploadPhoto('album1')">Upload Photo</button>
+          <button onclick="editAlbum('album1')">Edit Album</button>
+          <button onclick="deleteAlbum('album1')">Delete Album</button>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <script>
-        var emptyRow = "<tr><td colspan='3' class='text-center'> No Records Available</td></tr>";
-        var emptyNewRow = "<tr class='trNewRow'>";
-        emptyNewRow = emptyNewRow + "    <td class='tdSr'>";
-        emptyNewRow = emptyNewRow + "        <input type='text' class='form-control txtSr' placeholder='Enter Position'/>";
-        emptyNewRow = emptyNewRow + "    </td>";
-        emptyNewRow = emptyNewRow + "    <td class='tdName'>";
-        emptyNewRow = emptyNewRow + "        <input type='text' class='form-control txtName' placeholder='Enter Name'/>";
-        emptyNewRow = emptyNewRow + "    </td>";
-        emptyNewRow = emptyNewRow + "    <td class='tdAction'>";
-        emptyNewRow = emptyNewRow + "        <button class='btn btn-sm btn-success btn-save'> Save</button>";
-        emptyNewRow = emptyNewRow + "        <button class='btn btn-sm btn-success btn-cancel'> Cancel</button>";
-        emptyNewRow = emptyNewRow + "    </td>";
-        emptyNewRow = emptyNewRow + "</tr>";
+  <!-- "Add Album" button below the first album -->
+  <div id="addAlbumButton">
+    <button onclick="addAlbum()">Add Album</button>
+  </div>
+</div>
 
-        var rowButtons = "<button class='btn btn-success btn-sm btn-edit' > Edit </button>  <button class='btn btn-danger btn-sm' > Delete </button> ";
-        var rowUpdateButtons = "<button class='btn btn-success btn-sm btn-save' > Update </button>  <button class='btn btn-danger btn-sm btn-save' > Cancel </button> ";
+<!-- Edit Album Modal -->
+<div id="editAlbumModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeEditAlbumModal()">&times;</span>
+    <label for="newAlbumTitle">Album Title:</label>
+    <input type="text" id="newAlbumTitle">
+    <br>
+    <label for="newAlbumDescription">Album Description:</label>
+    <textarea id="newAlbumDescription"></textarea>
+    <br>
+    <button onclick="saveAlbumDetails()">Save</button>
+  </div>
+</div>
 
-        $(document).ready(function () {
-            updateNoRecordsMessage();
+<script>
 
-            $("#btnAdd").click(function () {
-                if ($("#tblData tbody tr").length === 1 && $("#tblData tbody tr td").hasClass("text-center")) {
-                    $("#tblData tbody").html("");
-                }
-                $("#tblData tbody").append(emptyNewRow);
-            });
+  function uploadPhoto(albumId) {
+    const albumList = document.getElementById(`${albumId}List`);
 
-            $('#tblData').on('click', '.btn-save', function () {
-                const position = $(this).parent().parent().find(".txtSr").val();
-                $(this).parent().parent().find(".tdSr").html("" + position + "");
-                const name = $(this).parent().parent().find(".txtName").val();
-                $(this).parent().parent().find(".tdName").html("" + name + "");
-                $(this).parent().parent().find(".tdAction").html(rowButtons);
-                updateNoRecordsMessage();
-            });
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.multiple = true;
+    input.addEventListener('change', handleFileSelect);
+    input.click();
 
-            $('#tblData').on('click', '.btn-danger', function () {
-                $(this).parent().parent().remove();
-                updateNoRecordsMessage();
-            });
+    function handleFileSelect(event) {
+      const files = event.target.files;
 
-            $('#tblData').on('click', '.btn-cancel', function () {
-                $(this).parent().parent().remove();
-                updateNoRecordsMessage();
-            });
+      for (const file of files) {
+        const reader = new FileReader();
 
-            $('#tblData').on('click', '.btn-edit', function () {
-                const position = $(this).parent().parent().find(".tdSr").html();
-                $(this).parent().parent().find(".tdSr").html("<input type='text' value='" + position + "' class='form-control txtSr' placeholder='Enter Position'/>");
-                const name = $(this).parent().parent().find(".tdName").html();
-                $(this).parent().parent().find(".tdName").html("<input type='text' value='" + name + "' class='form-control txtName' placeholder='Enter Name'/>");
-                $(this).parent().parent().find(".tdAction").html(rowUpdateButtons);
-            });
+        reader.onload = function (e) {
+          const img = document.createElement('img');
+          img.className = 'photo';
+          img.src = e.target.result;
 
-            function updateNoRecordsMessage() {
-                if ($("#tblData tbody tr").length === 0) {
-                    $("#tblData tbody").html(emptyRow);
-                }
-            }
-        });
-    </script>
+          const deleteButton = document.createElement('button');
+          deleteButton.innerText = 'Delete';
+          deleteButton.addEventListener('click', function() {
+            albumList.removeChild(photoContainer);
+          });
+
+          const photoContainer = document.createElement('div');
+          photoContainer.appendChild(img);
+          photoContainer.appendChild(deleteButton);
+          photoContainer.dataset.fixed = 'false'; // Indicate that this is not a fixed photo
+
+          albumList.appendChild(photoContainer);
+        };
+
+        reader.readAsDataURL(file);
+      }
+    }
+  }
+
+  function editAlbum(albumId) {
+    const modal = document.getElementById('editAlbumModal');
+    const newAlbumTitleInput = document.getElementById('newAlbumTitle');
+    const newAlbumDescriptionInput = document.getElementById('newAlbumDescription');
+
+    // Set the current album title and description as default values in the input fields
+    const currentAlbumTitle = document.getElementById(`${albumId}`).getElementsByClassName('cardtitle')[0].innerText;
+    const currentAlbumDescription = document.getElementById(`${albumId}`).getElementsByClassName('carddescription')[0].innerText;
+    
+    newAlbumTitleInput.value = currentAlbumTitle;
+    newAlbumDescriptionInput.value = currentAlbumDescription;
+
+    modal.style.display = 'flex';
+
+    // Save the new album details
+    window.saveAlbumDetails = function() {
+      const newTitle = newAlbumTitleInput.value;
+      const newDescription = newAlbumDescriptionInput.value;
+
+      document.getElementById(`${albumId}`).getElementsByClassName('cardtitle')[0].innerText = newTitle;
+      document.getElementById(`${albumId}`).getElementsByClassName('carddescription')[0].innerText = newDescription;
+      
+      closeEditAlbumModal();
+    };
+
+    // Close the modal when clicking outside
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        closeEditAlbumModal();
+      }
+    };
+
+    // Close the modal
+    window.closeEditAlbumModal = function() {
+      modal.style.display = 'none';
+    };
+  }
+
+  function deleteAlbum(albumId) {
+    const album = document.getElementById(albumId);
+    album.parentNode.removeChild(album);
+  }
+
+  function addAlbum() {
+    const gallery = document.getElementById('gallery');
+    
+    const newAlbum = document.createElement('div');
+    newAlbum.className = 'albumcard';
+    newAlbum.id = `album${gallery.childElementCount + 1}`;
+
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'cardtitle';
+    titleSpan.innerText = 'New Album';
+
+    const descriptionSpan = document.createElement('span');
+    descriptionSpan.className = 'carddescription';
+    descriptionSpan.innerText = 'Album description';
+
+    const hiddenContent = document.createElement('div');
+    hiddenContent.className = 'hidden-content';
+
+    const albumContent = document.createElement('div');
+    albumContent.className = 'album';
+
+    const photoContainer = document.createElement('div');
+    photoContainer.id = `${newAlbum.id}List`;
+    photoContainer.className = 'photo-container';
+
+    const photoActions = document.createElement('div');
+    photoActions.className = 'photo-actions';
+
+    const uploadButton = document.createElement('button');
+    uploadButton.innerText = 'Upload Photo';
+    uploadButton.addEventListener('click', function() {
+      uploadPhoto(newAlbum.id);
+    });
+
+    const editButton = document.createElement('button');
+    editButton.innerText = 'Edit Album';
+    editButton.addEventListener('click', function() {
+      editAlbum(newAlbum.id);
+    });
+
+    const deleteButton = document.createElement('button');
+    deleteButton.innerText = 'Delete Album';
+    deleteButton.addEventListener('click', function() {
+      deleteAlbum(newAlbum.id);
+    });
+
+    gallery.appendChild(newAlbum);
+    newAlbum.appendChild(titleSpan);
+    newAlbum.appendChild(document.createElement('br'));
+    newAlbum.appendChild(descriptionSpan);
+    newAlbum.appendChild(hiddenContent);
+    hiddenContent.appendChild(albumContent);
+    albumContent.appendChild(photoContainer);
+    albumContent.appendChild(photoActions);
+    photoActions.appendChild(uploadButton);
+    photoActions.appendChild(editButton);
+    photoActions.appendChild(deleteButton);
+    gallery.appendChild(document.getElementById('addAlbumButton'));
+  }
+
+  function deletePhoto(albumId, button) {
+    const albumList = document.getElementById(albumId);
+    const photoContainer = button.parentNode;
+    albumList.removeChild(photoContainer);
+  }
+
+</script>
 
 </body>
-
 </html>
