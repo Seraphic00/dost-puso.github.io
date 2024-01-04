@@ -85,6 +85,9 @@
             <input type="search" name="search" id="searchInput" placeholder=" Search" style="padding: 5px; width: 500px;">
             <button id="searchbtn" onclick="searchValue()">&#128269;</button>
           </div>
+          
+          <div id="searchResults"></div>
+          
           <div id="profile-info" class="d-flex align-items-center">
               <div class="dropdown">
                   <div class="d-flex align-items-center" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -120,516 +123,505 @@
               <p class="vs">vs. previous 30 days</p>
             </div>
           </div>
-
-          <div class="tabsection" id="aboutus">
-            <h5 class="cardfortitle">About Us</h5>
-            <div class="cards" id="aboutuscard">
-              <div class="card" id="historycard" onclick="editCard('History', 'historyContent')">
-                <p class="d-flex justify-content-between">
-                  <span class="cardtitle">HISTORY</span>
-                  <a href="#" class="edit">Edit</a>
-                </p>
-                <div class="hidden-content" id="historyContent" style="padding: 10px; text-align: justify;">
-                  The DOST-PSU UCC Scholars’ Organization, affectionately known as DOST-PUSO, had its humble beginnings on October 1, 2022. Founded by a group of passionate Department of Science and Technology (DOST) scholars at Pangasinan State University's Urdaneta City Campus, the organization's inception marked the commencement of a remarkable journey.
-                  <br><br>
-                  As DOST-PUSO continues to grow, adapt, and evolve, it remains steadfast in its mission to inspire and empower scholars, promote scientific literacy, and serve the nation with unwavering dedication. The organization's journey is a testament to what can be achieved when passionate individuals come together with a shared vision, driven by a love for education, science, and service to the Philippines.
-                  <br><br>
-                  In a short span of time, DOST-PUSO achieved remarkable milestones. The organization became a hub for fostering academic excellence, nurturing leadership skills, and promoting patriotic values. It organized numerous training workshops, seminars, and outreach programs that not only enhanced the skills and knowledge of its members but also extended the benefits of science and technology to the wider community.
+    
+          <div class="cards" id="aboutuscard">
+            <div class="card" id="historycard" onclick="editCard('History', 'historyContent')">
+              <p class="d-flex justify-content-between cardfortitle">
+                <span class="cardtitle">HISTORY</span>
+                <a href="#" class="edit">Edit</a>
+              </p>
+              <div class="hidden-content" id="historyContent" style="text-align: justify;">
+                The DOST-PSU UCC Scholars’ Organization, affectionately known as DOST-PUSO, had its humble beginnings on October 1, 2022. Founded by a group of passionate Department of Science and Technology (DOST) scholars at Pangasinan State University's Urdaneta City Campus, the organization's inception marked the commencement of a remarkable journey.
+                <br><br>
+                As DOST-PUSO continues to grow, adapt, and evolve, it remains steadfast in its mission to inspire and empower scholars, promote scientific literacy, and serve the nation with unwavering dedication. The organization's journey is a testament to what can be achieved when passionate individuals come together with a shared vision, driven by a love for education, science, and service to the Philippines.
+                <br><br>
+                In a short span of time, DOST-PUSO achieved remarkable milestones. The organization became a hub for fostering academic excellence, nurturing leadership skills, and promoting patriotic values. It organized numerous training workshops, seminars, and outreach programs that not only enhanced the skills and knowledge of its members but also extended the benefits of science and technology to the wider community.
+              </div>
+            </div>
+            <div class="card" id="logocard" onclick="editCard('Logo', 'logoContent')">
+              <p class="d-flex justify-content-between cardfortitle">
+                <span class="cardtitle">DOST PUSO LOGO</span>
+                <a href="#" class="edit">Edit</a>
+              </p>
+              <p class="hidden-content" id="logoContent" style="text-align: justify;">
+                The official logo of the DOST-PSU UCC Scholars’ Organization is its official symbol. Each element represents the following:<br><br>
+                (a) The three-color scheme of the logo was inspired by the DOST Logo and represents the unknown (black), truth and enlightenment (white), and progress (blue) <br>
+                (b)The heart-shaped logo was inspired by the organization's name, "PUSO," which means "heart. <br>
+                (c) The chain-like structure of the logo represents the shared bonds among the patriot scholars of PSU UCC, which are strengthened by the organization's mission and vision. <br>
+                (d) The square in the center of the logo, which was formed by the interlocking of the two chains represents each side the organization's four core values: Patriotic, Unwavering Service, Servant Leadership, and Optimistic.
+              </p>
+            </div>
+            <div class="card" id="visioncard" onclick="editCard('Vision', 'visionContent')">
+              <p class="d-flex justify-content-between cardfortitle">
+                <span class="cardtitle">Vision</span>
+                <a href="#" class="edit">Edit</a>
+              </p>
+              <p class="hidden-content" id="visionContent" style="text-align: justify;">
+                The organization shall envision a community of scholars who are <span id="vmbold">P</span>assionate about serving the nation, <span id="vmbold">U</span>nified by the same aspiration, <span id="vmbold">S</span>teadfast in the face of adversity, and <span id="vmbold">O</span>ptimistic toward creating a better country. 
+              </p>
+            </div>
+            <div class="card" id="missioncard" onclick="editCard('Mission', 'missionContent')">
+              <p class="d-flex justify-content-between cardfortitle">
+                <span class="cardtitle">Mission</span>
+                <a href="#" class="edit">Edit</a>
+              </p>
+              <p class="hidden-content" id="missionContent" style="text-align: justify;">
+                  The DOST-PSU UCC Scholars' Organization (DOST-PUSO) shall strive to pursue: <br>
+                  <span id="vmbold">P</span>romote development of the nation's most steadfast, enthusiastic, innovative, and patriotic scholars through relevant trainings and workshops, collaboration, leadership and academic excellence; <br>
+                  <span id="vmbold">U</span>nify DOST scholars of PSU UCC with one vision and mission; <br>
+                  <span id="vmbold">S</span>upport, empower, and encourage patriot scholars to take an active role in nation building; and <br>
+                  <span id="vmbold">O</span>ffer unwavering act of service to the nation. <br>
+              </p>
+            </div>
+            <div class="card cardofficer" id="officercard">
+              <span class="cardtitle cardfortitle">Officers</span>
+              <div id="padbot">
+                <div class="row pt-3 officertable">
+                  <div class="col-md-12 col-sm-12 col-12 p-2 ">
+                    <table id="tblData" class="table table-bordered table-hover table-striped">
+                      <thead>
+                        <tr>
+                          <th class="tdSr">Position</th>
+                          <th class="tdName">Name</th>
+                          <th class="tdAction">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="tdSr">President</td>
+                          <td class="tdName">PRINCE JOHN R. BASUEL</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">Internal Vice-President</td>
+                          <td class="tdName">BEVERLY G. BAUTISTA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">External Vice-President</td>
+                          <td class="tdName">LAIZA E. GUARDIANA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">Secretary</td>
+                          <td class="tdName">KEITH FRANCIS M. BUENO</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">Treasurer</td>
+                          <td class="tdName">CHARLOTTE JOBE C. DE OCAMPO</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">Auditor</td>
+                          <td class="tdName">CHRISTIAN B. GALERA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">NICOLE V. DE NIEVA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">Business Manager</td>
+                          <td class="tdName">CHRISTOPHER C. ANTOLIN</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">COCOY S. MENDOZA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">P.R.O.</td>
+                          <td class="tdName">DIAN E. GARCIA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">PRINCESS ERIKA R. CALIMLIM</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">Representatives</td>
+                          <td class="tdName"></td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">BSCE</td>
+                          <td class="tdName">DAVE ARDEN F. ESTRADA</td>
+                          <td class="tdAction">
+                            <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                            <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">JUSTINE RAYMART D. GASCON</td>
+                          <td class="tdAction">
+                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">DENVER JOHN C. LAMARCA</td>
+                          <td class="tdAction">
+                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">JOHN CARLO L. PASTER</td>
+                          <td class="tdAction">
+                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr"></td>
+                          <td class="tdName">RICKALIEN C. DELIZO</td>
+                          <td class="tdAction">
+                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">BS Architecture</td>
+                          <td class="tdName">CHARMAGNE ERICA B. CABANCLA</td>
+                          <td class="tdAction">
+                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tdSr">BS Mathematics</td>
+                          <td class="tdName">MARIA JESSA R. CANCINO</td>
+                          <td class="tdAction">
+                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
+                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="row addbtn">
+                  <div class="col-md-12 text-right">
+                    <input type="button" id="btnAdd" class="btn btn-primary" value="Add New" />
+                  </div>
                 </div>
               </div>
-              <div class="card" id="logocard" onclick="editCard('Logo', 'logoContent')">
-                <p class="d-flex justify-content-between">
-                  <span class="cardtitle">DOST PUSO LOGO</span>
-                  <a href="#" class="edit">Edit</a>
-                </p>
-                <p class="hidden-content" id="logoContent" style="padding: 10px; text-align: justify;">
-                  The official logo of the DOST-PSU UCC Scholars’ Organization is its official symbol. Each element represents the following:<br><br>
-                  (a) The three-color scheme of the logo was inspired by the DOST Logo and represents the unknown (black), truth and enlightenment (white), and progress (blue) <br>
-                  (b)The heart-shaped logo was inspired by the organization's name, "PUSO," which means "heart. <br>
-                  (c) The chain-like structure of the logo represents the shared bonds among the patriot scholars of PSU UCC, which are strengthened by the organization's mission and vision. <br>
-                  (d) The square in the center of the logo, which was formed by the interlocking of the two chains represents each side the organization's four core values: Patriotic, Unwavering Service, Servant Leadership, and Optimistic.
-                </p>
-              </div>
-              <div class="card" id="visioncard" onclick="editCard('Vision', 'visionContent')">
-                <p class="d-flex justify-content-between">
-                  <span class="cardtitle">Vision</span>
-                  <a href="#" class="edit">Edit</a>
-                </p>
-                <p class="hidden-content" id="visionContent" style="padding: 10px; text-align: justify;">
-                  The organization shall envision a community of scholars who are <span id="vmbold">P</span>assionate about serving the nation, <span id="vmbold">U</span>nified by the same aspiration, <span id="vmbold">S</span>teadfast in the face of adversity, and <span id="vmbold">O</span>ptimistic toward creating a better country. 
-                </p>
-              </div>
-              <div class="card" id="missioncard" onclick="editCard('Mission', 'missionContent')">
-                <p class="d-flex justify-content-between">
-                  <span class="cardtitle">Mission</span>
-                  <a href="#" class="edit">Edit</a>
-                </p>
-                <p class="hidden-content" id="missionContent" style="padding: 10px; text-align: justify;">
-                    The DOST-PSU UCC Scholars' Organization (DOST-PUSO) shall strive to pursue: <br>
-                    <span id="vmbold">P</span>romote development of the nation's most steadfast, enthusiastic, innovative, and patriotic scholars through relevant trainings and workshops, collaboration, leadership and academic excellence; <br>
-                    <span id="vmbold">U</span>nify DOST scholars of PSU UCC with one vision and mission; <br>
-                    <span id="vmbold">S</span>upport, empower, and encourage patriot scholars to take an active role in nation building; and <br>
-                    <span id="vmbold">O</span>ffer unwavering act of service to the nation. <br>
-                </p>
-              </div>
-              <div class="card cardofficer" id="officercard">
-                <span class="cardtitle">Officers</span>
+            </div>
+          </div>
+
+          <div class="cards" id="proandprocard">
+            <div class="card" id="calendarcard">
+              <span class="cardtitle cardfortitle">Calendar of Activities</span>
+              <div class="container">
                 <div id="padbot">
-                  <div class="row pt-3 officertable">
+                  <div class="row pt-3 calendartable">
                     <div class="col-md-12 col-sm-12 col-12 p-2 ">
-                      <table id="tblData" class="table table-bordered table-hover table-striped">
+                      <table id="tblData2" class="table table-bordered table-hover table-striped">
                         <thead>
                           <tr>
-                            <th class="tdSr">Position</th>
-                            <th class="tdName">Name</th>
-                            <th class="tdAction">Action</th>
+                            <th>Day</th>
+                            <th>Month</th>
+                            <th>Year</th>
+                            <th>Goals/Objectives</th>
+                            <th>Expected Output</th>
+                            <th>Key Staff Involved</th>
+                            <th>Resources to be Utilized</th>
+                            <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td class="tdSr">President</td>
-                            <td class="tdName">PRINCE JOHN R. BASUEL</td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
+                              <td class="tdDay">05</td>
+                              <td class="tdMonth">October</td>
+                              <td class="tdYear">2023</td>
+                              <td class="tdGoals">Elect capable and responsible officers to act as leaders of DOST – PUSO</td>
+                              <td class="tdExpectedOutput">Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)</td>
+                              <td class="tdKeyStaff">All PSU Urdaneta City Campus DOST scholars</td>
+                              <td class="tdResources">Microsoft teams</td>
+                              <td class="tdAction">
+                                  <button class='btn btn-success btn-sm btn-edit2'> Edit </button>
+                                  <button class='btn btn-danger btn-sm btn-delete2'> Delete </button>
+                              </td>
                           </tr>
-                          <tr>
-                            <td class="tdSr">Internal Vice-President</td>
-                            <td class="tdName">BEVERLY G. BAUTISTA</td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr">External Vice-President</td>
-                            <td class="tdName">LAIZA E. GUARDIANA</td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr">Secretary</td>
-                            <td class="tdName">KEITH FRANCIS M. BUENO</td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr">Treasurer</td>
-                            <td class="tdName">CHARLOTTE JOBE C. DE OCAMPO</td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr">Auditor</td>
-                            <td class="tdName">CHRISTIAN B. GALERA</td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">NICOLE V. DE NIEVA</td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr">Business Manager</td>
-                            <td class="tdName">CHRISTOPHER C. ANTOLIN</td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">COCOY S. MENDOZA</td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr">P.R.O.</td>
-                            <td class="tdName">DIAN E. GARCIA</td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">PRINCESS ERIKA R. CALIMLIM</td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr">Representatives</td>
-                            <td class="tdName"></td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr">BSCE</td>
-                            <td class="tdName">DAVE ARDEN F. ESTRADA</td>
-                            <td class="tdAction">
-                              <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                              <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">JUSTINE RAYMART D. GASCON</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">DENVER JOHN C. LAMARCA</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">JOHN CARLO L. PASTER</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr"></td>
-                            <td class="tdName">RICKALIEN C. DELIZO</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr">BS Architecture</td>
-                            <td class="tdName">CHARMAGNE ERICA B. CABANCLA</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="tdSr">BS Mathematics</td>
-                            <td class="tdName">MARIA JESSA R. CANCINO</td>
-                            <td class="tdAction">
-                                <button class='btn btn-success btn-sm btn-edit'> Edit </button>
-                                <button class='btn btn-danger btn-sm btn-delete'> Delete </button>
-                            </td>
-                          </tr>
-                        </tbody>
+                      </tbody>
                       </table>
-                    </div>
-                  </div>
-                  <div class="row addbtn">
-                    <div class="col-md-12 text-right">
-                      <input type="button" id="btnAdd" class="btn btn-primary" value="Add New" />
+                      <button id="btnAdd2" class="btn btn-primary">Add New</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-    
-          <div class="tabsection" id="proandpro">
-            <div class="cardfortitle">
-              <h5>Programs and Projects</h5>
+            <div class="card" id="gallerycard">
+              <span class="cardtitle cardfortitle">Gallery</span>
+              <div id="gallery">
+                <div class="albumcard" id="album1">
+                  <div class="gal">
+                    <span class="albumtitle">DOSTJLSSQualifiers</span>. 
+                    <span class="carddescription">Pagbati sa mga Bagong Iskolar nga Agham at Teknolohiya</span>
+                  </div>
+                  <div class="hidden-content" id="album1Content">
+                    <div class="album">
+                      <div id="album1List" class="photo-container">
+                        <div>
+                          <img class="photo" src="img/gallery/album1/title.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album1/one.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album1/two.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album1/three.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album1/four.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album1/five.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album1/six.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
+                        </div>
+                      </div>
+                      <div class="photo-actions">
+                        <button onclick="uploadPhoto('album1')">Upload Photo</button>
+                        <button onclick="editAlbum('album1')">Edit Album</button>
+                        <button onclick="deleteAlbum('album1')">Delete Album</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="albumcard" id="album2">
+                  <div class="gal">
+                    <span class="albumtitle">Padayon Pantry</span>. 
+                    <span class="carddescription">The DOST undergraduate scholarship examination has returned! Thousands of hopeful scholars are set to take the examination on March 18-19, 2023.
+                      <br><br>
+                      The 𝘿𝙊𝙎𝙏 - 𝙋𝙐𝙎𝙊, in collaboration with the 𝘿𝙊𝙎𝙏-𝙈𝘼𝙔𝙎𝘼 and 𝘿𝙊𝙎𝙏-𝙎𝙄𝘾𝘼𝙋, offers you the "𝙋𝙖𝙙𝙖𝙮𝙤𝙣 𝙋𝙖𝙣𝙩𝙧𝙮" as a way of showing our support and good luck to future scholars. The pressure and anxiety of taking the qualifying examination are not new to the present scholars which is why they decided to give a little motivation to the aspiring scholars by providing 𝙛𝙧𝙚𝙚 𝙨𝙣𝙖𝙘𝙠𝙨 𝙖𝙣𝙙 𝙙𝙧𝙞𝙣𝙠𝙨 to the examinees.
+                      <br><br>
+                      The “𝙋𝙖𝙙𝙖𝙮𝙤𝙣 𝙋𝙖𝙣𝙩𝙧𝙮” will be placed at one of the testing centers, the Urdaneta City National High School (UCNHS) on March 18, 2023. Any aspiring scholars who have completed the qualifying examination are welcome to visit.
+                      <br><br>
+                      Padayon and see you at the testing center, future scholars!
+                  </div>
+                  <div class="hidden-content" id="album2Content">
+                    <div class="album">
+                      <div id="album2List" class="photo-container">
+                        <div>
+                          <img class="photo" src="img/gallery/album2/one.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album2/two.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album2/three.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album2/four.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album2/five.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album2/six.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album2/seven.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album2/eight.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album2/nine.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
+                        </div>
+                        <div>
+                          <img class="photo" src="img/gallery/album2/ten.jpg" data-fixed="true">
+                          <br>
+                          <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
+                        </div>
+                      </div>
+                      <div class="photo-actions">
+                        <button onclick="uploadPhoto('album2')">Upload Photo</button>
+                        <button onclick="editAlbum('album2')">Edit Album</button>
+                        <button onclick="deleteAlbum('album2')">Delete Album</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="addAlbumButton">
+                  <button onclick="addAlbum()">Add Album</button>
+                </div>
+              </div>
             </div>
-            <div class="cards" id="proandprocard">
-              <div class="card" id="calendarcard">
-                <span class="cardtitle">Calendar of Activities</span>
-                <div class="container">
-                  <div id="padbot">
-                    <div class="row pt-3 calendartable">
-                      <div class="col-md-12 col-sm-12 col-12 p-2 ">
-                        <table id="tblData2" class="table table-bordered table-hover table-striped">
-                          <thead>
-                            <tr>
-                              <th>Day</th>
-                              <th>Month</th>
-                              <th>Year</th>
-                              <th>Goals/Objectives</th>
-                              <th>Expected Output</th>
-                              <th>Key Staff Involved</th>
-                              <th>Resources to be Utilized</th>
-                              <th>Action</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                                <td class="tdDay">05</td>
-                                <td class="tdMonth">October</td>
-                                <td class="tdYear">2023</td>
-                                <td class="tdGoals">Elect capable and responsible officers to act as leaders of DOST – PUSO</td>
-                                <td class="tdExpectedOutput">Elect fifteen officers: President, Internal Vice President, External Vice President, Secretary, Treasurer, two (2) Auditors, two (2) Business Managers, two (2) Public Relation Officers, four (4) Representatives for each year (1st year to 4th year)</td>
-                                <td class="tdKeyStaff">All PSU Urdaneta City Campus DOST scholars</td>
-                                <td class="tdResources">Microsoft teams</td>
-                                <td class="tdAction">
-                                    <button class='btn btn-success btn-sm btn-edit2'> Edit </button>
-                                    <button class='btn btn-danger btn-sm btn-delete2'> Delete </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                        </table>
-                        <button id="btnAdd2" class="btn btn-primary">Add New</button>
+            <div class="card" id="newscard">
+              <span class="cardtitle cardfortitle">News</span>
+              <div id="news">
+                  <div class="newscard" id="news1">
+                      <div class="new">
+                          <div class="news-content">
+                              <span class="newstitle">Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and CAR from March 28 to April 1, 2023, at Thunderbird Resort, San Fernando City, La Union!</span>. 
+                              <span class="newsdescription">The Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and CAR from March 28 to April 1, 2023, at Thunderbird Resort, San Fernando City, La Union.
+                                Bringing a total of nine (9) participants from the DOST-PSU Urdaneta Scholars' Organization (DOST-PUSO), the scholars enthusiastically engaged in the whole period of the camp, which seeks to mold the scholars' leadership and core values.
+                                The arrival, orientation, and registration of the participants on March 28, marked the beginning of the event. The scholars had a chance to socialize and interact with one another on their first night.
+                                </span>
+                          </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card" id="gallerycard">
-                <span class="cardtitle">Gallery</span>
-                <div id="gallery">
-                  <div class="albumcard" id="album1">
-                    <div class="gal">
-                      <span class="albumtitle">DOSTJLSSQualifiers</span>. 
-                      <span class="carddescription">Pagbati sa mga Bagong Iskolar nga Agham at Teknolohiya</span>
-                    </div>
-                    <div class="hidden-content" id="album1Content">
-                      <div class="album">
-                        <div id="album1List" class="photo-container">
-                          <div>
-                            <img class="photo" src="img/gallery/album1/title.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album1/one.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album1/two.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album1/three.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album1/four.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album1/five.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album1/six.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album1List', this)">Delete</button>
-                          </div>
-                        </div>
-                        <div class="photo-actions">
-                          <button onclick="uploadPhoto('album1')">Upload Photo</button>
-                          <button onclick="editAlbum('album1')">Edit Album</button>
-                          <button onclick="deleteAlbum('album1')">Delete Album</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="albumcard" id="album2">
-                    <div class="gal">
-                      <span class="albumtitle">Padayon Pantry</span>. 
-                      <span class="carddescription">The DOST undergraduate scholarship examination has returned! Thousands of hopeful scholars are set to take the examination on March 18-19, 2023.
-                        <br><br>
-                        The 𝘿𝙊𝙎𝙏 - 𝙋𝙐𝙎𝙊, in collaboration with the 𝘿𝙊𝙎𝙏-𝙈𝘼𝙔𝙎𝘼 and 𝘿𝙊𝙎𝙏-𝙎𝙄𝘾𝘼𝙋, offers you the "𝙋𝙖𝙙𝙖𝙮𝙤𝙣 𝙋𝙖𝙣𝙩𝙧𝙮" as a way of showing our support and good luck to future scholars. The pressure and anxiety of taking the qualifying examination are not new to the present scholars which is why they decided to give a little motivation to the aspiring scholars by providing 𝙛𝙧𝙚𝙚 𝙨𝙣𝙖𝙘𝙠𝙨 𝙖𝙣𝙙 𝙙𝙧𝙞𝙣𝙠𝙨 to the examinees.
-                        <br><br>
-                        The “𝙋𝙖𝙙𝙖𝙮𝙤𝙣 𝙋𝙖𝙣𝙩𝙧𝙮” will be placed at one of the testing centers, the Urdaneta City National High School (UCNHS) on March 18, 2023. Any aspiring scholars who have completed the qualifying examination are welcome to visit.
-                        <br><br>
-                        Padayon and see you at the testing center, future scholars!
-                    </div>
-                    <div class="hidden-content" id="album2Content">
-                      <div class="album">
-                        <div id="album2List" class="photo-container">
-                          <div>
-                            <img class="photo" src="img/gallery/album2/one.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album2/two.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album2/three.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album2/four.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album2/five.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album2/six.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album2/seven.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album2/eight.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album2/nine.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
-                          </div>
-                          <div>
-                            <img class="photo" src="img/gallery/album2/ten.jpg" data-fixed="true">
-                            <br>
-                            <button class="dltbtnforal" onclick="deletePhoto('album2List', this)">Delete</button>
-                          </div>
-                        </div>
-                        <div class="photo-actions">
-                          <button onclick="uploadPhoto('album2')">Upload Photo</button>
-                          <button onclick="editAlbum('album2')">Edit Album</button>
-                          <button onclick="deleteAlbum('album2')">Delete Album</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="addAlbumButton">
-                    <button onclick="addAlbum()">Add Album</button>
-                  </div>
-                </div>
-              </div>
-              <div class="card" id="newscard">
-                <span class="cardtitle">News</span>
-                <div id="news">
-                    <div class="newscard" id="news1">
-                        <div class="new">
-                            <div class="news-content">
-                                <span class="newstitle">Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and CAR from March 28 to April 1, 2023, at Thunderbird Resort, San Fernando City, La Union!</span>. 
-                                <span class="newsdescription">The Department of Science and Technology had once again organized a leadership camp for the 150 DOST-SEI scholars of Region 1 and CAR from March 28 to April 1, 2023, at Thunderbird Resort, San Fernando City, La Union.
-                                  Bringing a total of nine (9) participants from the DOST-PSU Urdaneta Scholars' Organization (DOST-PUSO), the scholars enthusiastically engaged in the whole period of the camp, which seeks to mold the scholars' leadership and core values.
-                                  The arrival, orientation, and registration of the participants on March 28, marked the beginning of the event. The scholars had a chance to socialize and interact with one another on their first night.
-                                  </span>
-                            </div>
-                        </div>
-                        <div class="hidden-content" id="news1Content">
-                            <div class="news">
-                                <div id="news1List" class="news-container">
-                                    <div>
-                                        <img class="news-image" src="img/news/news1/one.jpg" data-fixed="true">
-                                        <br>
-                                        <button class="dltbtnfornews" onclick="deletePhoto('news1List', this)">Delete</button>
-                                    </div>
-                                    <div>
-                                        <img class="news-image" src="img/news/news1/two.jpg" data-fixed="true">
-                                        <br>
-                                        <button class="dltbtnfornews" onclick="deletePhoto('news1List', this)">Delete</button>
-                                    </div>
-                                    <div>
-                                      <img class="news-image" src="img/news/news1/three.jpg" data-fixed="true">
+                      <div class="hidden-content" id="news1Content">
+                          <div class="news">
+                              <div id="news1List" class="news-container">
+                                  <div>
+                                      <img class="news-image" src="img/news/news1/one.jpg" data-fixed="true">
                                       <br>
                                       <button class="dltbtnfornews" onclick="deletePhoto('news1List', this)">Delete</button>
                                   </div>
                                   <div>
-                                    <img class="news-image" src="img/news/news1/four.jpg" data-fixed="true">
-                                    <br>
-                                    <button class="dltbtnfornews" onclick="deletePhoto('news1List', this)">Delete</button>
+                                      <img class="news-image" src="img/news/news1/two.jpg" data-fixed="true">
+                                      <br>
+                                      <button class="dltbtnfornews" onclick="deletePhoto('news1List', this)">Delete</button>
                                   </div>
                                   <div>
-                                    <img class="news-image" src="img/news/news1/five.jpg" data-fixed="true">
+                                    <img class="news-image" src="img/news/news1/three.jpg" data-fixed="true">
                                     <br>
                                     <button class="dltbtnfornews" onclick="deletePhoto('news1List', this)">Delete</button>
                                 </div>
+                                <div>
+                                  <img class="news-image" src="img/news/news1/four.jpg" data-fixed="true">
+                                  <br>
+                                  <button class="dltbtnfornews" onclick="deletePhoto('news1List', this)">Delete</button>
                                 </div>
-                                <div class="news-actions">
-                                    <button onclick="uploadPhoto('news1')">Upload Photo</button>
-                                    <button onclick="editNews('news1')">Edit News</button>
-                                    <button onclick="deleteNews('news1')">Delete News</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add more news cards as needed -->
-                    <div id="addNewsButton">
-                        <button onclick="addNews()">Add News</button>
-                    </div>
-                </div>
-            </div>
-            </div>
-          </div>
-      
-          <div class="tabsection" id="scholarship">
-            <div class="cardfortitle">
-              <h5>Scholarship</h5>
-            </div>
-            <div class="cards" id="proandprocard">
-              <div class="card" id="jlsscard">
-                <p class="d-flex justify-content-between">
-                  <span class="cardtitle">Junior Level Science Scholarship</span>
-                  <a href="#" class="edit">Edit</a></p>
+                                <div>
+                                  <img class="news-image" src="img/news/news1/five.jpg" data-fixed="true">
+                                  <br>
+                                  <button class="dltbtnfornews" onclick="deletePhoto('news1List', this)">Delete</button>
+                              </div>
+                              </div>
+                              <div class="news-actions">
+                                  <button onclick="uploadPhoto('news1')">Upload Photo</button>
+                                  <button onclick="editNews('news1')">Edit News</button>
+                                  <button onclick="deleteNews('news1')">Delete News</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Add more news cards as needed -->
+                  <div id="addNewsButton">
+                      <button onclick="addNews()">Add News</button>
+                  </div>
               </div>
-              <div class="card" id="santcard">
-                <p class="d-flex justify-content-between">
-                  <span class="cardtitle">S&T Undergraduate Scholarship</span>
-                  <a href="#" class="edit">Edit</a>
-                </p>
-              </div>
+          </div>
+          </div>
+
+          <div class="cards" id="proandprocard">
+            <div class="card" id="jlsscard">
+              <p class="d-flex justify-content-between cardfortitle">
+                <span class="cardtitle">Junior Level Science Scholarship</span>
+                <a href="#" class="edit">Edit</a></p>
+            </div>
+            <div class="card" id="santcard">
+              <p class="d-flex justify-content-between cardfortitle">
+                <span class="cardtitle">S&T Undergraduate Scholarship</span>
+                <a href="#" class="edit">Edit</a>
+              </p>
             </div>
           </div>
-      
-          <div class="tabsection" id="contacts">
-            <div class="cardfortitle" id="contactscard">
-              <h5>Contacts</h5>
+
+          <div class="cards">
+            <div class="card" id="contactscard">
+              <p class="d-flex justify-content-between cardfortitle">
+                <span class="cardtitle">Contacts</span>
+                <a href="#" class="edit">Edit</a></p>
             </div>
-          </div>
-  
-          <div class="tabsection" id="messages">
-            <div class="cardfortitle" id="messagescard">
-              <h5>Messages</h5>
+            <div class="card" id="messagescard">
+              <p class="d-flex justify-content-between cardfortitle">
+                <span class="cardtitle">Messagesp</span>
+                <a href="#" class="edit">Edit</a>
+              </p>
             </div>
-          </div>
-  
-          <div class="tabsection" id="membership">
-            <div class="cardfortitle" id="membercard">
-              <h5>Membership Request</h5>
+            <div class="card" id="membercard">
+              <p class="d-flex justify-content-between cardfortitle">
+                <span class="cardtitle">Membership Request</span>
+                <a href="#" class="edit">Edit</a>
+              </p>
             </div>
-          </div>
-      
-          <div class="tabsection" id="accounts">
-            <div class="cardfortitle" id="accountscard">
-              <h5>Accounts</h5>
+            <div class="card" id="accountscard">
+              <p class="d-flex justify-content-between cardfortitle">
+                <span class="cardtitle">Accounts</span>
+                <a href="#" class="edit">Edit</a>
+              </p>
             </div>
           </div>
         </div>
@@ -752,7 +744,6 @@
 
     <!-- OVERLAY -->
     <div id="overlay"></div>
-
 
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -1095,7 +1086,6 @@
         const newAlbumTitleInput = document.getElementById('newAlbumTitle');
         const newAlbumDescriptionInput = document.getElementById('newAlbumDescription');
 
-        // Set the current album title and description as default values in the input fields
         const currentAlbumTitle = document.getElementById(`${albumId}`).getElementsByClassName('albumtitle')[0].innerText;
         const currentAlbumDescription = document.getElementById(`${albumId}`).getElementsByClassName('carddescription')[0].innerText;
 
@@ -1103,6 +1093,18 @@
         newAlbumDescriptionInput.value = currentAlbumDescription;
 
         modal.style.display = 'flex';
+
+        modal.innerHTML = `
+        <div class="edit-album-modal-content">
+          <label for="newAlbumTitle" style="font-weight: bold";>Album Title:</label>
+          <input type="text" id="newAlbumTitle" value="${currentAlbumTitle}" style="width: 100%; margin-bottom: 10px;">
+
+          <label for="newAlbumDescription" style="font-weight: bold">Album Description:</label>
+          <textarea id="newAlbumDescription" style="width: 100%; height: 150px; margin-bottom: 10px;">${currentAlbumDescription}</textarea>
+
+          <button id="saveAlbumButton" onclick="saveAlbumDetails()">Save</button>
+        </div>
+      `;
 
         window.saveAlbumDetails = function() {
           const newTitle = newAlbumTitleInput.value;
@@ -1266,6 +1268,19 @@
   
           newNewsTitleInput.value = currentNewsTitle;
           newNewsDescriptionInput.value = currentNewsDescription;
+
+          modal.innerHTML = `
+            <div class="edit-news-modal-content">
+              <label for="newNewsTitle" style="font-weight: bold">News Title:</label>
+              <input type="text" id="newNewsTitle" value="${currentNewsTitle}" style="width: 100%; height: auto; margin-bottom: 10px; word-wrap: break-word;">
+
+              <label for="newNewsDescription" style="font-weight: bold">News Description:</label>
+              <textarea id="newNewsDescription" style="width: 100%; height: 150px; margin-bottom: 10px;">${currentNewsDescription}</textarea>
+
+              <button id="saveNewsButton" onclick="saveNewsDetails()">Save</button>
+            </div>
+          `;
+
   
           modal.style.display = 'flex';
   
@@ -1405,6 +1420,35 @@
           element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
         }
       }
+    </script>
+
+    <script>
+      function searchValue() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase();
+        const searchResultsContainer = document.getElementById('searchResults');
+        searchResultsContainer.innerHTML = ''; // Clear previous results
+
+        // Iterate through all text content in the page
+        const elementsWithTextContent = document.querySelectorAll('*:not(script):not(style)');
+        elementsWithTextContent.forEach((element) => {
+          const elementTextContent = element.textContent.toLowerCase();
+
+          if (elementTextContent.includes(searchInput)) {
+            // Create a link to the element with a matching text content
+            const resultLink = document.createElement('a');
+            resultLink.href = '#' + element.id;
+            resultLink.textContent = elementTextContent;
+
+            // Create a new line break
+            const lineBreak = document.createElement('br');
+
+            // Append the result link and line break to the search results container
+            searchResultsContainer.appendChild(resultLink);
+            searchResultsContainer.appendChild(lineBreak);
+          }
+        });
+      }
+
     </script>
 
 </body>
