@@ -82,8 +82,10 @@
       <div id="con">
         <div id="headprof" class="d-flex justify-content-between align-items-center">
           <div class="search">
-            <input type="search" name="search" id="searchInput" placeholder=" Search" style="padding: 5px; width: 500px;">
-            <button id="searchbtn" onclick="searchValue()">&#128269;</button>
+            <form onsubmit="searchValue(event)">
+              <input type="search" name="search" id="searchInput" placeholder="&#128269; Search" style="padding: 5px; width: 500px;">
+              <!-- <button id="searchbtn" type="submit">&#128269;</button> -->
+            </form>
           </div>
           
           <div id="searchResults"></div>
@@ -125,10 +127,9 @@
           </div>
     
           <div class="cards" id="aboutuscard">
-            <div class="card" id="historycard" onclick="editCard('History', 'historyContent')">
+            <section class="card" id="historycard History" onclick="editCard('History', 'historyContent')">
               <p class="d-flex justify-content-between cardfortitle">
                 <span class="cardtitle">HISTORY</span>
-                <a href="#" class="edit">Edit</a>
               </p>
               <div class="hidden-content" id="historyContent" style="text-align: justify;">
                 The DOST-PSU UCC Scholars’ Organization, affectionately known as DOST-PUSO, had its humble beginnings on October 1, 2022. Founded by a group of passionate Department of Science and Technology (DOST) scholars at Pangasinan State University's Urdaneta City Campus, the organization's inception marked the commencement of a remarkable journey.
@@ -137,11 +138,10 @@
                 <br><br>
                 In a short span of time, DOST-PUSO achieved remarkable milestones. The organization became a hub for fostering academic excellence, nurturing leadership skills, and promoting patriotic values. It organized numerous training workshops, seminars, and outreach programs that not only enhanced the skills and knowledge of its members but also extended the benefits of science and technology to the wider community.
               </div>
-            </div>
+            </section>
             <div class="card" id="logocard" onclick="editCard('Logo', 'logoContent')">
               <p class="d-flex justify-content-between cardfortitle">
                 <span class="cardtitle">DOST PUSO LOGO</span>
-                <a href="#" class="edit">Edit</a>
               </p>
               <p class="hidden-content" id="logoContent" style="text-align: justify;">
                 The official logo of the DOST-PSU UCC Scholars’ Organization is its official symbol. Each element represents the following:<br><br>
@@ -154,7 +154,6 @@
             <div class="card" id="visioncard" onclick="editCard('Vision', 'visionContent')">
               <p class="d-flex justify-content-between cardfortitle">
                 <span class="cardtitle">Vision</span>
-                <a href="#" class="edit">Edit</a>
               </p>
               <p class="hidden-content" id="visionContent" style="text-align: justify;">
                 The organization shall envision a community of scholars who are <span id="vmbold">P</span>assionate about serving the nation, <span id="vmbold">U</span>nified by the same aspiration, <span id="vmbold">S</span>teadfast in the face of adversity, and <span id="vmbold">O</span>ptimistic toward creating a better country. 
@@ -163,7 +162,6 @@
             <div class="card" id="missioncard" onclick="editCard('Mission', 'missionContent')">
               <p class="d-flex justify-content-between cardfortitle">
                 <span class="cardtitle">Mission</span>
-                <a href="#" class="edit">Edit</a>
               </p>
               <p class="hidden-content" id="missionContent" style="text-align: justify;">
                   The DOST-PSU UCC Scholars' Organization (DOST-PUSO) shall strive to pursue: <br>
@@ -586,16 +584,71 @@
           </div>
 
           <div class="cards" id="proandprocard">
-            <div class="card" id="jlsscard">
+            <div class="card" id="jlsscard" onclick="editCard('JLSS', 'jlssContent')">
               <p class="d-flex justify-content-between cardfortitle">
                 <span class="cardtitle">Junior Level Science Scholarship</span>
-                <a href="#" class="edit">Edit</a></p>
+              </p>
+              <div class="hidden-content" id="jlssContent" style="text-align: justify;">
+                <b>Types of Scholarship</b>
+                <hr>
+                <b>MERIT.</b> The DOST-SEI Merit Scholarship Program, formerly known as the NSDB or NSTA Scholarship under RA No. 2067, is awarded to students with high aptitude in science and mathematics and are willing to pursue careers in the fields of science and technology.
+                <br>
+                <b>RA 7687.</b> Republic Act No. 7687, also known as the “Science and Technology Scholarship Act of 1994”, provides for scholarships to talented and deserving students whose families’ socio-economic status does not exceed the set cut-off values of certain indicators. Qualifiers must pursue priority fields of study in the basic sciences, engineering, other applied sciences, and science and mathematics teaching.
+                <br><br>
+                <b>Priority S&T Programs and Study Placement</b>
+                <hr>
+                <ul>
+                  <li>Bachelor in Mathematics Education</li>
+                  <li>Bachelor in Technology and Livelihood Education with Specialization in Information and Communications</li>
+                  <li>Bachelor of Library and Information Science</li>
+                  <li>BS Aeronautical Engineering</li>
+                  <li>BS Aerospace Engineering</li>
+                  <li>BS Agribusiness</li>
+                  <li>BS Agribusiness Management</li>
+                  <li>BS Agribusiness Management and Entrepreneurship</li>
+                  <li>BS Agricultural and Biosystems Engineering</li>
+                  <li>BS Agricultural Biotechnology</li>
+                  <li>BS Agricultural Chemistry</li>
+                  <li>BS Agricultural Economics</li>
+                  <li>BS Agricultural Engineering</li>
+                  <li>BS Agricultural Technology</li>
+                  <li>BS Agriculture</li>
+                  <li>BS Animal Husbandry</li>
+                </ul>
+              </div>
             </div>
-            <div class="card" id="santcard">
+            <div class="card" id="sandtcard" onclick="editCard('S&T', 'sandtContent')">
               <p class="d-flex justify-content-between cardfortitle">
                 <span class="cardtitle">S&T Undergraduate Scholarship</span>
-                <a href="#" class="edit">Edit</a>
               </p>
+              <div class="hidden-content" id="sandtContent" style="text-align: justify;">
+                <b>Types of Scholarship</b>
+                <hr>
+                <b>MERIT.</b> The DOST-SEI Merit Scholarship Program, formerly known as the NSDB or NSTA Scholarship under RA No. 2067, is awarded to students with high aptitude in science and mathematics and are willing to pursue careers in the fields of science and technology.
+                <br>
+                <b>RA 7687.</b> Republic Act No. 7687, also known as the “Science and Technology Scholarship Act of 1994”, provides for scholarships to talented and deserving students whose families’ socio-economic status does not exceed the set cut-off values of certain indicators. Qualifiers must pursue priority fields of study in the basic sciences, engineering, other applied sciences, and science and mathematics teaching.
+                <br><br>
+                <b>Priority S&T Programs and Study Placement</b>
+                <hr>
+                <ul>
+                  <li>Bachelor in Mathematics Education</li>
+                  <li>Bachelor in Technology and Livelihood Education with Specialization in Information and Communications</li>
+                  <li>Bachelor of Library and Information Science</li>
+                  <li>BS Aeronautical Engineering</li>
+                  <li>BS Aerospace Engineering</li>
+                  <li>BS Agribusiness</li>
+                  <li>BS Agribusiness Management</li>
+                  <li>BS Agribusiness Management and Entrepreneurship</li>
+                  <li>BS Agricultural and Biosystems Engineering</li>
+                  <li>BS Agricultural Biotechnology</li>
+                  <li>BS Agricultural Chemistry</li>
+                  <li>BS Agricultural Economics</li>
+                  <li>BS Agricultural Engineering</li>
+                  <li>BS Agricultural Technology</li>
+                  <li>BS Agriculture</li>
+                  <li>BS Animal Husbandry</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -603,24 +656,20 @@
             <div class="card" id="contactscard">
               <p class="d-flex justify-content-between cardfortitle">
                 <span class="cardtitle">Contacts</span>
-                <a href="#" class="edit">Edit</a></p>
             </div>
             <div class="card" id="messagescard">
               <p class="d-flex justify-content-between cardfortitle">
-                <span class="cardtitle">Messagesp</span>
-                <a href="#" class="edit">Edit</a>
+                <span class="cardtitle">Messages</span>
               </p>
             </div>
             <div class="card" id="membercard">
               <p class="d-flex justify-content-between cardfortitle">
                 <span class="cardtitle">Membership Request</span>
-                <a href="#" class="edit">Edit</a>
               </p>
             </div>
             <div class="card" id="accountscard">
               <p class="d-flex justify-content-between cardfortitle">
                 <span class="cardtitle">Accounts</span>
-                <a href="#" class="edit">Edit</a>
               </p>
             </div>
           </div>
@@ -1423,33 +1472,30 @@
     </script>
 
     <script>
-      function searchValue() {
-        const searchInput = document.getElementById('searchInput').value.toLowerCase();
-        const searchResultsContainer = document.getElementById('searchResults');
-        searchResultsContainer.innerHTML = ''; // Clear previous results
+    function searchValue(event) {
+        event.preventDefault();
 
-        // Iterate through all text content in the page
-        const elementsWithTextContent = document.querySelectorAll('*:not(script):not(style)');
-        elementsWithTextContent.forEach((element) => {
-          const elementTextContent = element.textContent.toLowerCase();
+        let searchInput = document.getElementById('searchInput').value.toLowerCase();
 
-          if (elementTextContent.includes(searchInput)) {
-            // Create a link to the element with a matching text content
-            const resultLink = document.createElement('a');
-            resultLink.href = '#' + element.id;
-            resultLink.textContent = elementTextContent;
+        var sectionMappings = {
+          "history" :  "History",
+          "logocard": "logocard"
+        }
 
-            // Create a new line break
-            const lineBreak = document.createElement('br');
-
-            // Append the result link and line break to the search results container
-            searchResultsContainer.appendChild(resultLink);
-            searchResultsContainer.appendChild(lineBreak);
-          }
-        });
+        if(sectionMappings.hasOwnProperty(searchValue)){
+          var sectionId = sectionMappings[searchValue];
+          document.getElementById(sectionId).scrollIntoView({behavior: "smooth"});
+        }
+        else{
+          alert("No match")
+        }
       }
 
+
+
     </script>
+
+
 
 </body>
 </html>
